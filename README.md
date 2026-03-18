@@ -35,6 +35,7 @@ O Claude vai te fazer algumas perguntas e configurar o sistema pro seu negócio.
 
 **Skills prontas pra usar:**
 - `/setup` — configura o sistema pro seu negócio (comece por aqui)
+- `/iniciar` — carrega o contexto do negócio no começo de cada sessão de trabalho
 - `/carrossel` — cria carrosséis pra Instagram e TikTok com a sua identidade visual
 - `/proposta-comercial` — gera proposta profissional em HTML a partir de um briefing
 - `/publicar-site` — publica qualquer HTML no ar com um link compartilhável
@@ -47,6 +48,11 @@ O Claude vai te fazer algumas perguntas e configurar o sistema pro seu negócio.
 - `_memoria/` — contexto do seu negócio e preferências
 - `marca/` — guia de identidade visual da sua marca
 - `_configurar-mcps.md` — MCPs recomendados pro seu perfil com comandos prontos
+
+**Pasta `dados/`:**
+- Drop zone pra arquivos que você quer analisar (CSV, XLSX, TXT, PDF)
+- Útil quando você não tem MCP de Google Drive instalado
+- Use com `/analisar-dados dados/seu-arquivo.csv`
 
 ---
 
