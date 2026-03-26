@@ -9,6 +9,36 @@ O setup vai te fazer algumas perguntas e configurar tudo pro seu negócio em pou
 
 <!-- Este arquivo será atualizado pelo /setup com o contexto do seu negócio. -->
 
+## Contexto do negócio
+
+No início de toda conversa, ler os seguintes arquivos (se existirem e estiverem configurados):
+
+1. `_contexto/empresa.md` — quem é o usuário, o que faz, como funciona o negócio
+2. `_contexto/preferencias.md` — tom de voz, estilo de escrita, o que evitar
+3. `_contexto/estrategia.md` — foco atual, prioridades, o que pode esperar
+
+Usar essas informações como base pra qualquer resposta ou decisão. Ao sugerir prioridades, formatos ou abordagens, considerar o foco atual descrito em `estrategia.md`.
+
+Para qualquer tarefa visual (carrossel, proposta, slide, landing page), consultar `marca/design-guide.md` como referência de estilo.
+
+Não é necessário listar o que foi lido nem confirmar a leitura. Apenas usar o contexto naturalmente.
+
+---
+
+## Fluxo de trabalho
+
+Antes de executar qualquer tarefa, verificar se existe uma skill relevante em `.claude/commands/`.
+Se encontrar, seguir as instruções da skill.
+Se não encontrar, executar a tarefa normalmente.
+
+Ao concluir uma tarefa que não tinha skill mas parece repetível (o usuário provavelmente vai pedir de novo no futuro), perguntar:
+
+> "Isso pode virar uma skill pra próxima vez. Quer que eu crie?"
+
+Não perguntar pra tarefas pontuais ou perguntas simples. Só quando o padrão de repetição for claro.
+
+---
+
 ## Aprender com correções
 
 Quando o usuário corrigir algo, melhorar uma resposta ou dar uma instrução que parece permanente (frases como "na verdade é assim", "não faça mais isso", "prefiro assim", "sempre que...", "evita...", "da próxima vez..."), perguntar:
