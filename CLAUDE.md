@@ -1,14 +1,43 @@
-# Claude Code OS — Kit Ratos de IA
+# Clínica Base — Claude Code OS
 
-Este repositório é o kit de boas-vindas do curso Claude Code OS.
+## O que é esse workspace
+Workspace de gestão e comunicação da Clínica Base, clínica de Terapia Ocupacional e Desenvolvimento Infantil em Sorocaba, SP. Aqui ficam os conteúdos, campanhas, financeiro e projetos que Fagner opera no dia a dia do negócio.
 
-Se você acabou de clonar esse repositório:
-1. Rode `/setup` pra configurar o sistema pro seu negócio (uns 5 minutos)
-2. Depois rode `/mapear` pra criar skills personalizadas pro que você faz no dia a dia
+**Estrutura de pastas:**
+- `marketing/conteudo/` — produção para Instagram, YouTube, TikTok e Substack
+- `marketing/campanhas/` — planejamento e materiais de campanhas de captação
+- `marketing/materiais/` — peças, criativos e assets de marca
+- `financeiro/relatorios/` — relatórios financeiros
+- `financeiro/orcamentos/` — orçamentos e propostas financeiras
+- `gestao/pacientes/` — briefings e registros de acompanhamento (uso interno)
+- `gestao/documentos/` — documentos internos da clínica
+- `gestao/processos/` — processos e fluxos operacionais
+- `projetos/` — projetos específicos (lançamentos, iniciativas, Projeto Mil Dias)
+- `dados/` — drop zone para arquivos a analisar (CSV, XLSX, PDF, imagens)
+- `templates/skills/` — templates de skills prontos para personalizar com /mapear
+- `templates/ferramentas/catalogo.md` — APIs e ferramentas disponíveis para usar em skills
+
+## Sobre o negócio
+Clínica Base é uma clínica de Terapia Ocupacional especializada em crianças de 0 a 6 anos com atrasos e transtornos do neurodesenvolvimento (TEA, TDAH, dificuldades sensoriais). Fundada por Regiane Vidal (CREFITO-3 11824-TO) e gerida em parceria com Fagner, casal e sócios. Localizada em Sorocaba, SP. Opera pelo Método B.A.S.E. (Brincar, Afeto, Sensorial, Estimulação), com a mãe como protagonista do tratamento.
+
+## O que mais fazemos aqui
+- Produção de conteúdo para Instagram, YouTube, TikTok, LinkedIn e Substack
+- Planejamento e execução de campanhas de marketing para captação de pacientes
+- Gestão financeira da clínica
+- Materiais de orientação parental para pacientes
+- Gestão operacional geral
+
+## Clientes e contexto
+Atende famílias diretamente (B2C), com foco em mães de crianças com neurodesenvolvimento atípico em Sorocaba, SP. A clínica está em fase de estabelecimento e captação inicial de pacientes. Antes atuavam como prestadores de serviço para clínicas em São Paulo (B2B) — esse modelo foi encerrado.
+
+## Tom de voz
+Informal mas profundo. Especialista acessível, não distante. A mãe é sempre protagonista. Fatos concretos e emoção com substância. Sem jargão clínico sem tradução.
+Proibido: travessão (—), construções do tipo "não é X, é Y", urgência artificial, adjetivos vazios, clichês de saúde.
+
+## Ferramentas conectadas
+YouTube, Instagram, LinkedIn, TikTok, Notion (gestão), Substack, Website
 
 ---
-
-<!-- Este arquivo será atualizado pelo /setup com o contexto do seu negócio. -->
 
 ## Contexto do negócio
 
