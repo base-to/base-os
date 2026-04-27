@@ -2,11 +2,11 @@
 
 **Nome:** Fagner (gestão e marketing) e Regiane Vidal (clínica, CREFITO-3 11824-TO)
 **Negócio:** Clínica Base — Terapia Ocupacional e Desenvolvimento Infantil
-**O que faz:** Atendimento especializado em TO para crianças de 0 a 6 anos com atrasos e transtornos do neurodesenvolvimento (TEA, TDAH, dificuldades sensoriais), com foco na orientação parental e no Método B.A.S.E.
+**O que faz:** Atendimento especializado em TO para crianças com atrasos e transtornos do neurodesenvolvimento (TEA, TDAH, dificuldades sensoriais), com foco na orientação parental e no Método B.A.S.E.
 **Perfil:** solopreneur (casal sócio — Fagner cuida da gestão/marketing, Regiane do lado clínico)
 **Atende clientes:** sim, famílias diretamente (B2C)
 **Equipe:** Fagner e Regiane Vidal (casados, filho: Matias, 4 anos)
-**Ferramentas:** YouTube, Instagram, LinkedIn, TikTok, Notion, Substack, Website
+**Ferramentas:** YouTube, Instagram, LinkedIn, TikTok, Notion, Substack, Website, Gmail, Google Calendar, Canva, Google Drive, Supermetrics, Zoom, Windsor.ai
 **Principais entregas:** conteúdo para redes sociais, campanhas de marketing, atendimentos clínicos, orientação parental, materiais para pacientes
 
 ## Contexto adicional

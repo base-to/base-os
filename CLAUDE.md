@@ -18,7 +18,7 @@ Workspace de gestão e comunicação da Clínica Base, clínica de Terapia Ocupa
 - `templates/ferramentas/catalogo.md` — APIs e ferramentas disponíveis para usar em skills
 
 ## Sobre o negócio
-Clínica Base é uma clínica de Terapia Ocupacional especializada em crianças de 0 a 6 anos com atrasos e transtornos do neurodesenvolvimento (TEA, TDAH, dificuldades sensoriais). Fundada por Regiane Vidal (CREFITO-3 11824-TO) e gerida em parceria com Fagner, casal e sócios. Localizada em Sorocaba, SP. Opera pelo Método B.A.S.E. (Brincar, Afeto, Sensorial, Estimulação), com a mãe como protagonista do tratamento.
+Clínica Base é uma clínica de Terapia Ocupacional especializada em crianças com atrasos e transtornos do neurodesenvolvimento (TEA, TDAH, dificuldades sensoriais). Fundada por Regiane Vidal (CREFITO-3 11824-TO) e gerida em parceria com Fagner, casal e sócios. Localizada em Sorocaba, SP. Opera pelo Método B.A.S.E. (Brincar, Afeto, Sensorial, Estimulação), com a mãe como protagonista do tratamento.
 
 ## O que mais fazemos aqui
 - Produção de conteúdo para Instagram, YouTube, TikTok, LinkedIn e Substack
@@ -35,7 +35,7 @@ Informal mas profundo. Especialista acessível, não distante. A mãe é sempre 
 Proibido: travessão (—), construções do tipo "não é X, é Y", urgência artificial, adjetivos vazios, clichês de saúde.
 
 ## Ferramentas conectadas
-YouTube, Instagram, LinkedIn, TikTok, Notion (gestão), Substack, Website
+YouTube, Instagram, LinkedIn, TikTok, Notion (gestão), Substack, Website, Gmail, Google Calendar, Canva, Google Drive, Supermetrics, Zoom, Windsor.ai
 
 ---
 
