@@ -1,0 +1,99 @@
+{
+  "202601": {
+    "status": "publicado",
+    "processado_em": "2026-04-28",
+    "notion_page_id": "35014d80-7bf5-8169-856e-ced90ee74e48",
+    "resumo": {
+      "receita_atendimentos": 15449.04,
+      "receita_mil_dias": 0,
+      "financiamento_entrada": 0,
+      "total_despesas": 15258.58,
+      "resultado_operacional": 190.46,
+      "resultado_com_mil_dias": 190.46,
+      "fluxo_caixa": 190.46,
+      "margem_lucro_pct": 1.23,
+      "margem_contribuicao_pct": 94.46,
+      "ponto_equilibrio": 15248.75,
+      "prolabore_total": 10975.52
+    },
+    "categorias": {
+      "Receita de atendimentos": 15449.04,
+      "Pró-labore": -10975.52,
+      "Plano de saúde": -1914.29,
+      "Impostos e tributos": -637.50,
+      "Empréstimo / financiamento": -660.25,
+      "Ferramentas e software": -516.14,
+      "Conselho profissional": -180.39,
+      "Transporte": -218.68,
+      "Cursos e capacitação": -91.31,
+      "Telecomunicações": -64.50
+    }
+  },
+  "202602": {
+    "status": "publicado",
+    "processado_em": "2026-04-28",
+    "notion_page_id": "35014d80-7bf5-81b6-b16e-f90c46b99f55",
+    "resumo": {
+      "receita_atendimentos": 8911.32,
+      "receita_mil_dias": 2000.00,
+      "financiamento_entrada": 0,
+      "total_despesas": 10580.06,
+      "resultado_operacional": -1668.74,
+      "resultado_com_mil_dias": 331.26,
+      "fluxo_caixa": 331.26,
+      "margem_lucro_pct": null,
+      "margem_contribuicao_pct": null,
+      "ponto_equilibrio": null,
+      "prolabore_total": 7760.00
+    },
+    "categorias": {
+      "Receita de atendimentos": 8911.32,
+      "Projeto Mil Dias (aporte Excenter)": 2000.00,
+      "Pró-labore": -7760.00,
+      "Empréstimo / financiamento": -660.25,
+      "Ferramentas e software": -474.99,
+      "Cursos e capacitação": -871.66,
+      "Transporte": -355.94,
+      "Serviços contábeis": -369.00,
+      "Outras despesas": -88.22
+    }
+  },
+  "202603": {
+    "status": "publicado",
+    "processado_em": "2026-04-28",
+    "notion_page_id": "35014d80-7bf5-81ac-a72f-da94277fcdcf",
+    "resumo": {
+      "receita_atendimentos": 14087.72,
+      "receita_mil_dias": 4981.55,
+      "financiamento_entrada": 15000.00,
+      "total_despesas": 28061.59,
+      "resultado_operacional": -13973.87,
+      "resultado_com_mil_dias": -8992.32,
+      "fluxo_caixa": 6007.68,
+      "margem_lucro_pct": null,
+      "margem_contribuicao_pct": null,
+      "ponto_equilibrio": null,
+      "prolabore_total": 22356.84,
+      "nota": "Pró-labore elevado por R$ 10.000 pagos com recursos do empréstimo de R$ 15.000"
+    },
+    "categorias": {
+      "Receita de atendimentos": 14087.72,
+      "Projeto Mil Dias (aporte Excenter)": 4981.55,
+      "Financiamento - Empréstimo recebido": 15000.00,
+      "Pró-labore": -22356.84,
+      "Empréstimo / financiamento": -1279.88,
+      "Plano de saúde": -1914.29,
+      "Ferramentas e software": -719.36,
+      "Serviços contábeis": -895.99,
+      "Transporte": -557.26,
+      "Aluguel e espaço físico": -200.00,
+      "Cursos e capacitação": -73.48,
+      "Outras despesas": -64.49
+    }
+  },
+  "_meta": {
+    "dashboard_root_id": "35014d80-7bf5-8168-be32-f51b1312484e",
+    "visao_anual_id": "35014d80-7bf5-81b5-9926-d33b6f3b0aa2",
+    "dashboard_url": "https://www.notion.so/35014d807bf58168be32f51b1312484e"
+  }
+}

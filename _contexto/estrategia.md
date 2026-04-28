@@ -1,7 +1,7 @@
 # Foco Atual — Clínica Base
 
 ## Fase
-Estabelecimento em Sorocaba. A clínica tem espaço físico e está em fase inicial de captação de pacientes. Transição de B2B (serviço para outras clínicas em SP) para B2C (atendimento direto às famílias em Sorocaba).
+Estabelecimento em Sorocaba. A clínica tem espaço físico e está em fase inicial de captação de pacientes. Modelo atual híbrido: B2B (DesenvolvaCentro, principal fonte de receita) + B2C em crescimento (atendimento direto às famílias em Sorocaba). O objetivo é migrar progressivamente para B2C como base principal.
 
 ## Prioridade principal
 Captação de pacientes em Sorocaba. Construir presença local, gerar confiança na comunidade e atrair mães de crianças com neurodesenvolvimento atípico.

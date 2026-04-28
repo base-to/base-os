@@ -7,12 +7,15 @@ Workspace de gestão e comunicação da Clínica Base, clínica de Terapia Ocupa
 - `marketing/conteudo/` — produção para Instagram, YouTube, TikTok e Substack
 - `marketing/campanhas/` — planejamento e materiais de campanhas de captação
 - `marketing/materiais/` — peças, criativos e assets de marca
-- `financeiro/relatorios/` — relatórios financeiros
+- `financeiro/extratos/` — extratos bancários e faturas mensais (CSVs, formato AAAAMM-*.csv)
+- `financeiro/relatorios/` — relatórios financeiros e controle de processamento
 - `financeiro/orcamentos/` — orçamentos e propostas financeiras
 - `gestao/pacientes/` — briefings e registros de acompanhamento (uso interno)
 - `gestao/documentos/` — documentos internos da clínica
 - `gestao/processos/` — processos e fluxos operacionais
 - `projetos/` — projetos específicos (lançamentos, iniciativas, Projeto Mil Dias)
+- `comercial/` — propostas e materiais comerciais
+- `marca/` — identidade visual, design guide, materiais de marca
 - `dados/` — drop zone para arquivos a analisar (CSV, XLSX, PDF, imagens)
 - `templates/skills/` — templates de skills prontos para personalizar com /mapear
 - `templates/ferramentas/catalogo.md` — APIs e ferramentas disponíveis para usar em skills
@@ -28,14 +31,17 @@ Clínica Base é uma clínica de Terapia Ocupacional especializada em crianças 
 - Gestão operacional geral
 
 ## Clientes e contexto
-Atende famílias diretamente (B2C), com foco em mães de crianças com neurodesenvolvimento atípico em Sorocaba, SP. A clínica está em fase de estabelecimento e captação inicial de pacientes. Antes atuavam como prestadores de serviço para clínicas em São Paulo (B2B) — esse modelo foi encerrado.
+Modelo híbrido: prestam serviço para a DesenvolvaCentro (clínica parceira em São Paulo, B2B — principal fonte de receita atual) e atendem famílias diretamente em Sorocaba (B2C, em crescimento). Antes atuavam para múltiplas clínicas em SP — esse modelo foi reduzido à parceria atual com a DesenvolvaCentro enquanto constroem a base de pacientes próprios.
 
 ## Tom de voz
 Informal mas profundo. Especialista acessível, não distante. A mãe é sempre protagonista. Fatos concretos e emoção com substância. Sem jargão clínico sem tradução.
 Proibido: travessão (—), construções do tipo "não é X, é Y", urgência artificial, adjetivos vazios, clichês de saúde.
 
 ## Ferramentas conectadas
-YouTube, Instagram, LinkedIn, TikTok, Notion (gestão), Substack, Website, Gmail, Google Calendar, Canva, Google Drive, Supermetrics, Zoom, Windsor.ai
+YouTube, Instagram, LinkedIn, TikTok, Notion (MCP local, token próprio), Substack, Website, Gmail, Google Calendar, Canva, Google Drive, Supermetrics, Zoom, Windsor.ai
+
+## Skills instaladas
+- `/controle-financeiro` — processa extratos e faturas mensais, categoriza transações e publica dashboard no Notion
 
 ---
 

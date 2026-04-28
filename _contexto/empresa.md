@@ -12,10 +12,15 @@
 ## Contexto adicional
 
 - Localização: Sorocaba, SP. Já têm espaço físico próprio.
-- Histórico: 5 anos prestando serviço para clínicas em São Paulo (B2B). Mudaram para Sorocaba e decidiram abrir clínica própria, encerrando o modelo anterior.
+- Histórico: 5 anos prestando serviço para clínicas em São Paulo (B2B). Mudaram para Sorocaba e decidiram abrir clínica própria, reduzindo o B2B à parceria atual com a DesenvolvaCentro.
 - Método próprio: Método B.A.S.E. (Brincar, Afeto, Sensorial, Estimulação), desenvolvido por Regiane a partir de Integração Sensorial Ayres e DIR-Floortime.
 - Big Idea da marca: "A mãe é o maior instrumento terapêutico que existe."
 - Tagline: "Você é a base do seu filho."
 - Frase central: "Atendo mães que chegam sem entender o que está acontecendo com o filho — e saem sabendo o que fazer."
-- Iniciativa social: Projeto Mil Dias — atendimento a gestantes e mães em situação de vulnerabilidade social.
+- Iniciativa social: Projeto Mil Dias — atendimento a gestantes e mães em situação de vulnerabilidade social, com aporte mensal da Excenter Foundation.
 - Arquitetura de marca: Regiane Vidal (pessoa/autoridade) > Clínica Base (instituição) > Método B.A.S.E. (entrega diferenciada)
+
+## Parceiros
+
+- **DesenvolvaCentro** (São Paulo) — clínica parceira para quem prestam serviços de TO. Principal fonte de receita atual. Pagamentos quinzenais via Pix.
+- **Excenter Foundation** — organização que financia o Projeto Mil Dias com aportes mensais (via Regiane de Paula Vidal Silva LTDA).
