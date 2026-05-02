@@ -14,6 +14,11 @@ Workspace de gestão e comunicação da Clínica Base, clínica de Terapia Ocupa
 - `gestao/documentos/` — documentos internos da clínica
 - `gestao/processos/` — processos e fluxos operacionais
 - `projetos/` — projetos específicos (lançamentos, iniciativas, Projeto Mil Dias)
+  - `projetos/mil dias/prestacoes-de-conta/` — relatórios mensais para a Excenter Foundation — formato .md (mensal) ou .html/.pdf (bimestral), nomeados AAAA-MM[-MM]-mes[-mes]
+  - `projetos/mil dias/depoimentos/` — depoimentos de mães atendidas pelo projeto
+  - `projetos/mil dias/Imagens/` — logo do projeto (logo-mil-dias.png) e fotos de campo do território (Jardim Tatiana)
+  - `projetos/mil dias/territorio-jardim-tatiana.md` — diagnóstico social e demográfico da região
+- `tarefas.md` — lista de tarefas ativas (raiz do workspace)
 - `comercial/` — propostas e materiais comerciais
 - `marca/` — identidade visual, design guide, materiais de marca
 - `dados/` — drop zone para arquivos a analisar (CSV, XLSX, PDF, imagens)
@@ -42,6 +47,13 @@ YouTube, Instagram, LinkedIn, TikTok, Notion (MCP local, token próprio), Substa
 
 ## Skills instaladas
 - `/controle-financeiro` — processa extratos e faturas mensais, categoriza transações e publica dashboard no Notion
+- `/atualizar` — varre o estado do projeto e atualiza arquivos de contexto desatualizados
+- `/iniciar` — lê contexto do negócio e ajuda a começar a sessão
+- `/mapear` — entrevista sobre processos repetitivos e cria skills personalizadas
+- `/novo-projeto` — cria nova pasta de projeto com CLAUDE.md dedicado
+- `/setup` — configura o Claude Code OS pro negócio
+- `/syncar` — salva o estado atual no GitHub (commit + push)
+- `/prestacaodecontas-pmd` — produz a prestação de contas do Projeto Mil Dias para a Excenter Foundation (coleta dados, monta HTML, gera PDF)
 
 ---
 
