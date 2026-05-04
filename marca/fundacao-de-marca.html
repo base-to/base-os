@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Clínica Base · Documento de Fundação de Marca</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  @page {
+    size: A4;
+    margin: 22mm 22mm 18mm 22mm;
+  }
+  :root {
+    --charcoal: #3D2B1F;
+    --creme: #F5EFE6;
+    --cobre: #B87333;
+    --salvia: #7C9A7C;
+    --preto: #1A1A1A;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--creme);
+    color: var(--charcoal);
+    font-family: 'Lato', sans-serif;
+    font-size: 11pt;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    page-break-after: always;
+    min-height: 253mm;
+    display: flex;
+    flex-direction: column;
+  }
+  .page:last-child { page-break-after: auto; }
+  .pad { padding: 6mm 0; }
+  .label {
+    font-family: 'Lato', sans-serif;
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--cobre);
+  }
+  .label.muted { color: var(--charcoal); opacity: 0.55; }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 48pt;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--charcoal);
+  }
+  h1 .accent { color: var(--cobre); }
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 26pt;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    color: var(--charcoal);
+    margin-bottom: 4mm;
+  }
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 16pt;
+    color: var(--charcoal);
+    margin-bottom: 3mm;
+  }
+  p { margin-bottom: 3.5mm; }
+  p.lead {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 14pt;
+    line-height: 1.45;
+    color: var(--charcoal);
+    margin-bottom: 6mm;
+  }
+  .meta {
+    font-family: 'Lato', sans-serif;
+    font-size: 9pt;
+    letter-spacing: 0.06em;
+    color: var(--charcoal);
+    opacity: 0.75;
+    line-height: 1.6;
+  }
+  .rule {
+    border: none;
+    height: 1px;
+    background: var(--charcoal);
+    opacity: 0.35;
+    margin: 8mm 0;
+  }
+  .rule.cobre { background: var(--cobre); opacity: 1; }
+  .quote-box {
+    border-left: 2px solid var(--cobre);
+    padding: 2mm 0 2mm 6mm;
+    margin: 6mm 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 13pt;
+    line-height: 1.45;
+    color: var(--charcoal);
+  }
+  .quote-attr {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-size: 9pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cobre);
+    margin-top: 4mm;
+  }
+  .big-quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 28pt;
+    line-height: 1.25;
+    color: var(--charcoal);
+    margin: 8mm 0;
+  }
+  .big-quote .accent { color: var(--cobre); }
+  ul.checklist { list-style: none; padding: 0; margin: 4mm 0; }
+  ul.checklist li {
+    padding: 2.5mm 0 2.5mm 7mm;
+    position: relative;
+    font-size: 11pt;
+    line-height: 1.55;
+  }
+  ul.checklist li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 2.5mm;
+    color: var(--cobre);
+    font-weight: 700;
+  }
+  ul.bullets { list-style: none; padding: 0; margin: 4mm 0; }
+  ul.bullets li {
+    padding: 1.5mm 0 1.5mm 6mm;
+    position: relative;
+    font-size: 11pt;
+  }
+  ul.bullets li::before {
+    content: "·";
+    position: absolute;
+    left: 1mm;
+    top: 1mm;
+    color: var(--cobre);
+    font-weight: 700;
+    font-size: 18pt;
+    line-height: 0.5;
+  }
+  table.tom {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6mm 0;
+    font-size: 10.5pt;
+  }
+  table.tom th, table.tom td {
+    padding: 3mm 4mm;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid rgba(61,43,31,0.2);
+  }
+  table.tom th {
+    background: rgba(184,115,51,0.1);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 10pt;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--charcoal);
+  }
+  table.tom td:first-child { font-weight: 700; width: 28%; }
+  table.tom td:last-child { font-style: italic; opacity: 0.85; }
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8mm;
+    margin: 6mm 0;
+  }
+  .col-good {
+    border-left: 2px solid #5C8A5C;
+    padding-left: 5mm;
+  }
+  .col-bad {
+    border-left: 2px solid #B05050;
+    padding-left: 5mm;
+  }
+  .col-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 4mm;
+  }
+  .col-good .col-label { color: #5C8A5C; }
+  .col-bad .col-label { color: #B05050; }
+  .col-good ul, .col-bad ul {
+    list-style: none;
+    padding: 0;
+  }
+  .col-good ul li, .col-bad ul li {
+    padding: 2mm 0;
+    border-bottom: 1px solid rgba(61,43,31,0.12);
+    font-size: 10.5pt;
+  }
+  .architecture {
+    margin: 8mm 0;
+  }
+  .arch-box {
+    padding: 6mm;
+    border: 1px solid var(--charcoal);
+    margin-bottom: 4mm;
+  }
+  .arch-box.featured {
+    border-color: var(--cobre);
+    border-width: 1.5px;
+    background: rgba(184,115,51,0.04);
+  }
+  .arch-box .arch-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 18pt;
+    color: var(--charcoal);
+    opacity: 0.85;
+    margin-bottom: 2mm;
+  }
+  .arch-box.featured .arch-name { font-weight: 700; opacity: 1; }
+  .arch-box .arch-role {
+    font-family: 'Lato', sans-serif;
+    font-size: 9pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cobre);
+  }
+  .arch-arrow {
+    text-align: center;
+    color: var(--cobre);
+    font-size: 16pt;
+    margin: 1mm 0;
+  }
+  .summary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8mm;
+    margin: 8mm 0;
+  }
+  .summary-card {
+    padding-bottom: 4mm;
+    border-bottom: 1px solid rgba(61,43,31,0.15);
+  }
+  .summary-card .h-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--cobre);
+    margin-bottom: 3mm;
+  }
+  .summary-card .body {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 12pt;
+    line-height: 1.45;
+    color: var(--charcoal);
+  }
+  .summary-card .body .name {
+    font-style: normal;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 1mm;
+  }
+  .summary-card .body .sub {
+    font-style: normal;
+    font-size: 9pt;
+    letter-spacing: 0.05em;
+    color: var(--charcoal);
+    opacity: 0.6;
+    display: block;
+    margin-top: 1mm;
+  }
+  .footer-doc {
+    margin-top: auto;
+    padding-top: 8mm;
+    border-top: 1px solid rgba(61,43,31,0.2);
+    font-family: 'Lato', sans-serif;
+    font-size: 9pt;
+    letter-spacing: 0.05em;
+    color: var(--charcoal);
+    opacity: 0.65;
+  }
+  .logo-svg-wrap {
+    display: flex;
+    align-items: center;
+    gap: 4mm;
+    margin-bottom: 16mm;
+  }
+  .logo-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 14pt;
+    color: var(--charcoal);
+    line-height: 1;
+  }
+  .logo-text .lt-sub {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 7pt;
+    letter-spacing: 0.24em;
+    color: var(--cobre);
+    text-transform: uppercase;
+    margin-top: 2mm;
+  }
+  .cover-sub {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 16pt;
+    color: var(--charcoal);
+    opacity: 0.85;
+    margin-top: 6mm;
+    margin-bottom: 14mm;
+  }
+  strong { color: var(--charcoal); font-weight: 700; }
+  em { font-style: italic; }
+  blockquote {
+    margin: 5mm 0;
+    padding-left: 5mm;
+    border-left: 2px solid var(--cobre);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 12pt;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============= PÁGINA 1: CAPA ============= -->
+<section class="page">
+  <div class="logo-svg-wrap">
+    <svg viewBox="0 0 140 90" width="60" height="38" xmlns="http://www.w3.org/2000/svg">
+      <line x1="10" y1="80" x2="130" y2="80" stroke="#3D2B1F" stroke-width="2.5"/>
+      <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#3D2B1F" stroke-width="3.5" fill="none"/>
+      <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#7C9A7C" stroke-width="3.5" fill="none"/>
+      <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#B87333" stroke-width="3.5" fill="none"/>
+    </svg>
+    <div class="logo-text">
+      Clínica Base
+      <span class="lt-sub">Terapia Ocupacional</span>
+    </div>
+  </div>
+
+  <div class="label" style="margin-bottom: 8mm;">Documento de Fundação de Marca</div>
+
+  <h1>Clínica<br><span class="accent">Base</span></h1>
+
+  <div class="cover-sub">Terapia Ocupacional e Desenvolvimento Infantil</div>
+
+  <p style="max-width: 130mm; font-size: 11pt; line-height: 1.6;">Este documento é a bússola estratégica da Clínica Base. Contém os elementos fundamentais de identidade verbal e posicionamento que orientam toda a comunicação da marca, do Instagram ao atendimento presencial.</p>
+
+  <div class="meta" style="margin: 14mm 0 8mm;">
+    Sorocaba, SP · Maio 2026 · Versão 1.1<br>
+    Fundada por Regiane Vidal · CREFITO-3 11824-TO
+  </div>
+
+  <hr class="rule cobre">
+
+  <div class="quote-box">
+    "Atendo mães que chegam sem entender o que está acontecendo com o filho, e saem sabendo o que fazer."
+    <div class="quote-attr">Regiane Vidal · Frase Central da Marca</div>
+  </div>
+</section>
+
+<!-- ============= PÁGINA 2: SOBRE ============= -->
+<section class="page">
+  <div class="label" style="margin-bottom: 6mm;">Sobre este documento</div>
+  <h2>Como ler esta fundação.</h2>
+
+  <p>Este documento não é um plano de marketing. É a fundação estratégica da Clínica Base, o conjunto de verdades centrais que orienta todas as decisões de comunicação.</p>
+
+  <p>Antes de criar qualquer peça (post, legenda, texto de site, script de atendimento, material para paciente), as perguntas a fazer são:</p>
+
+  <ul class="bullets">
+    <li>Esta peça parte da Big Idea?</li>
+    <li>Ela coloca a mãe como protagonista?</li>
+    <li>Está no tom de marca correto?</li>
+    <li>Alguém de fora da clínica entenderia e se interessaria?</li>
+  </ul>
+
+  <p>Se a resposta a qualquer dessas perguntas for não, a peça precisa ser revisada antes de ir ao ar.</p>
+
+  <p style="margin-top: 8mm;"><strong>Como usar em novas conversas:</strong> compartilhe este documento como contexto antes de solicitar qualquer criação de copy ou conteúdo. Ele fornece tudo que é necessário para manter consistência e profundidade em cada peça criada.</p>
+
+  <div class="footer-doc">Documento de Fundação de Marca · Versão 1.1 · Maio 2026</div>
+</section>
+
+<!-- ============= PÁGINA 3: ARQUITETURA ============= -->
+<section class="page">
+  <div class="label" style="margin-bottom: 6mm;">Arquitetura de Marca</div>
+  <h2>Três ativos distintos.</h2>
+
+  <p>Três ativos, cada um com seu papel. A clareza entre eles elimina a confusão de nomes que existia anteriormente.</p>
+
+  <div class="architecture">
+    <div class="arch-box">
+      <div class="arch-name">Regiane Vidal</div>
+      <div class="arch-role">A pessoa · terapeuta, especialista, autoridade</div>
+    </div>
+
+    <div class="arch-arrow">↓</div>
+
+    <div class="arch-box featured">
+      <div class="arch-name">Clínica Base</div>
+      <div class="arch-role">A instituição · onde o atendimento acontece</div>
+    </div>
+
+    <div class="arch-arrow">↓</div>
+
+    <div class="arch-box">
+      <div class="arch-name">Método Base</div>
+      <div class="arch-role">A entrega · o que diferencia o tratamento</div>
+    </div>
+  </div>
+
+  <p class="lead" style="text-align: center; margin-top: 8mm;">Regiane Vidal é a autoridade que criou o Método Base e fundou a Clínica Base. Os três crescem juntos, mas cada um faz o seu trabalho.</p>
+</section>
+
+<!-- ============= PÁGINA 4: NOME (01) ============= -->
+<section class="page">
+  <div class="label" style="margin-bottom: 6mm;">01 · Nome</div>
+  <h2>Clínica Base</h2>
+
+  <p>O nome "Base" nasceu de dentro da prática. Era o nome do método desenvolvido por Regiane Vidal. Nomes que nascem de dentro têm substância. Não foi inventado, foi revelado.</p>
+
+  <div class="quote-box">
+    <strong style="font-style: normal; font-family: 'Lato', sans-serif; font-size: 9pt; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cobre); display: block; margin-bottom: 3mm;">O Nome</strong>
+    Clínica Base · Terapia Ocupacional e Desenvolvimento Infantil
+  </div>
+
+  <h3 style="margin-top: 8mm;">Por que Base funciona</h3>
+
+  <p>Para a mãe, "Base" fala diretamente ao que ela está buscando: chão firme, segurança, fundação. Um lugar onde alguém vai olhar para o filho dela, e para ela, com competência e cuidado.</p>
+
+  <p>Para o negócio, "Base" permite escala: quando novas terapeutas forem contratadas e aprenderem o Método Base, o nome da clínica já carrega o método. A transição é natural. A Regiane passa de "a terapeuta" para "a criadora do Método Base". O nome não precisa mudar.</p>
+
+  <p style="margin-top: 6mm;"><strong>Nenhuma outra clínica em Sorocaba tem esse nome com esse significado.</strong></p>
+</section>
+
+<!-- ============= PÁGINA 5: BIG IDEA (02) ============= -->
+<section class="page">
+  <div class="label" style="margin-bottom: 6mm;">02 · Big Idea</div>
+  <h2>O conceito central que sustenta toda a comunicação.</h2>
+
+  <p>A Big Idea não é um slogan. É o paradigma que a Clínica Base inverte. O conceito tão forte que pode sustentar 20 anos de comunicação. Quando você a lê, parece óbvio. Mas ninguém mais estava dizendo.</p>
+
+  <hr class="rule cobre" style="margin: 10mm 0;">
+
+  <div class="big-quote">
+    "A mãe é o maior <span class="accent">instrumento terapêutico</span> que existe."
+  </div>
+
+  <hr class="rule cobre" style="margin: 10mm 0;">
+
+  <p>O mercado inteiro comunica: <em>"traga seu filho, nós cuidamos."</em> A Clínica Base diz o oposto: <em>"você, mãe, é parte essencial do tratamento."</em></p>
+
+  <h3 style="margin-top: 8mm;">Teste da Big Idea</h3>
+
+  <ul class="checklist">
+    <li>É contra-intuitiva, prende a atenção</li>
+    <li>É única, nenhuma clínica em Sorocaba está dizendo isso</li>
+    <li>Se encaixa na estratégia, é exatamente o que vocês fazem</li>
+    <li>Pode ser usada por 30 anos, é uma crença, não uma tendência</li>
+  </ul>
+
+  <p style="margin-top: 6mm; font-size: 10pt; opacity: 0.8;">A Big Idea funciona como filtro de tudo: cada post, cada sessão, cada mensagem de WhatsApp deve poder ser rastreada de volta a ela. Se uma peça de comunicação não pode ser conectada à Big Idea, ela não deveria existir.</p>
+</section>
+
+<!-- ============= PÁGINA 6: TAGLINE (03) ============= -->
+<section class="page">
+  <div class="label" style="margin-bottom: 6mm;">03 · Tagline</div>
+  <h2>A frase que acompanha a marca em todo lugar.</h2>
+
+  <p>A tagline é a expressão mais destilada da Big Idea. Curta o suficiente para ser memorizada. Verdadeira o suficiente para durar décadas. Específica o suficiente para que nenhum concorrente possa apropriar.</p>
+
+  <hr class="rule cobre" style="margin: 10mm 0;">
+
+  <div class="big-quote" style="text-align: center;">
+    "Você é a base do <span class="accent">seu filho</span>."
+  </div>
+
+  <hr class="rule cobre" style="margin: 10mm 0;">
+
+  <h3 style="margin-top: 8mm;">Por que esta tagline</h3>
+
+  <p>Coloca a mãe como protagonista, não a clínica. Conecta diretamente ao nome Base. É a única que nenhum concorrente pode usar, porque nenhum outro está posicionando a mãe como centro do tratamento.</p>
+
+  <p><strong>Teste de substituição:</strong> se você trocar "Clínica Base" por qualquer outra clínica, a tagline não funciona. Ela pertence exclusivamente a esta marca.</p>
+</section>
+
+<!-- ============= PÁGINA 7: FRASE CENTRAL (04) ============= -->
+<section class="page">
+  <div class="label" style="margin-bottom: 6mm;">04 · Frase Central da Marca</div>
+  <h2>Como a Regiane descreve o que faz.</h2>
+
+  <p>Esta é a frase que a Regiane usa quando alguém pergunta "o que você faz?" em qualquer contexto. Ela deve ser usada na apresentação pessoal, no script de indicação e como filtro interno para todo conteúdo criado.</p>
+
+  <hr class="rule cobre" style="margin: 8mm 0;">
+
+  <div class="big-quote">
+    "Atendo mães que chegam sem entender o que está acontecendo com o filho, e saem sabendo o que fazer."
+  </div>
+
+  <hr class="rule cobre" style="margin: 8mm 0;">
+
+  <h3>Por que esta frase funciona</h3>
+
+  <div style="border-left: 2px solid var(--cobre); padding-left: 5mm; margin: 4mm 0;">
+    <strong style="color: var(--cobre);">"Chegam sem entender"</strong>
+    <p style="margin-top: 1mm;">Nomeia a dor real, sem julgamento. A mãe se reconhece imediatamente.</p>
+  </div>
+
+  <div style="border-left: 2px solid var(--cobre); padding-left: 5mm; margin: 4mm 0;">
+    <strong style="color: var(--cobre);">"Saem sabendo o que fazer"</strong>
+    <p style="margin-top: 1mm;">A transformação é concreta e prática. Não é "empoderamento" nem "confiança". É ação. É o que a mãe realmente precisa.</p>
+  </div>
+
+  <p>O par "chegam / saem" cria o arco completo do tratamento, e evoca implicitamente a clínica como lugar de transformação.</p>
+
+  <h3 style="margin-top: 6mm;">Como usar</h3>
+  <p><strong>Na apresentação pessoal:</strong> <em>"Sou terapeuta ocupacional infantil. Atendo mães que chegam sem entender o que está acontecendo com o filho, e saem sabendo o que fazer."</em></p>
+  <p><strong>Como filtro de conteúdo:</strong> <em>"Este post serve a essa mãe que está chegando sem entender?"</em></p>
+</section>
+
+<!-- ============= PÁGINA 8: TOM DE MARCA (05) ============= -->
+<section class="page">
+  <div class="label" style="margin-bottom: 6mm;">05 · Tom de Marca</div>
+  <h2>Como a Clínica Base fala.</h2>
+
+  <p>O tom de marca orienta desde um post do Instagram até uma mensagem de WhatsApp. Ele define não apenas o que dizemos, mas como dizemos, e o que nunca dizemos.</p>
+
+  <p class="lead" style="border-left: 2px solid var(--cobre); padding-left: 6mm; margin: 6mm 0;">Em uma frase: A Clínica Base fala como uma especialista que entende o filho, e entende a mãe.</p>
+
+  <table class="tom">
+    <thead>
+      <tr><th>Dimensão</th><th>Posição</th><th>Por quê</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Formalidade</td><td>Informal com precisão</td><td>Fala como especialista de confiança, não como instituição</td></tr>
+      <tr><td>Emoção</td><td>Alta</td><td>A mãe está em momento de vulnerabilidade real</td></tr>
+      <tr><td>Autoridade</td><td>Acessível</td><td>Parceira, não distante. Senta ao lado, não do outro lado da mesa</td></tr>
+      <tr><td>Humor</td><td>Sério</td><td>O tema não comporta leveza fácil</td></tr>
+      <tr><td>Perspectiva</td><td>Visionária</td><td>Acredita que o desenvolvimento começa na família, não na clínica</td></tr>
+    </tbody>
+  </table>
+
+  <div class="two-col">
+    <div class="col-good">
+      <div class="col-label">✓ O que aparece</div>
+      <ul>
+        <li>Linguagem direta, sem rodeios</li>
+        <li>Fatos concretos e específicos</li>
+        <li>Emoção com substância</li>
+        <li>A mãe como protagonista</li>
+        <li>Verbos de ação e transformação</li>
+        <li>Perguntas que a mãe já está fazendo</li>
+      </ul>
+    </div>
+    <div class="col-bad">
+      <div class="col-label">✗ O que nunca aparece</div>
+      <ul>
+        <li>Jargão clínico sem tradução</li>
+        <li>"Atendimento humanizado"</li>
+        <li>"Cuidado integral"</li>
+        <li>Tom condescendente ("deixa com a gente")</li>
+        <li>Urgência artificial ("vagas limitadas")</li>
+        <li>Adjetivos vazios sem prova</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============= PÁGINA 9: MANIFESTO (06) ============= -->
+<section class="page">
+  <div class="label" style="margin-bottom: 6mm;">06 · Manifesto de Marca</div>
+  <h2>A declaração de identidade da Clínica Base.</h2>
+
+  <p>O manifesto articula a essência da marca, o que ela acredita, por que existe e o que defende. Não é copy de venda. É a fundação de onde toda comunicação parte.</p>
+
+  <hr class="rule" style="margin: 8mm 0;">
+
+  <div style="font-family: 'Playfair Display', serif; font-size: 12.5pt; line-height: 1.7; color: var(--charcoal);">
+    <p>Todo diagnóstico chega com um peso.</p>
+
+    <p>TEA. TDAH. Atraso no desenvolvimento. Palavras que nenhuma mãe está pronta para ouvir, e que muitas recebem sem um mapa para o que vem depois.</p>
+
+    <p>A partir dali começa uma nova jornada. Consultas, relatórios, listas de espera. E um padrão que se repete em quase todo lugar: o terapeuta avalia o diagnóstico e trabalha as dificuldades que ele traz. A queixa da mãe, as dificuldades reais do dia a dia, fica em segundo plano. O tratamento acontece no consultório. E para quando a sessão termina.</p>
+
+    <p>Como se o desenvolvimento do seu filho fosse um assunto de especialistas. E você, que o conhece mais do que qualquer pessoa no mundo, fosse apenas a motorista.</p>
+
+    <p style="font-weight: 700; font-style: italic; color: var(--cobre); margin: 6mm 0;">Nós não acreditamos nisso.</p>
+
+    <p>Acreditamos que a mãe informada e apoiada é o maior instrumento terapêutico que existe. Que o desenvolvimento real, o que transforma, o que fica para a vida, acontece nas 167 horas que não são a sessão de terapia. No banho. No almoço. No brincar antes de dormir. Em casa.</p>
+
+    <p>Na Clínica Base, o tratamento começa pela sua queixa, não pelo diagnóstico. Os objetivos são construídos com você. As estratégias da sessão, você aprende. Os materiais que você leva para casa são feitos a partir da sua realidade. A sessão termina. O tratamento não.</p>
+
+    <p>Porque quando a mãe sabe o que fazer, o filho avança.</p>
+
+    <p style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 22pt; color: var(--cobre); margin-top: 8mm; line-height: 1.2;">Você é a base do seu filho.</p>
+  </div>
+
+  <div class="footer-doc">
+    <em>Clínica Base · Terapia Ocupacional e Desenvolvimento Infantil · Fundada por Regiane Vidal</em>
+  </div>
+</section>
+
+<!-- ============= PÁGINA 10: RESUMO ============= -->
+<section class="page">
+  <div class="label" style="margin-bottom: 6mm;">Resumo da Fundação de Marca</div>
+  <h2>Os seis ativos verbais da marca.</h2>
+
+  <p>A síntese de tudo que foi articulado neste documento. Use esta página como referência rápida em qualquer contexto onde precisar checar o alinhamento de uma peça.</p>
+
+  <div class="summary-grid">
+    <div class="summary-card">
+      <div class="h-label">Nome</div>
+      <div class="body">
+        <span class="name">Clínica Base</span>
+        Terapia Ocupacional e Desenvolvimento Infantil
+      </div>
+    </div>
+
+    <div class="summary-card">
+      <div class="h-label">Big Idea</div>
+      <div class="body">
+        A mãe é o maior instrumento terapêutico que existe.
+      </div>
+    </div>
+
+    <div class="summary-card">
+      <div class="h-label">Tagline</div>
+      <div class="body">
+        Você é a base do seu filho.
+      </div>
+    </div>
+
+    <div class="summary-card">
+      <div class="h-label">Frase Central</div>
+      <div class="body">
+        Atendo mães que chegam sem entender o que está acontecendo com o filho, e saem sabendo o que fazer.
+      </div>
+    </div>
+
+    <div class="summary-card">
+      <div class="h-label">Tom de Marca</div>
+      <div class="body">
+        Especialista acessível, emocional, sem jargão. Parceira, não distante.
+      </div>
+    </div>
+
+    <div class="summary-card">
+      <div class="h-label">Fundadora</div>
+      <div class="body">
+        <span class="name">Regiane Vidal</span>
+        <span class="sub">CREFITO-3 11824-TO</span>
+      </div>
+    </div>
+  </div>
+
+  <hr class="rule" style="margin-top: auto;">
+
+  <div class="footer-doc">
+    Clínica Base · Sorocaba, SP · Documento de uso interno · Versão 1.1 · Maio 2026
+  </div>
+</section>
+
+</body>
+</html>
