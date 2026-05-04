@@ -75,37 +75,31 @@ A especificidade está protegida por dois ativos exclusivos. O posicionamento pa
 
 ---
 
-## 5. Tagline
+## 5. Tagline e Big Idea
 
-### Conceitos gerados (5)
+### Tagline Oficial (vigente)
 
-1. "Onde o desenvolvimento começa pela mãe"
-2. "B.A.S.E. de tudo: o vínculo entre mãe e filho"
-3. "Terapia Ocupacional com base na relação que importa"
-4. "A terapia que entra em casa pela mão da mãe"
-5. "Cuidar do desenvolvimento começa pelo vínculo"
+> ***Você é a base do seu filho.***
 
-### Filtro de especificidade
+Esta é a tagline oficial da marca, definida no Documento de Fundação de Marca (Versão 1.0, Abril 2026). Coloca a mãe como protagonista, conecta diretamente ao nome **Base**, passa o teste de substituição (nenhuma outra clínica pode usar) e é durável o suficiente para sustentar décadas de comunicação.
 
-- Conceito 4: muito longo, parece slogan publicitário
-- Conceito 5: passa o teste de tom mas perde a referência ao método
-- Conceito 2: força demais o jogo com o nome, perde clareza
+### Big Idea
 
-### Finalistas
+> ***A mãe é o maior instrumento terapêutico que existe.***
 
-**Finalista 1:** "Onde o desenvolvimento começa pela mãe"
+A Big Idea é o paradigma que a Clínica Base inverte. O mercado comunica: "traga seu filho, nós cuidamos." A Clínica Base diz o oposto: "você, mãe, é parte essencial do tratamento." Toda peça de comunicação deve poder ser rastreada de volta a essa Big Idea.
 
-Curto, claro, diferenciado. Coloca a mãe explicitamente como ponto de partida do desenvolvimento (alinhado ao posicionamento e ao coach parental). Lê-se em 1 segundo. Funciona em logo, biografia de Instagram, papel timbrado e WhatsApp.
+### Frase Central
 
-**Finalista 2:** "Terapia Ocupacional com base na relação que importa"
+> *"Atendo mães que chegam sem entender o que está acontecendo com o filho, e saem sabendo o que fazer."*
 
-Joga com o nome ("base") sem forçar maiúsculas. Tom mais técnico, adequado para site institucional, LinkedIn e comunicação B2B com a DesenvolvaCentro.
+A frase que Regiane usa para se apresentar. O par "chegam / saem" cria o arco completo da transformação que a clínica entrega.
 
-### Recomendação
+### Aplicação por contexto
 
-**Finalista 1** como tagline principal de marca. Aparece em logo, Instagram, materiais de captação direta, embalagem do brand kit.
-
-**Finalista 2** como tagline secundária para contextos institucionais e B2B (site, LinkedIn, propostas comerciais).
+- **Tagline em logo, Instagram, papel timbrado, WhatsApp e cartão:** "Você é a base do seu filho."
+- **Apresentação pessoal de Regiane (eventos, networking, BNI):** Frase Central.
+- **Filtro interno de conteúdo:** "Esta peça parte da Big Idea?"
 
 ---
 

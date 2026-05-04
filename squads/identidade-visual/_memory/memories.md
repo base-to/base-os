@@ -9,6 +9,14 @@
 
 - **Logo escolhido: Conceito I (Marca Concêntrica).** Três arcos aninhados subindo de uma mesma linha-base. Charcoal (clínica) externo, sálvia (mãe) intermediário, cobre (criança) interno. Sem figura humana literal. Toda aplicação visual da marca usa esse símbolo.
 
+- **Tagline oficial vigente: "Você é a base do seu filho."** Definida no Documento de Fundação de Marca (Versão 1.0, Abril 2026). Não confundir com versões anteriores ou alternativas.
+
+- **Big Idea oficial: "A mãe é o maior instrumento terapêutico que existe."** Toda peça de comunicação deve poder ser rastreada a esta Big Idea. Filtro a usar antes de aprovar qualquer copy.
+
+- **Frase Central oficial:** "Atendo mães que chegam sem entender o que está acontecendo com o filho, e saem sabendo o que fazer." Usada por Regiane em apresentação pessoal e como filtro de conteúdo.
+
+- **Documento de Fundação de Marca existe.** Em `gestao/documentos/Clínica Base — Fundação de Marca.pdf`. Sempre consultar antes de criar copy ou tagline. Não inventar sem verificar.
+
 ## Estrutura de Conteúdo
 
 - **Hierarquia do serviço:** o serviço principal é a **sessão de Terapia Ocupacional para crianças**. O diferencial é a **mãe como protagonista** da terapia (participa em momentos-chave da sessão, recebe ferramentas e estratégias, leva instruções para sustentar o desenvolvimento em casa). O **coach parental** é uma das ferramentas do Método B.A.S.E. que estrutura essa participação. Razão: posicionar coach parental como produto principal distorce a oferta. O cliente contrata terapia para o filho, não treinamento para a mãe. Cuidado também com "mãe dentro da sessão" sem qualificar "em momentos-chave", para não dar a entender que a mãe fica na sala durante toda a terapia.

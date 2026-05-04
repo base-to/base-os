@@ -250,7 +250,7 @@ Razões da escolha:
 **Fundo:** #3D2B1F (Charcoal Quente)
 **Logo:** Variação negativa do Conceito A, em #F5EFE6
 **Tagline (H1):** Playfair Display Bold 64px, #F5EFE6, alinhado ao centro
-> "Onde o desenvolvimento começa pela mãe."
+> "Você é a base do seu filho."
 
 **Destaque (Lato Bold):** 22px, #B87333, all caps, tracking 0.05em
 > MÉTODO B.A.S.E.
@@ -274,7 +274,7 @@ Razões da escolha:
 
 **Verso:**
 - Fundo: #3D2B1F
-- Tagline (Playfair Display Italic 14pt, #F5EFE6, centralizada): "Onde o desenvolvimento começa pela mãe."
+- Tagline (Playfair Display Italic 14pt, #F5EFE6, centralizada): "Você é a base do seu filho."
 - Linha decorativa (1pt, #B87333) sob a tagline
 - Logo versão negativa, canto inferior direito, altura 8mm
 
