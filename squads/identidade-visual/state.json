@@ -1,7 +1,7 @@
 {
   "squad": "identidade-visual",
   "status": "running",
-  "step": { "current": 2, "total": 7, "label": "step-02-aprovar-estrategia" },
+  "step": { "current": 4, "total": 7, "label": "step-04-aprovar-visuais" },
   "agents": [
     {
       "id": "beatriz-branding",
@@ -14,7 +14,7 @@
       "id": "vitor-visual",
       "name": "Vitor Visual",
       "icon": "🎨",
-      "status": "idle",
+      "status": "done",
       "desk": { "col": 2, "row": 1 }
     },
     {
@@ -33,11 +33,11 @@
     }
   ],
   "handoff": {
-    "from": "beatriz-branding",
-    "to": "vitor-visual",
-    "message": "Estratégia v2 com correções: faixa etária removida, palavra 'cura' eliminada, mãe protagonista reformulada como coach parental",
-    "completedAt": "2026-05-04T16:05:00Z"
+    "from": "vitor-visual",
+    "to": "carla-compilacao",
+    "message": "3 conceitos de logo, paleta Editorial Quente, par tipográfico Playfair+Lato e 4 mockups HTML prontos para revisão",
+    "completedAt": "2026-05-04T16:25:00Z"
   },
   "startedAt": "2026-05-04T15:57:29Z",
-  "updatedAt": "2026-05-04T16:05:00Z"
+  "updatedAt": "2026-05-04T16:25:00Z"
 }

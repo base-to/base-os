@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Clínica Base — 3 Conceitos de Logo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --charcoal: #3D2B1F;
+    --creme: #F5EFE6;
+    --cobre: #B87333;
+    --salvia: #7C9A7C;
+    --preto: #1A1A1A;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Lato', sans-serif;
+    background: var(--creme);
+    color: var(--charcoal);
+    padding: 60px 40px;
+  }
+  h1.page-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  p.page-sub {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 60px;
+    opacity: 0.7;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .card {
+    background: var(--creme);
+    border: 1px solid rgba(61, 43, 31, 0.15);
+    border-radius: 8px;
+    padding: 48px 32px;
+    text-align: center;
+  }
+  .card h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  .card .label {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cobre);
+    margin-bottom: 32px;
+  }
+  .logo-stage {
+    background: var(--creme);
+    padding: 60px 24px;
+    margin-bottom: 16px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo-stage.dark {
+    background: var(--charcoal);
+  }
+  .logo-stage.mono {
+    background: #ffffff;
+  }
+  .stage-label {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    opacity: 0.5;
+    margin-top: 8px;
+  }
+
+  /* ====== Conceito A: Lettermark B.A.S.E. ====== */
+  .logo-a {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--charcoal);
+    line-height: 1;
+    text-align: center;
+  }
+  .logo-a .lettermark {
+    font-size: 64px;
+    letter-spacing: -0.01em;
+  }
+  .logo-a .lettermark .b-init {
+    font-size: 110%;
+  }
+  .logo-a .name {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    color: var(--cobre);
+    margin-top: 14px;
+    text-transform: uppercase;
+  }
+  .logo-stage.dark .logo-a { color: var(--creme); }
+  .logo-stage.dark .logo-a .name { color: var(--cobre); }
+  .logo-stage.mono .logo-a, .logo-stage.mono .logo-a .name { color: var(--preto); }
+
+  /* ====== Conceito B: Símbolo Fundação ====== */
+  .logo-b {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .logo-b .symbol {
+    width: 64px;
+    height: 64px;
+    position: relative;
+  }
+  .logo-b .layer-bottom {
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    height: 22px;
+    background: var(--charcoal);
+  }
+  .logo-b .layer-top {
+    position: absolute;
+    top: 4px;
+    left: 8px;
+    width: 78%;
+    height: 22px;
+    background: var(--cobre);
+  }
+  .logo-b .name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: var(--charcoal);
+    line-height: 1;
+  }
+  .logo-stage.dark .logo-b .layer-bottom { background: var(--creme); }
+  .logo-stage.dark .logo-b .name { color: var(--creme); }
+  .logo-stage.mono .logo-b .layer-bottom { background: var(--preto); }
+  .logo-stage.mono .logo-b .layer-top { background: var(--preto); opacity: 0.5; }
+  .logo-stage.mono .logo-b .name { color: var(--preto); }
+
+  /* ====== Conceito C: Marca de Conexão ====== */
+  .logo-c {
+    text-align: center;
+  }
+  .logo-c svg {
+    display: block;
+    margin: 0 auto 14px;
+  }
+  .logo-c .name {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.16em;
+    color: var(--charcoal);
+    text-transform: uppercase;
+  }
+  .logo-c .name::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--cobre);
+    margin: 0 auto 12px;
+  }
+  .logo-stage.dark .logo-c .name { color: var(--creme); }
+  .logo-stage.mono .logo-c .name { color: var(--preto); }
+
+  .desc {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--charcoal);
+    text-align: left;
+    padding: 16px 8px 0;
+    border-top: 1px solid rgba(61, 43, 31, 0.15);
+    margin-top: 16px;
+  }
+  .desc strong {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+  <h1 class="page-title">Clínica Base · 3 Conceitos de Logo</h1>
+  <p class="page-sub">Sistema visual editorial quente · Identidade Visual v3</p>
+
+  <div class="grid">
+
+    <!-- Conceito A -->
+    <div class="card">
+      <h2>Conceito A</h2>
+      <div class="label">Lettermark B.A.S.E.</div>
+
+      <div class="logo-stage">
+        <div class="logo-a">
+          <div class="lettermark"><span class="b-init">B</span>.A.S.E.</div>
+          <div class="name">Clínica Base</div>
+        </div>
+        <div class="stage-label">Versão principal</div>
+      </div>
+
+      <div class="logo-stage dark">
+        <div class="logo-a">
+          <div class="lettermark"><span class="b-init">B</span>.A.S.E.</div>
+          <div class="name">Clínica Base</div>
+        </div>
+        <div class="stage-label" style="color: rgba(245,239,230,0.7)">Versão negativa</div>
+      </div>
+
+      <div class="logo-stage mono">
+        <div class="logo-a">
+          <div class="lettermark"><span class="b-init">B</span>.A.S.E.</div>
+          <div class="name">Clínica Base</div>
+        </div>
+        <div class="stage-label">Monocromática</div>
+      </div>
+
+      <div class="desc">
+        <strong>Justificativa</strong>
+        O Método B.A.S.E. é o ativo diferencial. Colocá-lo no centro do logo afirma que a metodologia é a clínica. Playfair Display traz autoridade editorial sem frieza.
+      </div>
+    </div>
+
+    <!-- Conceito B -->
+    <div class="card">
+      <h2>Conceito B</h2>
+      <div class="label">Símbolo Fundação</div>
+
+      <div class="logo-stage">
+        <div class="logo-b">
+          <div class="symbol">
+            <div class="layer-bottom"></div>
+            <div class="layer-top"></div>
+          </div>
+          <div class="name">Clínica Base</div>
+        </div>
+        <div class="stage-label">Versão principal</div>
+      </div>
+
+      <div class="logo-stage dark">
+        <div class="logo-b">
+          <div class="symbol">
+            <div class="layer-bottom"></div>
+            <div class="layer-top"></div>
+          </div>
+          <div class="name">Clínica Base</div>
+        </div>
+        <div class="stage-label" style="color: rgba(245,239,230,0.7)">Versão negativa</div>
+      </div>
+
+      <div class="logo-stage mono">
+        <div class="logo-b">
+          <div class="symbol">
+            <div class="layer-bottom"></div>
+            <div class="layer-top"></div>
+          </div>
+          <div class="name">Clínica Base</div>
+        </div>
+        <div class="stage-label">Monocromática</div>
+      </div>
+
+      <div class="desc">
+        <strong>Justificativa</strong>
+        "Base" é o nome e a metáfora central. Camadas horizontais sólidas comunicam estabilidade do Sábio. Deslocamento entre camadas adiciona o crescimento do Cuidador.
+      </div>
+    </div>
+
+    <!-- Conceito C -->
+    <div class="card">
+      <h2>Conceito C</h2>
+      <div class="label">Marca de Conexão</div>
+
+      <div class="logo-stage">
+        <div class="logo-c">
+          <svg width="100" height="80" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 20 60 Q 30 10, 50 40 Q 30 70, 20 60 Z" fill="#3D2B1F"/>
+            <path d="M 80 60 Q 70 10, 50 40 Q 70 70, 80 60 Z" fill="#7C9A7C"/>
+          </svg>
+          <div class="name">Clínica Base</div>
+        </div>
+        <div class="stage-label">Versão principal</div>
+      </div>
+
+      <div class="logo-stage dark">
+        <div class="logo-c">
+          <svg width="100" height="80" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 20 60 Q 30 10, 50 40 Q 30 70, 20 60 Z" fill="#F5EFE6"/>
+            <path d="M 80 60 Q 70 10, 50 40 Q 70 70, 80 60 Z" fill="#B87333"/>
+          </svg>
+          <div class="name">Clínica Base</div>
+        </div>
+        <div class="stage-label" style="color: rgba(245,239,230,0.7)">Versão negativa</div>
+      </div>
+
+      <div class="logo-stage mono">
+        <div class="logo-c">
+          <svg width="100" height="80" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 20 60 Q 30 10, 50 40 Q 30 70, 20 60 Z" fill="#1A1A1A"/>
+            <path d="M 80 60 Q 70 10, 50 40 Q 70 70, 80 60 Z" fill="#1A1A1A" fill-opacity="0.5"/>
+          </svg>
+          <div class="name">Clínica Base</div>
+        </div>
+        <div class="stage-label">Monocromática</div>
+      </div>
+
+      <div class="desc">
+        <strong>Justificativa</strong>
+        Díade mãe-filho como núcleo do método. Duas formas que só fazem sentido juntas, metáfora visual do coach parental.
+      </div>
+    </div>
+
+  </div>
+
+  <p style="text-align: center; margin-top: 60px; font-size: 13px; opacity: 0.6;">
+    Conceito recomendado: <strong>A — Lettermark B.A.S.E.</strong>
+  </p>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Clínica Base — Mockup Instagram Escuro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --charcoal: #3D2B1F;
+    --creme: #F5EFE6;
+    --cobre: #B87333;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #e5e5e5;
+    font-family: 'Lato', sans-serif;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .label {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    margin-bottom: 16px;
+  }
+  .post {
+    width: 540px;
+    height: 540px;
+    background: var(--charcoal);
+    color: var(--creme);
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    position: relative;
+  }
+  .logo-top {
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--creme);
+    line-height: 1;
+    text-align: center;
+  }
+  .logo-top .lettermark {
+    font-size: 22px;
+    letter-spacing: -0.01em;
+  }
+  .logo-top .lettermark .b-init { font-size: 110%; }
+  .logo-top .name {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 8px;
+    letter-spacing: 0.24em;
+    color: var(--cobre);
+    margin-top: 4px;
+    text-transform: uppercase;
+  }
+  .tagline {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.18;
+    color: var(--creme);
+    letter-spacing: -0.015em;
+    max-width: 380px;
+    margin-bottom: 28px;
+  }
+  .destaque {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--cobre);
+  }
+  .destaque::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--cobre);
+    margin: 0 auto 14px;
+  }
+  .footer-info {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    color: var(--creme);
+    opacity: 0.7;
+  }
+  .footer-info .sep { color: var(--cobre); margin: 0 6px; opacity: 1; }
+</style>
+</head>
+<body>
+  <div class="label">Mockup Instagram Escuro · Tagline da Marca</div>
+
+  <div class="post">
+    <div class="logo-top">
+      <div class="lettermark"><span class="b-init">B</span>.A.S.E.</div>
+      <div class="name">Clínica Base</div>
+    </div>
+
+    <div class="tagline">Onde o desenvolvimento começa pela mãe.</div>
+    <div class="destaque">Método B.A.S.E.</div>
+
+    <div class="footer-info">
+      Terapia Ocupacional<span class="sep">·</span>Sorocaba, SP<span class="sep">·</span>CREFITO-3 11824-TO
+    </div>
+  </div>
+</body>
+</html>
