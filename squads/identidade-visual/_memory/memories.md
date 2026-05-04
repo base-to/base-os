@@ -9,7 +9,7 @@
 
 ## Estrutura de Conteúdo
 
-- **Mãe protagonista = coach parental, não "mãe dentro da sessão".** A mãe participa em momentos-chave da sessão, recebe acesso direto a estratégias e ferramentas que o terapeuta usa, leva instruções claras para sustentar o desenvolvimento da criança em casa. Cuidado para não comunicar que a mãe fica dentro da sala durante toda a terapia. Razão: o diferencial real é o sistema estruturado de coach parental, não a presença física na sessão. Usar formulações como "preparar a mãe", "sustentar o desenvolvimento em casa", "ferramentas para a mãe", "coach parental".
+- **Hierarquia do serviço:** o serviço principal é a **sessão de Terapia Ocupacional para crianças**. O diferencial é a **mãe como protagonista** da terapia (participa em momentos-chave da sessão, recebe ferramentas e estratégias, leva instruções para sustentar o desenvolvimento em casa). O **coach parental** é uma das ferramentas do Método B.A.S.E. que estrutura essa participação. Razão: posicionar coach parental como produto principal distorce a oferta. O cliente contrata terapia para o filho, não treinamento para a mãe. Cuidado também com "mãe dentro da sessão" sem qualificar "em momentos-chave", para não dar a entender que a mãe fica na sala durante toda a terapia.
 
 ## Proibições Explícitas
 

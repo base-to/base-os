@@ -223,7 +223,7 @@ Razões:
 > "A mãe entende a criança antes do laudo entender."
 
 **Subtítulo (Body):** Lato Regular 22px, #3D2B1F, alinhado à esquerda
-> O coach parental do Método B.A.S.E. transforma essa intuição em sistema replicável em casa.
+> Na Clínica Base, a Terapia Ocupacional coloca essa intuição no centro do desenvolvimento da criança, pelo Método B.A.S.E.
 
 **CTA (CTA style):** Lato Bold 16px, #B87333, all caps, tracking 0.05em
 > SAIBA MAIS NA BIO
@@ -279,7 +279,7 @@ Razões:
 - [x] Nenhum elemento visual contradiz o arquétipo Cuidador + Sábio
 - [x] Tom visual editorial e profissional, sem elementos infantis ou pastéis
 - [x] Conteúdo dos mockups respeita as proibições explícitas: sem "cura", sem faixa etária, sem travessão, sem "não é X é Y", sem urgência artificial
-- [x] Linguagem dos mockups reflete coach parental como diferencial: "ferramentas", "sistema replicável em casa", "instruções claras"
+- [x] Linguagem dos mockups posiciona corretamente a hierarquia: serviço é Terapia Ocupacional, diferencial é a mãe como protagonista, coach parental é ferramenta de suporte
 
 ### Resultado do Teste de Coerência
 

@@ -26,7 +26,7 @@ O mundo clínico tem laudos, CID-10, prontuários, sessões onde a criança trab
 
 O mundo real é onde a criança existe de fato. É onde acontece a regulação, a tentativa de comunicação, o vínculo. É onde, se a mãe não sabe o que fazer, a terapia daquela semana inteira é desperdiçada.
 
-A Clínica Base resolve esse gap. O Método B.A.S.E. inclui um sistema de coach parental: a mãe participa em momentos-chave da sessão, recebe acesso direto às estratégias e ferramentas que o terapeuta usa, e leva instruções claras para sustentar o desenvolvimento da criança em casa. A clínica não é uma sala fechada por 45 minutos. É um sistema que entra em casa pela mão da mãe.
+A Clínica Base resolve esse gap. A Terapia Ocupacional aqui acontece com a mãe como protagonista do desenvolvimento da criança: ela participa em momentos-chave da sessão, recebe acesso direto às estratégias e ferramentas que o terapeuta usa, e leva instruções claras para sustentar o desenvolvimento da criança em casa. O coach parental é uma das ferramentas do Método B.A.S.E. que estrutura essa participação. A sessão não é uma sala fechada por 45 minutos. É um sistema que entra em casa pela mão da mãe.
 
 O problema que resolvemos não é "criança com atraso". É "mãe sem mapa para sustentar o desenvolvimento da criança ao lado dela."
 
@@ -38,7 +38,7 @@ O problema que resolvemos não é "criança com atraso". É "mãe sem mapa para 
 
 A essência operacional da Clínica Base é cuidar. Da criança e da mãe ao mesmo tempo, em sistema. O Cuidador é generoso, presente, confiável. Não abandona quando o caso fica complexo. Não usa jargão para se proteger emocionalmente do paciente. Fala com clareza e calor ao mesmo tempo.
 
-**Justificativa:** o Método B.A.S.E. foi construído ao redor do vínculo afetivo (o A de Afeto é central, não decorativo) e do protagonismo da mãe via coach parental. Isso não é estratégia de marca aplicada por cima do negócio. É a estrutura operacional do negócio. Escolher Cuidador é nomear o que a clínica já é.
+**Justificativa:** o Método B.A.S.E. foi construído ao redor do vínculo afetivo (o A de Afeto é central, não decorativo) e do protagonismo da mãe na Terapia Ocupacional da criança. Isso não é estratégia de marca aplicada por cima do negócio. É a estrutura operacional do negócio. Escolher Cuidador é nomear o que a clínica já é.
 
 **Marcas-referência do arquétipo:** Johnson & Johnson, UNICEF, Dove, Granado.
 
@@ -122,11 +122,11 @@ A terapia da Clínica Base não é genérica. É um método estruturado com prop
 
 O método é nomeado, ensinável e replicável. Esse é o ativo Sábio da marca.
 
-### Pilar 2: Mãe Protagonista (via Coach Parental)
+### Pilar 2: Mãe Protagonista da Terapia Ocupacional
 
-A mãe é parte ativa da estratégia terapêutica. Recebe acesso direto às ferramentas, estratégias e leituras que o terapeuta usa, participa em momentos-chave da sessão, e leva instruções claras para sustentar o desenvolvimento da criança em casa.
+O serviço da Clínica Base é a Terapia Ocupacional para crianças com atrasos do neurodesenvolvimento. O diferencial é como essa terapia acontece: com a mãe no centro do processo de desenvolvimento da criança, não no corredor.
 
-O método inclui coach parental estruturado. A mãe não fica dependente do consultório para continuar a evolução da criança. O terapeuta amplifica a mãe, não a substitui.
+Na sessão de Terapia Ocupacional, a mãe participa em momentos-chave, recebe acesso direto às ferramentas e estratégias que o terapeuta usa, e leva instruções claras para sustentar o desenvolvimento da criança em casa. O coach parental é uma das ferramentas do Método B.A.S.E. que estrutura essa participação. O terapeuta amplifica a mãe, não a substitui, e a mãe não fica dependente do consultório para continuar a evolução da criança.
 
 Esse é o pilar diferenciador. Aparece visualmente como decisão de cor (calor terroso, não frieza clínica), tipograficamente (serif com autoridade, não sans-serif distante) e em copy (segunda pessoa, com a mãe como sujeito da frase).
 
@@ -182,7 +182,7 @@ A marca opera com 6 tons calibrados (especificados em `pipeline/data/tone-of-voi
 
 1. **Método proprietário com nome (B.A.S.E.).** Nenhum concorrente investigado tem metodologia própria nominada. ABA, Integração Sensorial e Modelo Denver são técnicas externas. B.A.S.E. é original da Clínica Base.
 
-2. **Coach parental estruturado.** A mãe recebe acesso a estratégias, ferramentas e instruções para sustentar o desenvolvimento da criança em casa. Posicionamento único no segmento. Centro Baobá é multidisciplinar, instituto_singular é educação para profissionais, FMCSV é fundação. Nenhum estrutura coach parental como prática central.
+2. **Mãe como protagonista da Terapia Ocupacional.** O serviço é TO infantil, igual ao da concorrência no nome. A diferença é a posição da mãe no processo: ela participa em momentos-chave da sessão, recebe ferramentas e instruções, e sustenta o desenvolvimento da criança em casa. O coach parental é a ferramenta do Método B.A.S.E. que estrutura isso. Posicionamento único no segmento. Centro Baobá é multidisciplinar, instituto_singular é educação para profissionais, FMCSV é fundação. Nenhum coloca a mãe nessa posição operacional dentro da TO.
 
 3. **Relação mãe-filho como alavanca terapêutica primária.** Não é um recurso entre outros, é a estrutura sobre a qual o método opera. Outros usam relação como suporte. A Clínica Base usa relação como instrumento.
 
