@@ -1,0 +1,49 @@
+squad_code: "identidade-visual"
+purpose: "Criar a identidade visual completa da Clínica Base do zero — logo, paleta de cores, tipografia e branding kit"
+domain: "content"
+
+company:
+  name: "Clínica Base"
+  tone: "Informal mas profundo. Especialista acessível. Fatos concretos com emoção. Sem jargão não traduzido."
+  products: "Terapia Ocupacional infantil, Método B.A.S.E. (Brincar, Afeto, Sensorial, Estimulação)"
+  audience: "Mães de crianças com TEA, TDAH e atrasos do neurodesenvolvimento em Sorocaba, SP"
+
+language: "Português (Brasil)"
+
+context:
+  audience: "Mães e famílias de crianças com atrasos e transtornos do neurodesenvolvimento"
+  visual_personality: "Profissional e confiável — autoridade clínica, paleta sóbria, tipografia forte"
+  starting_point: "Zero — sem logo, sem paleta, sem identidade existente"
+  deliverables:
+    - logo
+    - paleta de cores
+    - tipografia
+    - branding kit completo
+
+tools_needed:
+  - canva
+  - image-ai-generator
+  - image-creator
+  - template-designer
+
+investigation:
+  enabled: true
+  profiles:
+    - url: "https://centrobaoba.com.br/"
+      platform: "website"
+      investigation_mode: "webfetch"
+    - url: "https://www.instagram.com/lidiane.winck/"
+      platform: "instagram"
+      investigation_mode: "profile_3"
+    - url: "https://www.instagram.com/instituto_singular/"
+      platform: "instagram"
+      investigation_mode: "profile_3"
+    - url: "https://institutosingular.org/cursos/"
+      platform: "website"
+      investigation_mode: "webfetch"
+    - url: "https://fundacaomariacecilia.org.br/"
+      platform: "website"
+      investigation_mode: "webfetch"
+
+target_formats:
+  - image-design
