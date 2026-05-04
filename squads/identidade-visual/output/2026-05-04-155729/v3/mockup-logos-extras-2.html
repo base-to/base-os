@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Clínica Base — Conceitos G, H, I</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --charcoal: #3D2B1F;
+    --creme: #F5EFE6;
+    --cobre: #B87333;
+    --salvia: #7C9A7C;
+    --preto: #1A1A1A;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Lato', sans-serif;
+    background: var(--creme);
+    color: var(--charcoal);
+    padding: 60px 40px;
+  }
+  h1.page-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  p.page-sub {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 60px;
+    opacity: 0.7;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .card {
+    background: var(--creme);
+    border: 1px solid rgba(61, 43, 31, 0.15);
+    border-radius: 8px;
+    padding: 48px 32px;
+    text-align: center;
+  }
+  .card h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  .card .label {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cobre);
+    margin-bottom: 32px;
+  }
+  .logo-stage {
+    background: var(--creme);
+    padding: 60px 24px;
+    margin-bottom: 16px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo-stage.dark { background: var(--charcoal); }
+  .logo-stage.mono { background: #ffffff; }
+  .stage-label {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    opacity: 0.5;
+    margin-top: 14px;
+  }
+
+  /* ====== Conceito G: Wordmark "base." ====== */
+  .logo-g {
+    text-align: center;
+    color: var(--charcoal);
+  }
+  .logo-g .wordmark {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 88px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .logo-g .dot { color: var(--cobre); }
+  .logo-g .name {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    color: var(--charcoal);
+    text-transform: uppercase;
+    margin-top: 16px;
+    opacity: 0.85;
+  }
+  .logo-stage.dark .logo-g .wordmark { color: var(--creme); }
+  .logo-stage.dark .logo-g .name { color: var(--creme); opacity: 0.85; }
+  .logo-stage.dark .logo-g .dot { color: var(--cobre); }
+  .logo-stage.mono .logo-g .wordmark { color: var(--preto); }
+  .logo-stage.mono .logo-g .dot { color: var(--preto); }
+  .logo-stage.mono .logo-g .name { color: var(--preto); }
+
+  /* ====== Conceito H: Letra "B" Monumental ====== */
+  .logo-h {
+    text-align: center;
+    color: var(--charcoal);
+  }
+  .logo-h svg { display: block; margin: 0 auto; }
+  .logo-h .name {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.28em;
+    color: var(--charcoal);
+    text-transform: uppercase;
+    margin-top: 14px;
+  }
+  .logo-stage.dark .logo-h .name { color: var(--creme); }
+  .logo-stage.mono .logo-h .name { color: var(--preto); }
+
+  /* ====== Conceito I: Marca Concêntrica ====== */
+  .logo-i {
+    text-align: center;
+    color: var(--charcoal);
+  }
+  .logo-i svg { display: block; margin: 0 auto 16px; }
+  .logo-i .name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--charcoal);
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+  .logo-i .name::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--cobre);
+    margin: 0 auto 10px;
+  }
+  .logo-stage.dark .logo-i .name { color: var(--creme); }
+  .logo-stage.mono .logo-i .name { color: var(--preto); }
+
+  .desc {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--charcoal);
+    text-align: left;
+    padding: 16px 8px 0;
+    border-top: 1px solid rgba(61, 43, 31, 0.15);
+    margin-top: 16px;
+  }
+  .desc strong {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+  <h1 class="page-title">Clínica Base · Conceitos G, H, I</h1>
+  <p class="page-sub">Mais 3 direções no mesmo território limpo/editorial dos conceitos A, B, C</p>
+
+  <div class="grid">
+
+    <!-- ====== Conceito G: Wordmark "base." ====== -->
+    <div class="card">
+      <h2>Conceito G</h2>
+      <div class="label">Wordmark "base." Italic</div>
+
+      <div class="logo-stage">
+        <div class="logo-g">
+          <div class="wordmark">base<span class="dot">.</span></div>
+          <div class="name">Clínica · Sorocaba</div>
+        </div>
+        <div class="stage-label">Versão principal</div>
+      </div>
+
+      <div class="logo-stage dark">
+        <div class="logo-g">
+          <div class="wordmark">base<span class="dot">.</span></div>
+          <div class="name">Clínica · Sorocaba</div>
+        </div>
+        <div class="stage-label" style="color: rgba(245,239,230,0.7)">Versão negativa</div>
+      </div>
+
+      <div class="logo-stage mono">
+        <div class="logo-g">
+          <div class="wordmark">base<span class="dot">.</span></div>
+          <div class="name">Clínica · Sorocaba</div>
+        </div>
+        <div class="stage-label">Monocromática</div>
+      </div>
+
+      <div class="desc">
+        <strong>Justificativa</strong>
+        Wordmark editorial em itálico que afirma a identidade como declaração: <em>base.</em> O ponto em cobre é o único elemento de cor, virando assinatura visual. Tom maduro e premium, completamente diferente da estética pastel pediátrica do segmento.
+      </div>
+    </div>
+
+    <!-- ====== Conceito H: Letra "B" Monumental ====== -->
+    <div class="card">
+      <h2>Conceito H</h2>
+      <div class="label">Letra "B" Monumental</div>
+
+      <div class="logo-stage">
+        <div class="logo-h">
+          <svg width="120" height="140" viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg">
+            <text x="60" y="100" font-family="Playfair Display" font-size="120" font-weight="900" fill="#3D2B1F" text-anchor="middle" letter-spacing="-2">B</text>
+            <line x1="6" y1="118" x2="114" y2="118" stroke="#B87333" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <div class="name">Clínica Base</div>
+        </div>
+        <div class="stage-label">Versão principal</div>
+      </div>
+
+      <div class="logo-stage dark">
+        <div class="logo-h">
+          <svg width="120" height="140" viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg">
+            <text x="60" y="100" font-family="Playfair Display" font-size="120" font-weight="900" fill="#F5EFE6" text-anchor="middle" letter-spacing="-2">B</text>
+            <line x1="6" y1="118" x2="114" y2="118" stroke="#B87333" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <div class="name">Clínica Base</div>
+        </div>
+        <div class="stage-label" style="color: rgba(245,239,230,0.7)">Versão negativa</div>
+      </div>
+
+      <div class="logo-stage mono">
+        <div class="logo-h">
+          <svg width="120" height="140" viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg">
+            <text x="60" y="100" font-family="Playfair Display" font-size="120" font-weight="900" fill="#1A1A1A" text-anchor="middle" letter-spacing="-2">B</text>
+            <line x1="6" y1="118" x2="114" y2="118" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <div class="name">Clínica Base</div>
+        </div>
+        <div class="stage-label">Monocromática</div>
+      </div>
+
+      <div class="desc">
+        <strong>Justificativa</strong>
+        Letra "B" serifada com linha de base estendida em cobre. Marca arquitetônica que comunica literalmente "B + base". Funciona como favicon perfeito (apenas o B), bordado claro e relevo seco. Memorabilidade alta com simplicidade radical.
+      </div>
+    </div>
+
+    <!-- ====== Conceito I: Marca Concêntrica ====== -->
+    <div class="card">
+      <h2>Conceito I</h2>
+      <div class="label">Marca Concêntrica</div>
+
+      <div class="logo-stage">
+        <div class="logo-i">
+          <svg width="140" height="90" viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg">
+            <line x1="10" y1="80" x2="130" y2="80" stroke="#3D2B1F" stroke-width="2"/>
+            <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#3D2B1F" stroke-width="3" fill="none"/>
+            <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#7C9A7C" stroke-width="3" fill="none"/>
+            <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#B87333" stroke-width="3" fill="none"/>
+          </svg>
+          <div class="name">Clínica Base</div>
+        </div>
+        <div class="stage-label">Versão principal</div>
+      </div>
+
+      <div class="logo-stage dark">
+        <div class="logo-i">
+          <svg width="140" height="90" viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg">
+            <line x1="10" y1="80" x2="130" y2="80" stroke="#F5EFE6" stroke-width="2"/>
+            <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#F5EFE6" stroke-width="3" fill="none"/>
+            <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#7C9A7C" stroke-width="3" fill="none"/>
+            <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#B87333" stroke-width="3" fill="none"/>
+          </svg>
+          <div class="name">Clínica Base</div>
+        </div>
+        <div class="stage-label" style="color: rgba(245,239,230,0.7)">Versão negativa</div>
+      </div>
+
+      <div class="logo-stage mono">
+        <div class="logo-i">
+          <svg width="140" height="90" viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg">
+            <line x1="10" y1="80" x2="130" y2="80" stroke="#1A1A1A" stroke-width="2"/>
+            <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#1A1A1A" stroke-width="3" fill="none"/>
+            <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#1A1A1A" stroke-width="3" fill="none" stroke-opacity="0.7"/>
+            <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#1A1A1A" stroke-width="3" fill="none" stroke-opacity="0.45"/>
+          </svg>
+          <div class="name">Clínica Base</div>
+        </div>
+        <div class="stage-label">Monocromática</div>
+      </div>
+
+      <div class="desc">
+        <strong>Justificativa</strong>
+        Três arcos aninhados subindo de uma mesma linha-base: clínica (charcoal externo), mãe (sálvia), criança (cobre interno). Todos compartilham a mesma fundação. Sem figura humana literal. Geométrico e limpo, com leitura semântica clara.
+      </div>
+    </div>
+
+  </div>
+
+  <p style="text-align: center; margin-top: 60px; font-size: 13px; opacity: 0.6;">
+    Para comparar com os outros conceitos: <strong>mockup-logos.html</strong> (A, B, C) e <strong>mockup-logos-extras.html</strong> (D, E, F)
+  </p>
+</body>
+</html>
