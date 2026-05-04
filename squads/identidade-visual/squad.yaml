@@ -1,0 +1,30 @@
+squad:
+  code: "identidade-visual"
+  name: "Identidade Visual — Clínica Base"
+  description: "Cria a identidade visual completa da Clínica Base: logo, paleta de cores, tipografia e branding kit"
+  version: "1.0.0"
+  language: "pt-BR"
+
+skills:
+  - web_search
+  - web_fetch
+  - canva
+  - image-ai-generator
+  - image-creator
+
+data:
+  - pipeline/data/research-brief.md
+  - pipeline/data/domain-framework.md
+  - pipeline/data/quality-criteria.md
+  - pipeline/data/output-examples.md
+  - pipeline/data/anti-patterns.md
+  - pipeline/data/tone-of-voice.md
+
+agents:
+  - path: ./agents/beatriz-branding.agent.md
+  - path: ./agents/vitor-visual.agent.md
+  - path: ./agents/carla-compilacao.agent.md
+  - path: ./agents/paulo-padrao.agent.md
+
+pipeline:
+  entry: pipeline/pipeline.yaml

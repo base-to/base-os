@@ -1,0 +1,18 @@
+pipeline:
+  code: "identidade-visual"
+  name: "Identidade Visual Pipeline"
+  version: "1.0.0"
+
+  steps:
+    - file: steps/step-01-estrategia-de-marca.md
+    - file: steps/step-02-aprovar-estrategia.md
+    - file: steps/step-03-criar-visuais.md
+    - file: steps/step-04-aprovar-visuais.md
+    - file: steps/step-05-montar-brandkit.md
+    - file: steps/step-06-revisar-qualidade.md
+    - file: steps/step-07-aprovacao-final.md
+
+  checkpoints:
+    - step-02-aprovar-estrategia
+    - step-04-aprovar-visuais
+    - step-07-aprovacao-final

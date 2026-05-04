@@ -1,0 +1,5 @@
+id,name,title,icon,execution,path
+identidade-visual/agents/beatriz-branding,Beatriz Branding,Estrategista de Marca,🧭,inline,./agents/beatriz-branding.agent.md
+identidade-visual/agents/vitor-visual,Vitor Visual,Designer Visual,🎨,inline,./agents/vitor-visual.agent.md
+identidade-visual/agents/carla-compilacao,Carla Compilação,Brand Kit Builder,📋,subagent,./agents/carla-compilacao.agent.md
+identidade-visual/agents/paulo-padrao,Paulo Padrão,Revisor de Qualidade,✅,inline,./agents/paulo-padrao.agent.md
