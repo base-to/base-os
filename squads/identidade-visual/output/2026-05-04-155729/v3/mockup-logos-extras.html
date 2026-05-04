@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Clínica Base — Conceitos D, E, F</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --charcoal: #3D2B1F;
+    --creme: #F5EFE6;
+    --cobre: #B87333;
+    --salvia: #7C9A7C;
+    --preto: #1A1A1A;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Lato', sans-serif;
+    background: var(--creme);
+    color: var(--charcoal);
+    padding: 60px 40px;
+  }
+  h1.page-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  p.page-sub {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 60px;
+    opacity: 0.7;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .card {
+    background: var(--creme);
+    border: 1px solid rgba(61, 43, 31, 0.15);
+    border-radius: 8px;
+    padding: 48px 32px;
+    text-align: center;
+  }
+  .card h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  .card .label {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cobre);
+    margin-bottom: 32px;
+  }
+  .logo-stage {
+    background: var(--creme);
+    padding: 60px 24px;
+    margin-bottom: 16px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo-stage.dark { background: var(--charcoal); }
+  .logo-stage.mono { background: #ffffff; }
+  .stage-label {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    opacity: 0.5;
+    margin-top: 12px;
+  }
+
+  /* ====== Conceito D: Monograma CB ====== */
+  .logo-d {
+    text-align: center;
+    color: var(--charcoal);
+  }
+  .logo-d .monogram {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    letter-spacing: -0.08em;
+  }
+  .logo-d .monogram .c {
+    color: var(--cobre);
+    position: relative;
+    z-index: 2;
+  }
+  .logo-d .monogram .b {
+    color: var(--charcoal);
+    margin-left: -0.18em;
+    position: relative;
+    z-index: 1;
+  }
+  .logo-d .name {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.22em;
+    color: var(--charcoal);
+    text-transform: uppercase;
+    margin-top: 18px;
+  }
+  .logo-d .name::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1px;
+    background: var(--cobre);
+    margin: 0 auto 12px;
+  }
+  .logo-stage.dark .logo-d .monogram .c { color: var(--cobre); }
+  .logo-stage.dark .logo-d .monogram .b { color: var(--creme); }
+  .logo-stage.dark .logo-d .name { color: var(--creme); }
+  .logo-stage.mono .logo-d .monogram .c { color: var(--preto); opacity: 0.5; }
+  .logo-stage.mono .logo-d .monogram .b { color: var(--preto); }
+  .logo-stage.mono .logo-d .name { color: var(--preto); }
+
+  /* ====== Conceito E: Selo Editorial ====== */
+  .logo-e {
+    text-align: center;
+  }
+  .logo-e svg {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* ====== Conceito F: Símbolo Ponte ====== */
+  .logo-f {
+    text-align: center;
+    color: var(--charcoal);
+  }
+  .logo-f svg {
+    display: block;
+    margin: 0 auto 14px;
+  }
+  .logo-f .name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--charcoal);
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+  .logo-stage.dark .logo-f .name { color: var(--creme); }
+  .logo-stage.mono .logo-f .name { color: var(--preto); }
+
+  .desc {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--charcoal);
+    text-align: left;
+    padding: 16px 8px 0;
+    border-top: 1px solid rgba(61, 43, 31, 0.15);
+    margin-top: 16px;
+  }
+  .desc strong {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+  <h1 class="page-title">Clínica Base · Conceitos D, E, F</h1>
+  <p class="page-sub">Direções alternativas além dos conceitos A, B, C</p>
+
+  <div class="grid">
+
+    <!-- ====== Conceito D: Monograma CB ====== -->
+    <div class="card">
+      <h2>Conceito D</h2>
+      <div class="label">Monograma CB</div>
+
+      <div class="logo-stage">
+        <div class="logo-d">
+          <div class="monogram"><span class="c">C</span><span class="b">B</span></div>
+          <div class="name">Clínica Base</div>
+        </div>
+        <div class="stage-label">Versão principal</div>
+      </div>
+
+      <div class="logo-stage dark">
+        <div class="logo-d">
+          <div class="monogram"><span class="c">C</span><span class="b">B</span></div>
+          <div class="name">Clínica Base</div>
+        </div>
+        <div class="stage-label" style="color: rgba(245,239,230,0.7)">Versão negativa</div>
+      </div>
+
+      <div class="logo-stage mono">
+        <div class="logo-d">
+          <div class="monogram"><span class="c">C</span><span class="b">B</span></div>
+          <div class="name">Clínica Base</div>
+        </div>
+        <div class="stage-label">Monocromática</div>
+      </div>
+
+      <div class="desc">
+        <strong>Justificativa</strong>
+        Monograma editorial que une "Clínica" (cuidado, envolvimento) e "Base" (estrutura, fundação). Formato pessoal e íntimo, ideal para selo, papelaria, gravações em metal e couro.
+      </div>
+    </div>
+
+    <!-- ====== Conceito E: Selo Editorial ====== -->
+    <div class="card">
+      <h2>Conceito E</h2>
+      <div class="label">Selo Editorial B.A.S.E.</div>
+
+      <div class="logo-stage">
+        <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <path id="circle-top-d" d="M 100,100 m -78,0 a 78,78 0 0,1 156,0" fill="none"/>
+            <path id="circle-bot-d" d="M 100,100 m -72,0 a 72,72 0 1,0 144,0" fill="none" transform="rotate(180 100 100)"/>
+          </defs>
+          <circle cx="100" cy="100" r="92" fill="none" stroke="#3D2B1F" stroke-width="1.5"/>
+          <circle cx="100" cy="100" r="86" fill="none" stroke="#B87333" stroke-width="0.5"/>
+          <text font-family="Lato" font-size="9" font-weight="700" fill="#3D2B1F" letter-spacing="3">
+            <textPath href="#circle-top-d" startOffset="50%" text-anchor="middle">CLÍNICA BASE · SOROCABA · SP</textPath>
+          </text>
+          <text font-family="Lato" font-size="8" font-weight="400" fill="#3D2B1F" letter-spacing="2">
+            <textPath href="#circle-bot-d" startOffset="50%" text-anchor="middle">CREFITO-3 11824-TO</textPath>
+          </text>
+          <text x="100" y="98" font-family="Playfair Display" font-size="32" font-weight="700" fill="#3D2B1F" text-anchor="middle" letter-spacing="-1">B.A.S.E.</text>
+          <line x1="65" y1="110" x2="135" y2="110" stroke="#B87333" stroke-width="0.8"/>
+          <text x="100" y="128" font-family="Playfair Display" font-style="italic" font-size="11" fill="#3D2B1F" text-anchor="middle">método</text>
+        </svg>
+        <div class="stage-label">Versão principal</div>
+      </div>
+
+      <div class="logo-stage dark">
+        <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <path id="circle-top-dark" d="M 100,100 m -78,0 a 78,78 0 0,1 156,0" fill="none"/>
+            <path id="circle-bot-dark" d="M 100,100 m -72,0 a 72,72 0 1,0 144,0" fill="none" transform="rotate(180 100 100)"/>
+          </defs>
+          <circle cx="100" cy="100" r="92" fill="none" stroke="#F5EFE6" stroke-width="1.5"/>
+          <circle cx="100" cy="100" r="86" fill="none" stroke="#B87333" stroke-width="0.5"/>
+          <text font-family="Lato" font-size="9" font-weight="700" fill="#F5EFE6" letter-spacing="3">
+            <textPath href="#circle-top-dark" startOffset="50%" text-anchor="middle">CLÍNICA BASE · SOROCABA · SP</textPath>
+          </text>
+          <text font-family="Lato" font-size="8" font-weight="400" fill="#F5EFE6" letter-spacing="2">
+            <textPath href="#circle-bot-dark" startOffset="50%" text-anchor="middle">CREFITO-3 11824-TO</textPath>
+          </text>
+          <text x="100" y="98" font-family="Playfair Display" font-size="32" font-weight="700" fill="#F5EFE6" text-anchor="middle" letter-spacing="-1">B.A.S.E.</text>
+          <line x1="65" y1="110" x2="135" y2="110" stroke="#B87333" stroke-width="0.8"/>
+          <text x="100" y="128" font-family="Playfair Display" font-style="italic" font-size="11" fill="#F5EFE6" text-anchor="middle">método</text>
+        </svg>
+        <div class="stage-label" style="color: rgba(245,239,230,0.7)">Versão negativa</div>
+      </div>
+
+      <div class="logo-stage mono">
+        <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <path id="circle-top-m" d="M 100,100 m -78,0 a 78,78 0 0,1 156,0" fill="none"/>
+            <path id="circle-bot-m" d="M 100,100 m -72,0 a 72,72 0 1,0 144,0" fill="none" transform="rotate(180 100 100)"/>
+          </defs>
+          <circle cx="100" cy="100" r="92" fill="none" stroke="#1A1A1A" stroke-width="1.5"/>
+          <circle cx="100" cy="100" r="86" fill="none" stroke="#1A1A1A" stroke-width="0.5"/>
+          <text font-family="Lato" font-size="9" font-weight="700" fill="#1A1A1A" letter-spacing="3">
+            <textPath href="#circle-top-m" startOffset="50%" text-anchor="middle">CLÍNICA BASE · SOROCABA · SP</textPath>
+          </text>
+          <text font-family="Lato" font-size="8" font-weight="400" fill="#1A1A1A" letter-spacing="2">
+            <textPath href="#circle-bot-m" startOffset="50%" text-anchor="middle">CREFITO-3 11824-TO</textPath>
+          </text>
+          <text x="100" y="98" font-family="Playfair Display" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle" letter-spacing="-1">B.A.S.E.</text>
+          <line x1="65" y1="110" x2="135" y2="110" stroke="#1A1A1A" stroke-width="0.8"/>
+          <text x="100" y="128" font-family="Playfair Display" font-style="italic" font-size="11" fill="#1A1A1A" text-anchor="middle">método</text>
+        </svg>
+        <div class="stage-label">Monocromática</div>
+      </div>
+
+      <div class="desc">
+        <strong>Justificativa</strong>
+        Selo editorial com B.A.S.E. centralizado e CREFITO-3 ao redor. Combina autoridade técnica (registro profissional no logo) com tradição editorial (formato circular). Nenhum concorrente investigado usa selo. Diferenciação máxima.
+      </div>
+    </div>
+
+    <!-- ====== Conceito F: Símbolo Ponte ====== -->
+    <div class="card">
+      <h2>Conceito F</h2>
+      <div class="label">Símbolo Ponte</div>
+
+      <div class="logo-stage">
+        <div class="logo-f">
+          <svg width="120" height="80" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="10" y1="65" x2="110" y2="65" stroke="#3D2B1F" stroke-width="3" stroke-linecap="round"/>
+            <path d="M 25 65 Q 60 15, 95 65" stroke="#3D2B1F" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <line x1="25" y1="65" x2="25" y2="40" stroke="#3D2B1F" stroke-width="2" stroke-linecap="round"/>
+            <line x1="95" y1="65" x2="95" y2="40" stroke="#3D2B1F" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="60" cy="32" r="4" fill="#B87333"/>
+          </svg>
+          <div class="name">Clínica Base</div>
+        </div>
+        <div class="stage-label">Versão principal</div>
+      </div>
+
+      <div class="logo-stage dark">
+        <div class="logo-f">
+          <svg width="120" height="80" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="10" y1="65" x2="110" y2="65" stroke="#F5EFE6" stroke-width="3" stroke-linecap="round"/>
+            <path d="M 25 65 Q 60 15, 95 65" stroke="#F5EFE6" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <line x1="25" y1="65" x2="25" y2="40" stroke="#F5EFE6" stroke-width="2" stroke-linecap="round"/>
+            <line x1="95" y1="65" x2="95" y2="40" stroke="#F5EFE6" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="60" cy="32" r="4" fill="#B87333"/>
+          </svg>
+          <div class="name">Clínica Base</div>
+        </div>
+        <div class="stage-label" style="color: rgba(245,239,230,0.7)">Versão negativa</div>
+      </div>
+
+      <div class="logo-stage mono">
+        <div class="logo-f">
+          <svg width="120" height="80" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="10" y1="65" x2="110" y2="65" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round"/>
+            <path d="M 25 65 Q 60 15, 95 65" stroke="#1A1A1A" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <line x1="25" y1="65" x2="25" y2="40" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+            <line x1="95" y1="65" x2="95" y2="40" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="60" cy="32" r="4" fill="#1A1A1A"/>
+          </svg>
+          <div class="name">Clínica Base</div>
+        </div>
+        <div class="stage-label">Monocromática</div>
+      </div>
+
+      <div class="desc">
+        <strong>Justificativa</strong>
+        Forma abstrata de ponte/arco. Metáfora visual do diagnóstico estratégico: a Clínica Base é a ponte entre o mundo clínico (laudo, sessão) e o mundo real (casa, dia a dia). O ponto cobre representa a criança caminhando entre os dois mundos.
+      </div>
+    </div>
+
+  </div>
+
+  <p style="text-align: center; margin-top: 60px; font-size: 13px; opacity: 0.6;">
+    Para comparar com os conceitos originais, abra também <strong>mockup-logos.html</strong>
+  </p>
+</body>
+</html>
