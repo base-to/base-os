@@ -60,7 +60,7 @@ Cuidador 70% e Sábio 30%. Em cada peça de comunicação, o Cuidador dirige o t
 
 ### Frase de Posicionamento
 
-> Para mães de crianças com atrasos do neurodesenvolvimento em Sorocaba, a Clínica Base é a única clínica de Terapia Ocupacional que prepara a mãe para sustentar o desenvolvimento da criança em casa, pelo Método B.A.S.E.
+> A Clínica Base é uma clínica de Terapia Ocupacional em Sorocaba que trabalha lado a lado com a mãe para sustentar o desenvolvimento da criança no dia a dia, pelo Método B.A.S.E.
 
 ### Teste de Especificidade
 
@@ -68,10 +68,10 @@ Cuidador 70% e Sábio 30%. Em cada peça de comunicação, o Cuidador dirige o t
 
 **Resposta:** não. Dois elementos travam a apropriação:
 
-- "Preparar a mãe para sustentar o desenvolvimento em casa". Nenhum concorrente investigado posiciona a mãe como agente do desenvolvimento via coach parental estruturado. centrobaoba é multidisciplinar evidência-baseada, instituto_singular é educação para profissionais, lidiane.winck é prática individual sem método nomeado.
+- "Trabalha lado a lado com a mãe para sustentar o desenvolvimento no dia a dia". Nenhum concorrente investigado posiciona a relação clínica-mãe como parceria operacional contínua via coach parental estruturado. centrobaoba é multidisciplinar evidência-baseada, instituto_singular é educação para profissionais, lidiane.winck é prática individual sem método nomeado.
 - "Método B.A.S.E.". É proprietário e nominado. Não é genérico como ABA ou Integração Sensorial.
 
-A especificidade está protegida por dois ativos exclusivos. O posicionamento passa.
+A especificidade está protegida por dois ativos exclusivos. O posicionamento passa, sem precisar reivindicar exclusividade explícita.
 
 ---
 
