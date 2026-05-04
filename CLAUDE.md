@@ -24,6 +24,7 @@ Workspace de gestão e comunicação da Clínica Base, clínica de Terapia Ocupa
 - `dados/` — drop zone para arquivos a analisar (CSV, XLSX, PDF, imagens)
 - `templates/skills/` — templates de skills prontos para personalizar com /mapear
 - `templates/ferramentas/catalogo.md` — APIs e ferramentas disponíveis para usar em skills
+- `_opensquad/` — framework de automação multi-agente (skills, squads, memória do Opensquad)
 
 ## Sobre o negócio
 Clínica Base é uma clínica de Terapia Ocupacional especializada em crianças com atrasos e transtornos do neurodesenvolvimento (TEA, TDAH, dificuldades sensoriais). Fundada por Regiane Vidal (CREFITO-3 11824-TO) e gerida em parceria com Fagner, casal e sócios. Localizada em Sorocaba, SP. Opera pelo Método B.A.S.E. (Brincar, Afeto, Sensorial, Estimulação), com a mãe como protagonista do tratamento.
