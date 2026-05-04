@@ -10,7 +10,7 @@ A Clínica Base é uma clínica de Terapia Ocupacional especializada em criança
 
 Modelo híbrido: presta serviço para a DesenvolvaCentro (parceira em São Paulo, principal fonte de receita atual) e atende famílias diretamente em Sorocaba (B2C em crescimento). Antes atendia múltiplas clínicas em SP, modelo reduzido à parceria atual enquanto constrói base de pacientes próprios.
 
-**Público primário (B2C):** mães de classes B e C em Sorocaba e região, com crianças entre 1 e 8 anos com diagnóstico ou suspeita de atraso do neurodesenvolvimento.
+**Público primário (B2C):** mães de classes A e B em Sorocaba e região, com crianças entre com diagnóstico ou suspeita de atraso do neurodesenvolvimento.
 
 **Ponto de partida:** zero. Sem logo, sem paleta, sem identidade visual existente. A estratégia é construir do zero a identidade que vai guiar a captação direta de pacientes.
 
