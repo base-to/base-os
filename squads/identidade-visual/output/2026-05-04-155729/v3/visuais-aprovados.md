@@ -78,19 +78,30 @@
 
 ---
 
-### Conceito Recomendado
+### Conceito Escolhido
 
-**Conceito A (Lettermark B.A.S.E.) como logo principal.**
+**Conceito I (Marca Concêntrica) como logo principal.**
 
-Razões:
-1. **Diferenciação máxima no segmento.** Nenhum concorrente investigado (centrobaoba, instituto_singular, lidiane.winck, FMCSV) usa lettermark tipográfico do método. Rompe com o padrão de símbolos genéricos.
-2. **Reforça o ativo proprietário.** O Método B.A.S.E. é o diferencial central da marca. O logo o mantém à vista em qualquer aplicação.
-3. **Versatilidade total.** Funciona em todos os formatos testados (favicon, bordado, relevo, monocromático).
-4. **Alinhamento de arquétipo.** Tipografia editorial é o veículo do Sábio. O calor do Playfair impede que vire frio.
+Após exploração de 9 conceitos (A–I), o usuário selecionou o Conceito I.
 
-**Conceito B (Símbolo Fundação)** fica como **alternativa para aplicações institucionais** onde o lettermark pode perder versatilidade (placa de entrada em alto relevo, uniforme bordado).
+**Descrição do Conceito I:** três arcos aninhados subindo de uma mesma linha-base. O arco externo em charcoal (#3D2B1F) representa a clínica, o arco intermediário em sálvia (#7C9A7C) representa a mãe, e o arco interno em cobre (#B87333) representa a criança. Todos os três compartilham a mesma linha de base — metáfora visual do posicionamento: clínica, mãe e criança alinhadas na mesma fundação de desenvolvimento.
 
-**Conceito C (Marca de Conexão)** fica como **biblioteca de elemento gráfico secundário** para campanhas que destacam o coach parental e a relação mãe-filho. Não vira logo principal, mas pode aparecer em capa de e-book, posts educacionais sobre vínculo, e materiais para a mãe.
+Razões da escolha:
+1. **Leitura semântica clara.** Sem figura humana literal, o conceito ainda comunica relação e conjunto. As três entidades (clínica, mãe, criança) ficam visíveis como sistema, alinhadas ao Pilar 2 (Mãe Protagonista).
+2. **Geometria editorial limpa.** Não usa árvore, coração, cruz ou símbolo genérico de saúde. Sai do clichê do segmento.
+3. **Versatilidade.** Os arcos funcionam em favicon (apenas o arco maior), bordado (formas geométricas claras), relevo seco e em preto e branco com diferenciação por opacidade.
+4. **Cores integradas ao símbolo.** Os 3 arcos usam 3 cores da paleta principal, fazendo o logo carregar parte do sistema visual ao mesmo tempo.
+5. **Diferenciação frontal.** Nenhum concorrente investigado usa marca concêntrica de arcos. É território visual próprio.
+
+**Conceito A (Lettermark B.A.S.E.)** fica disponível como **alternativa tipográfica** quando o símbolo não puder ser reproduzido (ex: assinatura de e-mail puramente texto, comunicação muito reduzida).
+
+**Aplicações renderizadas (HTML):**
+- `mockup-logos.html` — 3 conceitos originais lado a lado (A, B, C)
+- `mockup-logos-extras.html` — 3 conceitos alternativos (D, E, F)
+- `mockup-logos-extras-2.html` — 3 conceitos alternativos (G, H, I) — **Conceito I aqui**
+- `mockup-instagram-claro.html` — Conceito I aplicado em post Instagram fundo creme
+- `mockup-instagram-escuro.html` — Conceito I aplicado em post Instagram fundo charcoal com tagline
+- `mockup-cartao-visita.html` — Conceito I aplicado em cartão de visita (frente e verso)
 
 ---
 

@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Clínica Base — Mockup Instagram Escuro</title>
+<title>Clínica Base — Mockup Instagram Escuro (Conceito I)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -11,6 +11,7 @@
     --charcoal: #3D2B1F;
     --creme: #F5EFE6;
     --cobre: #B87333;
+    --salvia: #7C9A7C;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -44,28 +45,32 @@
   }
   .logo-top {
     position: absolute;
-    top: 32px;
+    top: 36px;
     left: 50%;
     transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo-symbol-top { display: block; }
+  .brandname-top {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
+    font-size: 18px;
     color: var(--creme);
     line-height: 1;
-    text-align: center;
-  }
-  .logo-top .lettermark {
-    font-size: 22px;
     letter-spacing: -0.01em;
+    margin-top: 8px;
   }
-  .logo-top .lettermark .b-init { font-size: 110%; }
-  .logo-top .name {
+  .brandname-top .sub {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 8px;
     letter-spacing: 0.24em;
     color: var(--cobre);
-    margin-top: 4px;
     text-transform: uppercase;
+    display: block;
+    margin-top: 4px;
   }
   .tagline {
     font-family: 'Playfair Display', serif;
@@ -109,19 +114,27 @@
 </style>
 </head>
 <body>
-  <div class="label">Mockup Instagram Escuro · Tagline da Marca</div>
+  <div class="label">Mockup Instagram · Conceito I · Fundo Escuro com Tagline</div>
 
   <div class="post">
     <div class="logo-top">
-      <div class="lettermark"><span class="b-init">B</span>.A.S.E.</div>
-      <div class="name">Clínica Base</div>
+      <svg class="logo-symbol-top" viewBox="0 0 140 90" width="56" height="36">
+        <line x1="10" y1="80" x2="130" y2="80" stroke="#F5EFE6" stroke-width="2.5"/>
+        <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#F5EFE6" stroke-width="3.5" fill="none"/>
+        <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#7C9A7C" stroke-width="3.5" fill="none"/>
+        <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#B87333" stroke-width="3.5" fill="none"/>
+      </svg>
+      <div class="brandname-top">
+        Clínica Base
+        <span class="sub">Terapia Ocupacional</span>
+      </div>
     </div>
 
     <div class="tagline">Onde o desenvolvimento começa pela mãe.</div>
     <div class="destaque">Método B.A.S.E.</div>
 
     <div class="footer-info">
-      Terapia Ocupacional<span class="sep">·</span>Sorocaba, SP<span class="sep">·</span>CREFITO-3 11824-TO
+      Sorocaba, SP<span class="sep">·</span>CREFITO-3 11824-TO
     </div>
   </div>
 </body>

@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Clínica Base — Mockup Cartão de Visita</title>
+<title>Clínica Base — Cartão de Visita (Conceito I)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -11,6 +11,7 @@
     --charcoal: #3D2B1F;
     --creme: #F5EFE6;
     --cobre: #B87333;
+    --salvia: #7C9A7C;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -32,7 +33,6 @@
     display: flex;
     gap: 32px;
   }
-  /* 90x50mm = 360x200px @ approx 100dpi for screen preview */
   .card {
     width: 540px;
     height: 300px;
@@ -50,24 +50,28 @@
     justify-content: space-between;
   }
   .front .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .front .logo-symbol { display: block; }
+  .front .brandname {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
+    font-size: 22px;
     color: var(--charcoal);
     line-height: 1;
-  }
-  .front .logo .lettermark {
-    font-size: 32px;
     letter-spacing: -0.01em;
   }
-  .front .logo .lettermark .b-init { font-size: 110%; }
-  .front .logo .brandname {
+  .front .brandname .sub {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    font-size: 10px;
+    font-size: 9px;
     letter-spacing: 0.22em;
     color: var(--cobre);
-    margin-top: 4px;
     text-transform: uppercase;
+    display: block;
+    margin-top: 4px;
   }
   .front .info {
     display: flex;
@@ -135,38 +139,41 @@
     background: var(--cobre);
     margin-top: 18px;
   }
-  .back .logo-small {
+  .back .logo-bottom {
     position: absolute;
     bottom: 24px;
     right: 32px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .back .logo-bottom .brandname-mini {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 13px;
     color: var(--creme);
     line-height: 1;
     letter-spacing: -0.01em;
   }
-  .back .logo-small .b-init { font-size: 110%; }
-  .back .logo-small .brandname {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 7px;
-    letter-spacing: 0.22em;
-    color: var(--cobre);
-    margin-top: 2px;
-    text-transform: uppercase;
-  }
 </style>
 </head>
 <body>
-  <div class="label">Cartão de Visita · 90x50mm · Frente e Verso</div>
+  <div class="label">Cartão de Visita · Conceito I · 90x50mm · Frente e Verso</div>
 
   <div class="row">
     <!-- Frente -->
     <div class="card front">
       <div class="logo">
-        <div class="lettermark"><span class="b-init">B</span>.A.S.E.</div>
-        <div class="brandname">Clínica Base</div>
+        <svg class="logo-symbol" viewBox="0 0 140 90" width="68" height="44">
+          <line x1="10" y1="80" x2="130" y2="80" stroke="#3D2B1F" stroke-width="2.5"/>
+          <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#3D2B1F" stroke-width="3.5" fill="none"/>
+          <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#7C9A7C" stroke-width="3.5" fill="none"/>
+          <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#B87333" stroke-width="3.5" fill="none"/>
+        </svg>
+        <div class="brandname">
+          Clínica Base
+          <span class="sub">Terapia Ocupacional</span>
+        </div>
       </div>
       <div class="info">
         <div class="nome">Regiane Vidal</div>
@@ -181,9 +188,14 @@
     <div class="card back">
       <div class="tagline">"Onde o desenvolvimento começa pela mãe."</div>
       <div class="deco-line"></div>
-      <div class="logo-small">
-        <span class="b-init">B</span>.A.S.E.
-        <div class="brandname">Clínica Base</div>
+      <div class="logo-bottom">
+        <svg viewBox="0 0 140 90" width="38" height="24">
+          <line x1="10" y1="80" x2="130" y2="80" stroke="#F5EFE6" stroke-width="3"/>
+          <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#F5EFE6" stroke-width="4" fill="none"/>
+          <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#7C9A7C" stroke-width="4" fill="none"/>
+          <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#B87333" stroke-width="4" fill="none"/>
+        </svg>
+        <div class="brandname-mini">Clínica Base</div>
       </div>
     </div>
   </div>
