@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Identidade Estratégica — Clínica B.A.S.E.</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --teal: #2DB5AE;
+    --teal-light: #E8F8F7;
+    --coral: #E8705E;
+    --terracota: #C8572A;
+    --dark: #1A1A1A;
+    --gray-bg: #EEEEEA;
+    --white: #FFFFFF;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark);
+    background: var(--white);
+    font-size: 10.5pt;
+    line-height: 1.7;
+  }
+
+  /* CAPA */
+  .cover {
+    background: var(--dark);
+    color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 72px;
+    page-break-after: always;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -120px;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    background: var(--teal);
+    opacity: 0.12;
+  }
+
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: var(--coral);
+    opacity: 0.1;
+  }
+
+  .cover-label {
+    font-size: 9pt;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 28px;
+  }
+
+  .cover h1 {
+    font-size: 52pt;
+    font-weight: 700;
+    line-height: 1.05;
+    margin-bottom: 8px;
+  }
+
+  .cover h1 span {
+    color: var(--teal);
+  }
+
+  .cover-sub {
+    font-size: 13pt;
+    font-weight: 300;
+    color: rgba(255,255,255,0.6);
+    margin-top: 16px;
+    margin-bottom: 64px;
+  }
+
+  .cover-divider {
+    width: 64px;
+    height: 3px;
+    background: var(--teal);
+    margin-bottom: 40px;
+  }
+
+  .cover-tagline {
+    font-size: 15pt;
+    font-weight: 400;
+    color: rgba(255,255,255,0.85);
+    font-style: italic;
+    max-width: 520px;
+    line-height: 1.5;
+  }
+
+  .cover-footer {
+    position: absolute;
+    bottom: 48px;
+    left: 72px;
+    right: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 8pt;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 1px;
+  }
+
+  /* PÁGINAS INTERNAS */
+  .page {
+    padding: 64px 72px;
+    min-height: 100vh;
+    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page:last-child {
+    page-break-after: avoid;
+  }
+
+  /* SECTION HEADER */
+  .section-number {
+    font-size: 8pt;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-size: 26pt;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+
+  .section-title span {
+    color: var(--teal);
+  }
+
+  .section-divider {
+    width: 48px;
+    height: 3px;
+    background: var(--teal);
+    margin: 20px 0 32px;
+  }
+
+  /* BODY TEXT */
+  p {
+    margin-bottom: 16px;
+    color: #333;
+  }
+
+  .lead {
+    font-size: 12pt;
+    font-weight: 500;
+    color: var(--dark);
+    margin-bottom: 24px;
+  }
+
+  /* BLOCKQUOTE */
+  .quote {
+    border-left: 4px solid var(--teal);
+    padding: 16px 24px;
+    margin: 28px 0;
+    background: var(--teal-light);
+    border-radius: 0 12px 12px 0;
+  }
+
+  .quote p {
+    font-size: 12pt;
+    font-style: italic;
+    color: var(--dark);
+    margin: 0;
+    font-weight: 500;
+  }
+
+  /* MÉTODO BASE — PILARES */
+  .pillars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 28px 0;
+  }
+
+  .pillar {
+    background: var(--gray-bg);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .pillar-letter {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    background: var(--teal);
+    color: var(--white);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18pt;
+    font-weight: 700;
+  }
+
+  .pillar-content strong {
+    display: block;
+    font-size: 10.5pt;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 4px;
+  }
+
+  .pillar-content span {
+    font-size: 9.5pt;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* SERVIÇOS */
+  .services {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 24px 0;
+  }
+
+  .service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 18px 24px;
+    background: var(--gray-bg);
+    border-radius: 14px;
+  }
+
+  .service-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    background: var(--teal);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .service-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .service-item strong {
+    display: block;
+    font-size: 10pt;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .service-item span {
+    font-size: 9.5pt;
+    color: #555;
+  }
+
+  /* META BOX */
+  .meta-box {
+    background: var(--dark);
+    border-radius: 20px;
+    padding: 40px 48px;
+    color: var(--white);
+    margin: 28px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .meta-box::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: var(--teal);
+    opacity: 0.15;
+  }
+
+  .meta-number {
+    font-size: 42pt;
+    font-weight: 700;
+    color: var(--teal);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .meta-label {
+    font-size: 9pt;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 28px;
+  }
+
+  .meta-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .meta-tag {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 9pt;
+    color: rgba(255,255,255,0.8);
+  }
+
+  /* PROPÓSITO */
+  .purpose-box {
+    background: var(--teal);
+    border-radius: 20px;
+    padding: 40px 48px;
+    color: var(--white);
+    margin: 28px 0;
+  }
+
+  .purpose-box p {
+    font-size: 14pt;
+    font-weight: 500;
+    color: var(--white);
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* VALORES */
+  .values {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 24px;
+  }
+
+  .value-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px 24px;
+    background: var(--gray-bg);
+    border-radius: 14px;
+  }
+
+  .value-number {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    background: var(--teal);
+    color: var(--white);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11pt;
+    font-weight: 700;
+  }
+
+  .value-item strong {
+    display: block;
+    font-size: 10pt;
+    font-weight: 600;
+    margin-bottom: 3px;
+    color: var(--dark);
+  }
+
+  .value-item span {
+    font-size: 9.5pt;
+    color: #555;
+    line-height: 1.55;
+  }
+
+  /* ÂNCORAS */
+  .anchors {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .anchor-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 18px 24px;
+    border: 1.5px solid #E0E0DC;
+    border-radius: 14px;
+  }
+
+  .anchor-dot {
+    width: 10px;
+    height: 10px;
+    min-width: 10px;
+    background: var(--teal);
+    border-radius: 50%;
+    margin-top: 6px;
+  }
+
+  .anchor-item p {
+    margin: 0;
+    font-size: 10pt;
+    color: var(--dark);
+  }
+
+  /* INICIATIVA SOCIAL */
+  .social-box {
+    background: var(--teal-light);
+    border: 1.5px solid var(--teal);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin: 28px 0;
+  }
+
+  .social-box .social-label {
+    font-size: 8pt;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 10px;
+  }
+
+  .social-box p {
+    font-size: 10pt;
+    color: #333;
+    margin: 0;
+  }
+
+  /* CLOSING */
+  .closing {
+    background: var(--teal);
+    color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 72px;
+    page-break-before: always;
+  }
+
+  .closing-tagline {
+    font-size: 28pt;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--white);
+  }
+
+  .closing-sub {
+    font-size: 13pt;
+    font-weight: 300;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 48px;
+  }
+
+  .closing-info {
+    font-size: 9pt;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 1px;
+  }
+
+  /* PRINT */
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .cover, .page, .closing { page-break-after: always; }
+    .closing { page-break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- CAPA -->
+<div class="cover">
+  <div class="cover-label">Documento Estratégico — Maio 2026</div>
+  <h1>Clínica <span>B.A.S.E.</span></h1>
+  <div class="cover-sub">Terapia Ocupacional e Desenvolvimento Infantil — Sorocaba, SP</div>
+  <div class="cover-divider"></div>
+  <div class="cover-tagline">"A sessão termina.<br>O tratamento não."</div>
+  <div class="cover-footer">
+    <span>Fundada por Regiane Vidal — CREFITO-3 11824-TO</span>
+    <span>Identidade Estratégica</span>
+  </div>
+</div>
+
+<!-- PÁGINA 1 — POR QUE EXISTIMOS -->
+<div class="page">
+  <div class="section-number">01 — Por que existimos</div>
+  <div class="section-title">A crença<br>que nos move</div>
+  <div class="section-divider"></div>
+
+  <p class="lead">Todo diagnóstico chega com um peso.</p>
+
+  <p>TEA. TDAH. Atraso no desenvolvimento. Palavras que nenhuma mãe está pronta para ouvir — e que muitas recebem sem um mapa para o que vem depois.</p>
+
+  <p>A partir dali começa uma nova jornada. Consultas, relatórios, listas de espera. E um padrão que se repete em quase todo lugar: o terapeuta trabalha o diagnóstico dentro do consultório. A queixa da mãe — as dificuldades reais, do dia a dia — fica em segundo plano. O tratamento acontece durante a sessão. E para quando ela termina.</p>
+
+  <p>Como se o desenvolvimento do seu filho fosse um assunto de especialistas. E você, que o conhece mais do que qualquer pessoa no mundo, fosse apenas a motorista.</p>
+
+  <div class="quote">
+    <p>Nós não acreditamos nisso.</p>
+  </div>
+
+  <p>A Clínica B.A.S.E. existe porque acreditamos que a mãe informada e apoiada é o maior instrumento terapêutico que existe. Que o desenvolvimento real — o que transforma, o que fica para a vida — acontece nas <strong>167 horas</strong> que não são a sessão de terapia. No banho. No almoço. No brincar antes de dormir.</p>
+
+  <p><strong>Em casa.</strong></p>
+</div>
+
+<!-- PÁGINA 2 — COMO FAZEMOS -->
+<div class="page">
+  <div class="section-number">02 — Como fazemos</div>
+  <div class="section-title">O que diferencia<br>o nosso tratamento</div>
+  <div class="section-divider"></div>
+
+  <p>O que nos diferencia não é o que tratamos. É como enxergamos o tratamento.</p>
+
+  <p>Na Clínica B.A.S.E., o ponto de partida é a sua queixa — não o diagnóstico. Os objetivos são construídos com você. As estratégias da sessão, você aprende. Os materiais que leva para casa são feitos a partir da sua realidade.</p>
+
+  <div class="quote">
+    <p>A sessão termina. O tratamento não.</p>
+  </div>
+
+  <p>Isso acontece através do <strong>Método B.A.S.E.</strong>, desenvolvido por Regiane Vidal a partir de mais de 17 anos de prática clínica e dos métodos mais reconhecidos internacionalmente — Integração Sensorial Ayres e DIR-Floortime.</p>
+
+  <div class="pillars">
+    <div class="pillar">
+      <div class="pillar-letter">B</div>
+      <div class="pillar-content">
+        <strong>Brincar</strong>
+        <span>O brincar como ferramenta intencional de desenvolvimento, não como passatempo</span>
+      </div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-letter">A</div>
+      <div class="pillar-content">
+        <strong>Afeto</strong>
+        <span>Interações responsivas que constroem segurança emocional e vínculos que sustentam o avanço</span>
+      </div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-letter">S</div>
+      <div class="pillar-content">
+        <strong>Sensorial</strong>
+        <span>Compreensão de como o processamento sensorial afeta o comportamento, a atenção e a aprendizagem</span>
+      </div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-letter">E</div>
+      <div class="pillar-content">
+        <strong>Estimulação</strong>
+        <span>Ferramentas concretas para aplicar no cotidiano, saindo da teoria para o que é possível fazer hoje</span>
+      </div>
+    </div>
+  </div>
+
+  <p>Conhecimento científico que sai dos papers e entra no dia a dia da sua família.</p>
+</div>
+
+<!-- PÁGINA 3 — O QUE FAZEMOS -->
+<div class="page">
+  <div class="section-number">03 — O que fazemos</div>
+  <div class="section-title">Nossos<br>atendimentos</div>
+  <div class="section-divider"></div>
+
+  <p>A Clínica B.A.S.E. oferece atendimento especializado em Terapia Ocupacional para crianças com atrasos e transtornos do neurodesenvolvimento — com foco especial em TEA e dificuldades sensoriais.</p>
+
+  <div class="services">
+    <div class="service-item">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </div>
+      <div>
+        <strong>Avaliação funcional aprofundada</strong>
+        <span>Para entender as necessidades reais da criança, não só o diagnóstico no papel</span>
+      </div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+      <div>
+        <strong>Sessões individuais de Terapia Ocupacional</strong>
+        <span>Com o Método B.A.S.E. — ciência aplicada à realidade da sua família</span>
+      </div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div>
+        <strong>Orientação parental contínua</strong>
+        <span>Porque o tratamento começa na sessão e continua em casa, com você</span>
+      </div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      </div>
+      <div>
+        <strong>Consultoria escolar</strong>
+        <span>Quando necessário, para que a escola também se torne uma parceira no desenvolvimento</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="social-box">
+    <div class="social-label">Iniciativa Social</div>
+    <p>A Clínica B.A.S.E. mantém o <strong>Projeto Mil Dias</strong> — iniciativa social que leva desenvolvimento, orientação e suporte a gestantes, mães e crianças de 0 a 3 anos em contextos de vulnerabilidade. Porque a janela mais crítica do desenvolvimento não espera — e nenhuma criança deveria crescer sem a chance de se tornar tudo aquilo que pode ser.</p>
+  </div>
+</div>
+
+<!-- PÁGINA 4 — IDENTIDADE ESTRATÉGICA -->
+<div class="page">
+  <div class="section-number">04 — Identidade estratégica</div>
+  <div class="section-title">O que somos<br>e para onde vamos</div>
+  <div class="section-divider"></div>
+
+  <p>A <strong>Clínica B.A.S.E.</strong> é uma clínica de Terapia Ocupacional especializada em neurodesenvolvimento infantil que transforma crianças com TEA, TDAH e atrasos de desenvolvimento — colocando a mãe como protagonista do tratamento — para famílias que buscam mais do que uma sessão semanal.</p>
+
+  <div class="meta-box">
+    <div class="meta-number">R$100K/mês</div>
+    <div class="meta-label">Meta — Maio de 2029</div>
+    <div class="meta-tags">
+      <div class="meta-tag">20% de margem líquida</div>
+      <div class="meta-tag">100 pacientes ativos</div>
+      <div class="meta-tag">3 terapeutas</div>
+      <div class="meta-tag">100% B2C</div>
+    </div>
+  </div>
+
+  <div class="purpose-box">
+    <p>"Capacitar mães com conhecimento e ferramentas práticas para que seus filhos possam se desenvolver plenamente — nas 167 horas que acontecem fora do consultório."</p>
+  </div>
+</div>
+
+<!-- PÁGINA 5 — VALORES -->
+<div class="page">
+  <div class="section-number">05 — Valores fundamentais</div>
+  <div class="section-title">O que nos<br>guia por dentro</div>
+  <div class="section-divider"></div>
+
+  <div class="values">
+    <div class="value-item">
+      <div class="value-number">1</div>
+      <div>
+        <strong>A mãe é o maior instrumento terapêutico</strong>
+        <span>O tratamento começa na sessão e continua em casa. A mãe informada e apoiada muda o desenvolvimento do filho.</span>
+      </div>
+    </div>
+    <div class="value-item">
+      <div class="value-number">2</div>
+      <div>
+        <strong>Ciência que entra no dia a dia</strong>
+        <span>Integração Sensorial Ayres e DIR-Floortime saem dos papers e viram ação prática na rotina da família.</span>
+      </div>
+    </div>
+    <div class="value-item">
+      <div class="value-number">3</div>
+      <div>
+        <strong>A queixa real vem primeiro</strong>
+        <span>O ponto de partida é sempre o que a mãe vive — não o diagnóstico no papel. Objetivos construídos com ela, não para ela.</span>
+      </div>
+    </div>
+    <div class="value-item">
+      <div class="value-number">4</div>
+      <div>
+        <strong>Especialização contínua</strong>
+        <span>17+ anos de prática clínica com compromisso de aprofundamento permanente — para que a entrega nunca seja genérica.</span>
+      </div>
+    </div>
+    <div class="value-item">
+      <div class="value-number">5</div>
+      <div>
+        <strong>Nenhuma criança deve crescer sem chance</strong>
+        <span>A janela crítica do desenvolvimento não espera. O Projeto Mil Dias é a prova de que propósito e impacto andam juntos.</span>
+      </div>
+    </div>
+    <div class="value-item">
+      <div class="value-number">6</div>
+      <div>
+        <strong>Parceria e transparência com as famílias</strong>
+        <span>As famílias entendem o que está sendo feito e por quê. Sem mistério clínico, sem distância de especialista.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PÁGINA 6 — ÂNCORAS -->
+<div class="page">
+  <div class="section-number">06 — Âncoras estratégicas</div>
+  <div class="section-title">Os movimentos<br>que nos sustentam</div>
+  <div class="section-divider"></div>
+
+  <div class="anchors">
+    <div class="anchor-item">
+      <div class="anchor-dot"></div>
+      <p>Posicionar <strong>Regiane Vidal</strong> como a maior autoridade em TO infantil e neurodesenvolvimento de Sorocaba</p>
+    </div>
+    <div class="anchor-item">
+      <div class="anchor-dot"></div>
+      <p>Migrar completamente do B2B para <strong>receita 100% B2C</strong> — pacientes próprios como única fonte de renda</p>
+    </div>
+    <div class="anchor-item">
+      <div class="anchor-dot"></div>
+      <p>Consolidar o <strong>Método B.A.S.E.</strong> como diferencial clínico reconhecível e escalável</p>
+    </div>
+    <div class="anchor-item">
+      <div class="anchor-dot"></div>
+      <p>Usar <strong>conteúdo educativo</strong> para atrair, qualificar e converter famílias antes mesmo do primeiro contato</p>
+    </div>
+    <div class="anchor-item">
+      <div class="anchor-dot"></div>
+      <p>Manter o <strong>Projeto Mil Dias</strong> como âncora de propósito e prova pública dos valores da clínica</p>
+    </div>
+  </div>
+</div>
+
+<!-- ENCERRAMENTO -->
+<div class="closing">
+  <div class="closing-tagline">Você é a base<br>do seu filho.</div>
+  <div class="closing-sub">Nós estamos aqui para construir essa base com você.</div>
+  <div class="closing-info">Clínica B.A.S.E. · Sorocaba, SP · Fundada por Regiane Vidal — CREFITO-3 11824-TO</div>
+</div>
+
+</body>
+</html>
