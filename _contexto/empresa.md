@@ -2,7 +2,7 @@
 
 **Nome:** Fagner (gestão e marketing) e Regiane Vidal (clínica, CREFITO-3 11824-TO)
 **Negócio:** Clínica B.A.S.E. — Terapia Ocupacional e Desenvolvimento Infantil
-**O que faz:** Atendimento especializado em TO para crianças de 0 a 6 anos com atrasos e transtornos do neurodesenvolvimento (TEA, TDAH, dificuldades sensoriais), com foco na orientação parental e no Método B.A.S.E.
+**O que faz:** Atendimento especializado em TO para crianças com atrasos e transtornos do neurodesenvolvimento (TEA, TDAH, dificuldades sensoriais), com foco na orientação parental e no Método B.A.S.E.
 **Perfil:** solopreneur (casal sócio — Fagner cuida da gestão/marketing, Regiane do lado clínico)
 **Atende clientes:** sim, famílias diretamente (B2C)
 **Equipe:** Fagner e Regiane Vidal (casados, filho: Matias, 4 anos)
@@ -13,7 +13,7 @@
 
 - Localização: Sorocaba, SP. Já têm espaço físico próprio.
 - Histórico: 5 anos prestando serviço para clínicas em São Paulo (B2B). Mudaram para Sorocaba e decidiram abrir clínica própria, reduzindo o B2B à parceria atual com a DesenvolvaCentro.
-- Regiane tem 15 anos de prática clínica em TO infantil.
+- Regiane tem mais de 17 anos de prática clínica em TO infantil.
 - Método próprio: Método B.A.S.E. (Brincar, Afeto, Sensorial, Estimulação), desenvolvido por Regiane a partir de Integração Sensorial Ayres e DIR-Floortime.
   - **B — Brincar:** ferramenta intencional de desenvolvimento, não passatempo
   - **A — Afeto:** interações responsivas que constroem segurança emocional e vínculos
