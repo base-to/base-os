@@ -1,4 +1,4 @@
-# Modelo de Negócios — Clínica B.A.S.E.
+# Modelo de Negócios — Clínica Base
 **Business Model Canvas**
 Terapia Ocupacional e Desenvolvimento Infantil — Sorocaba, SP
 Documento interno — Abril 2026
@@ -24,7 +24,7 @@ Gestantes e mães em vulnerabilidade social — via Projeto Mil Dias.
 
 **Para a mãe que não entende o que está acontecendo com o filho:**
 
-A Clínica B.A.S.E. transforma confusão em clareza e desamparo em ação.
+A Clínica Base transforma confusão em clareza e desamparo em ação.
 
 - A mãe sai sabendo **o que está acontecendo** com o filho — com nome, com contexto, com explicação
 - Sai com **caminhos concretos** — não teoria, ação para hoje em casa
@@ -181,5 +181,5 @@ Dois pontos que a marca promete mas ainda não estão estruturados operacionalme
 
 ---
 
-*Clínica B.A.S.E. — Fundada por Regiane Vidal — CREFITO-3 11824-TO*
+*Clínica Base — Fundada por Regiane Vidal — CREFITO-3 11824-TO*
 *Sorocaba, SP — Documento interno — Abril 2026*
