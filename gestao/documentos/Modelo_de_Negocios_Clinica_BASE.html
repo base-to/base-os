@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Clínica Base · Modelo de Negócios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 22mm 22mm 18mm 22mm; }
+  :root {
+    --charcoal: #3D2B1F;
+    --creme: #F5EFE6;
+    --cobre: #B87333;
+    --salvia: #7C9A7C;
+    --preto: #1A1A1A;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--creme);
+    color: var(--charcoal);
+    font-family: 'Lato', sans-serif;
+    font-size: 11pt;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    page-break-after: always;
+    min-height: 253mm;
+    display: flex;
+    flex-direction: column;
+  }
+  .page:last-child { page-break-after: auto; }
+  .label {
+    font-family: 'Lato', sans-serif;
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--cobre);
+  }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 48pt;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--charcoal);
+  }
+  h1 .accent { color: var(--cobre); }
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 26pt;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    color: var(--charcoal);
+    margin-bottom: 4mm;
+  }
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 14pt;
+    color: var(--charcoal);
+    margin: 6mm 0 3mm;
+  }
+  h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 12pt;
+    color: var(--charcoal);
+    margin: 4mm 0 2mm;
+  }
+  p { margin-bottom: 3.5mm; }
+  p.lead {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 14pt;
+    line-height: 1.45;
+    color: var(--charcoal);
+    margin-bottom: 6mm;
+  }
+  .meta {
+    font-family: 'Lato', sans-serif;
+    font-size: 9pt;
+    letter-spacing: 0.06em;
+    color: var(--charcoal);
+    opacity: 0.75;
+    line-height: 1.6;
+  }
+  .rule {
+    border: none;
+    height: 1px;
+    background: var(--charcoal);
+    opacity: 0.35;
+    margin: 8mm 0;
+  }
+  .rule.cobre { background: var(--cobre); opacity: 1; }
+  .quote-box {
+    border-left: 2px solid var(--cobre);
+    padding: 2mm 0 2mm 6mm;
+    margin: 6mm 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 13pt;
+    line-height: 1.45;
+    color: var(--charcoal);
+  }
+  .big-quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24pt;
+    line-height: 1.25;
+    color: var(--charcoal);
+    margin: 8mm 0;
+  }
+  .big-quote .accent { color: var(--cobre); }
+  ul.bullets {
+    list-style: none;
+    padding: 0;
+    margin: 4mm 0;
+  }
+  ul.bullets li {
+    padding: 2mm 0 2mm 7mm;
+    position: relative;
+    font-size: 11pt;
+    line-height: 1.55;
+  }
+  ul.bullets li::before {
+    content: "·";
+    position: absolute;
+    left: 1mm;
+    top: -2mm;
+    color: var(--cobre);
+    font-weight: 700;
+    font-size: 18pt;
+  }
+  .seg-card {
+    margin-bottom: 6mm;
+    padding: 4mm 0 4mm 5mm;
+    border-left: 2px solid var(--cobre);
+  }
+  .seg-card .seg-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cobre);
+    margin-bottom: 2mm;
+  }
+  .seg-card .seg-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 14pt;
+    color: var(--charcoal);
+    margin-bottom: 2mm;
+  }
+  .seg-card .seg-desc {
+    font-size: 11pt;
+    line-height: 1.6;
+  }
+  table.data {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6mm 0;
+    font-size: 10.5pt;
+  }
+  table.data th, table.data td {
+    padding: 3mm 4mm;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid rgba(61,43,31,0.2);
+  }
+  table.data th {
+    background: rgba(184,115,51,0.1);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 10pt;
+    letter-spacing: 0.08em;
+    color: var(--charcoal);
+  }
+  table.data td.amount {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    text-align: right;
+    color: var(--charcoal);
+  }
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4mm 6mm;
+    margin: 4mm 0;
+  }
+  .pillar-mini {
+    padding: 2mm 0 2mm 5mm;
+    border-left: 2px solid var(--cobre);
+  }
+  .pillar-mini .pl-letter {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 18pt;
+    color: var(--cobre);
+    line-height: 1;
+  }
+  .pillar-mini .pl-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 11pt;
+    color: var(--charcoal);
+    margin: 1mm 0;
+  }
+  .pillar-mini .pl-desc {
+    font-size: 9.5pt;
+    line-height: 1.45;
+  }
+  .equilibrium-card {
+    background: rgba(184,115,51,0.08);
+    border: 1px solid var(--cobre);
+    padding: 6mm;
+    margin: 6mm 0;
+  }
+  .equilibrium-card .eq-headline {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18pt;
+    color: var(--charcoal);
+    line-height: 1.3;
+  }
+  .equilibrium-card .eq-headline .accent { color: var(--cobre); font-weight: 700; }
+  .gap-card {
+    margin-bottom: 5mm;
+    padding-left: 5mm;
+    border-left: 2px solid #B05050;
+  }
+  .gap-card .gap-num {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 11pt;
+    color: #B05050;
+    letter-spacing: 0.08em;
+    margin-bottom: 1mm;
+  }
+  .gap-card .gap-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 13pt;
+    color: var(--charcoal);
+    margin-bottom: 2mm;
+  }
+  .summary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6mm 8mm;
+    margin: 8mm 0;
+  }
+  .summary-card {
+    padding-bottom: 4mm;
+    border-bottom: 1px solid rgba(61,43,31,0.15);
+  }
+  .summary-card .h-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--cobre);
+    margin-bottom: 3mm;
+  }
+  .summary-card .body {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 11pt;
+    line-height: 1.45;
+    color: var(--charcoal);
+  }
+  .footer-doc {
+    margin-top: auto;
+    padding-top: 8mm;
+    border-top: 1px solid rgba(61,43,31,0.2);
+    font-family: 'Lato', sans-serif;
+    font-size: 9pt;
+    letter-spacing: 0.05em;
+    color: var(--charcoal);
+    opacity: 0.65;
+  }
+  .logo-svg-wrap {
+    display: flex;
+    align-items: center;
+    gap: 4mm;
+    margin-bottom: 16mm;
+  }
+  .logo-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 14pt;
+    color: var(--charcoal);
+    line-height: 1;
+  }
+  .logo-text .lt-sub {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 7pt;
+    letter-spacing: 0.24em;
+    color: var(--cobre);
+    text-transform: uppercase;
+    margin-top: 2mm;
+  }
+  .cover-sub {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 16pt;
+    color: var(--charcoal);
+    opacity: 0.85;
+    margin-top: 6mm;
+    margin-bottom: 14mm;
+  }
+  strong { color: var(--charcoal); font-weight: 700; }
+  em { font-style: italic; }
+  .voice-box {
+    background: rgba(124,154,124,0.12);
+    border-left: 2px solid var(--salvia);
+    padding: 4mm 5mm;
+    margin: 6mm 0;
+  }
+  .voice-box .vb-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--salvia);
+    margin-bottom: 3mm;
+  }
+  .voice-box p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 11pt;
+    line-height: 1.5;
+    margin-bottom: 2mm;
+    color: var(--charcoal);
+  }
+</style>
+</head>
+<body>
+
+<!-- ============= PÁGINA 1: CAPA ============= -->
+<section class="page">
+  <div class="logo-svg-wrap">
+    <svg viewBox="0 0 140 90" width="60" height="38" xmlns="http://www.w3.org/2000/svg">
+      <line x1="10" y1="80" x2="130" y2="80" stroke="#3D2B1F" stroke-width="2.5"/>
+      <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#3D2B1F" stroke-width="3.5" fill="none"/>
+      <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#7C9A7C" stroke-width="3.5" fill="none"/>
+      <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#B87333" stroke-width="3.5" fill="none"/>
+    </svg>
+    <div class="logo-text">
+      Clínica Base
+      <span class="lt-sub">Terapia Ocupacional</span>
+    </div>
+  </div>
+
+  <div class="label" style="margin-bottom: 8mm;">Business Model Canvas</div>
+
+  <h1>Modelo de<br><span class="accent">Negócios</span></h1>
+
+  <div class="cover-sub">Como a Clínica Base captura, entrega e sustenta valor.</div>
+
+  <p style="max-width: 130mm; font-size: 11pt; line-height: 1.6;">Este documento descreve a operação da Clínica Base: quem ela atende, o que entrega, por quais canais, com quais recursos e a que custos. É o mapa operacional que sustenta a estratégia, o ponto de partida para qualquer decisão de produto, contratação ou investimento.</p>
+
+  <div class="meta" style="margin: 14mm 0 8mm;">
+    Sorocaba, SP · Maio 2026 · Versão 1.1<br>
+    Fundada por Regiane Vidal · CREFITO-3 11824-TO
+  </div>
+
+  <hr class="rule cobre">
+
+  <div class="quote-box">
+    "O que nos diferencia não é o que tratamos. É como enxergamos o tratamento."
+  </div>
+</section>
+
+<!-- ============= PÁGINA 2: 01 SEGMENTOS DE CLIENTES ============= -->
+<section class="page">
+  <div class="label" style="margin-bottom: 6mm;">01 · Segmentos de Clientes</div>
+  <h2>Quem atendemos.</h2>
+
+  <p>A Clínica Base opera com três segmentos distintos. Cada um tem motivação própria, jornada própria e relação financeira própria com a clínica.</p>
+
+  <div class="seg-card">
+    <div class="seg-label">Primário · quem paga e decide</div>
+    <div class="seg-name">Mães de crianças com atrasos do neurodesenvolvimento</div>
+    <div class="seg-desc">Crianças com TEA, TDAH, dificuldades sensoriais (com ou sem diagnóstico fechado). A mãe chega perdida, sem mapa para o que fazer. Atendimento infantil em geral, sem limite de faixa etária.</div>
+  </div>
+
+  <div class="seg-card">
+    <div class="seg-label">Secundário · quem recebe o serviço</div>
+    <div class="seg-name">A criança</div>
+    <div class="seg-desc">Sem limite de faixa etária. O serviço é desenhado a partir da queixa real da mãe e das necessidades funcionais observadas durante a avaliação.</div>
+  </div>
+
+  <div class="seg-card">
+    <div class="seg-label">Social · não pagante</div>
+    <div class="seg-name">Gestantes e mães em vulnerabilidade social</div>
+    <div class="seg-desc">Atendidas pelo Projeto Mil Dias, iniciativa social mantida pela clínica. Foco nos primeiros 1.000 dias de vida, janela crítica do desenvolvimento.</div>
+  </div>
+
+  <div class="footer-doc">
+    Clínica Base · Documento interno · Versão 1.1 · Maio 2026
+  </div>
+</section>
+
+<!-- ============= PÁGINA 3: 02 PROPOSTA DE VALOR ============= -->
+<section class="page">
+  <div class="label" style="margin-bottom: 6mm;">02 · Proposta de Valor</div>
+  <h2>O que entregamos.</h2>
+
+  <p class="lead">Para a mãe que não entende o que está acontecendo com o filho, a Clínica Base transforma confusão em clareza e desamparo em ação.</p>
+
+  <ul class="bullets" style="margin: 6mm 0;">
+    <li>A mãe sai sabendo <strong>o que está acontecendo</strong> com o filho. Com nome, com contexto, com explicação.</li>
+    <li>Sai com <strong>caminhos concretos</strong>. Não teoria, ação para hoje em casa.</li>
+    <li>É tratada como <strong>parceira do tratamento</strong>, não como acompanhante.</li>
+    <li>O suporte <strong>não termina na sessão</strong>. Orientação contínua, dúvidas respondidas, realidade particular acolhida.</li>
+    <li>Tudo via <strong>Método B.A.S.E.</strong>, ciência que sai dos papers e entra no dia a dia da família.</li>
+  </ul>
+
+  <h3 style="margin-top: 6mm;">Método B.A.S.E.</h3>
+
+  <p style="font-size: 10.5pt; opacity: 0.85;">Desenvolvido por Regiane Vidal, fundamentado em Integração Sensorial Ayres e DIR-Floortime.</p>
+
+  <div class="pillars-grid">
+    <div class="pillar-mini">
+      <div class="pl-letter">B</div>
+      <div class="pl-name">Brincar</div>
+      <div class="pl-desc">Como ferramenta intencional de desenvolvimento.</div>
+    </div>
+    <div class="pillar-mini">
+      <div class="pl-letter">A</div>
+      <div class="pl-name">Afeto</div>
+      <div class="pl-desc">Interações responsivas que constroem segurança emocional.</div>
+    </div>
+    <div class="pillar-mini">
+      <div class="pl-letter">S</div>
+      <div class="pl-name">Sensorial</div>
+      <div class="pl-desc">Compreensão do processamento sensorial no comportamento.</div>
+    </div>
+    <div class="pillar-mini">
+      <div class="pl-letter">E</div>
+      <div class="pl-name">Estimulação</div>
+      <div class="pl-desc">Ferramentas concretas para aplicar no cotidiano.</div>
+    </div>
+  </div>
+
+  <div class="voice-box">
+    <div class="vb-label">Na voz da mãe</div>
+    <p>"Nos ajudou a entender o funcionamento do nosso filho e nos deu caminhos."</p>
+    <p>"Dá nome e acolhe a nossa realidade particular."</p>
+    <p>"Me dá ideias de ação."</p>
+  </div>
+</section>
+
+<!-- ============= PÁGINA 4: 03 CANAIS + 04 RELACIONAMENTO ============= -->
+<section class="page">
+  <div class="label" style="margin-bottom: 6mm;">03 · Canais</div>
+  <h2>Como a mãe encontra e avalia.</h2>
+
+  <h3>Descoberta</h3>
+  <ul class="bullets">
+    <li><strong>Google Meu Negócio + pesquisa orgânica</strong>. Canal principal. Mãe com intenção ativa de busca.</li>
+    <li><strong>Indicação (boca a boca)</strong>. Mães, amigos e familiares. Alta taxa de conversão.</li>
+    <li><strong>BNI Lumen (Sorocaba)</strong>. Grupo de networking estruturado, fonte ativa de indicações.</li>
+    <li><strong>Encaminhamento médico</strong>. Em construção (neuropediatra, pediatras, Dr. Samuel ADIB).</li>
+  </ul>
+
+  <h3>Decisão</h3>
+  <ul class="bullets">
+    <li>Instagram (@regianevidalto)</li>
+    <li>Site</li>
+    <li>Cartão digital</li>
+  </ul>
+
+  <h3>Primeiro contato</h3>
+  <ul class="bullets">
+    <li><strong>WhatsApp</strong>. Protocolo estruturado com script de 5 etapas (Fagner).</li>
+  </ul>
+
+  <hr class="rule" style="margin: 8mm 0;">
+
+  <div class="label" style="margin-bottom: 6mm;">04 · Relacionamento com Clientes</div>
+
+  <h3 style="margin-top: 0;">Antes · lead no WhatsApp</h3>
+  <p style="font-size: 10.5pt;">Fagner como primeiro contato. Tom humano, acolhedor, sem pressão. Cinco etapas: conexão, entender a situação, proposta de conversa gratuita (15 min), valor, fechamento. Follow-up máximo 2x. Porta sempre aberta. Regra de ouro: 1 pergunta por mensagem, nunca insistir mais de 2x.</p>
+
+  <h3>Processo de entrada</h3>
+  <p style="font-size: 10.5pt;">Entrevista inicial por videochamada (padrão) ou presencial na sala (se família preferir, obrigatório no espaço da clínica). Sala agendada por demanda durante avaliação. Após fechar contrato: horário fixo reservado para a família.</p>
+
+  <h3>Durante e após o tratamento</h3>
+  <p style="font-size: 10.5pt;">Orientação parental contínua (atualmente informal, lacuna a estruturar). Contato direto com Regiane para dúvidas. Após alta, sem processo estruturado no momento (lacuna a estruturar).</p>
+</section>
+
+<!-- ============= PÁGINA 5: 05 RECEITA + PONTO DE EQUILÍBRIO ============= -->
+<section class="page">
+  <div class="label" style="margin-bottom: 6mm;">05 · Fontes de Receita</div>
+  <h2>Como a clínica fatura.</h2>
+
+  <table class="data">
+    <thead>
+      <tr><th>Modalidade</th><th>Valor</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Sessão avulsa</td><td class="amount">R$ 320,00</td></tr>
+      <tr><td>Pacote (4+ sessões)</td><td class="amount">R$ 300,00 / sessão</td></tr>
+    </tbody>
+  </table>
+
+  <ul class="bullets">
+    <li>Modelo 100% particular. Sem convênio.</li>
+    <li>Família responsável por buscar reembolso no próprio plano de saúde.</li>
+    <li>Clínica fornece documentação necessária: diploma digitalizado, evoluções, relatórios de continuidade.</li>
+  </ul>
+
+  <hr class="rule" style="margin: 8mm 0;">
+
+  <div class="label" style="margin-bottom: 4mm;">Ponto de Equilíbrio</div>
+  <h3 style="margin-top: 0;">A matemática da viabilidade.</h3>
+
+  <table class="data">
+    <thead>
+      <tr><th>Modalidade</th><th>Margem por sessão</th><th>Sessões/mês para break-even</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Sessão avulsa (R$ 320)</td><td class="amount">R$ 280</td><td class="amount">~13 sessões</td></tr>
+      <tr><td>Pacote (R$ 300)</td><td class="amount">R$ 260</td><td class="amount">~14 sessões</td></tr>
+    </tbody>
+  </table>
+
+  <div class="equilibrium-card">
+    <div class="eq-headline">
+      <span class="accent">~3 sessões por semana</span> cobrem todos os custos fixos.
+    </div>
+    <p style="font-size: 11pt; margin-top: 4mm; margin-bottom: 0;">Capacidade real é muito superior. O desafio atual é velocidade de captação, não viabilidade.</p>
+  </div>
+</section>
+
+<!-- ============= PÁGINA 6: 06 RECURSOS + 07 ATIVIDADES ============= -->
+<section class="page">
+  <div class="label" style="margin-bottom: 6mm;">06 · Recursos-Chave</div>
+  <h2>O que sustenta a operação.</h2>
+
+  <ul class="bullets">
+    <li><strong>Regiane Vidal</strong>. Ativo central. 17+ anos de experiência (formada em 2008). Método B.A.S.E. próprio. CREFITO-3 11824-TO ativo.</li>
+    <li><strong>Fagner da Silva</strong>. Comercial, marketing, administrativo e gestão de operações.</li>
+    <li><strong>Sala de atendimento</strong>. Sublocação por demanda com Ana (quartas manhã/tarde + sextas a partir das 15h).</li>
+    <li><strong>Prontuário e agenda</strong>. Desenvolvido por Fagner no Notion.</li>
+    <li><strong>Contrato terapêutico</strong>. Documento informativo assinado.</li>
+    <li><strong>Presença digital</strong>. Google Meu Negócio, Instagram, TikTok, LinkedIn, YouTube, site, cartão digital.</li>
+  </ul>
+
+  <hr class="rule" style="margin: 8mm 0;">
+
+  <div class="label" style="margin-bottom: 6mm;">07 · Atividades-Chave</div>
+  <h3 style="margin-top: 0;">Clínico</h3>
+  <ul class="bullets">
+    <li>Entrevista inicial (online ou presencial na sala)</li>
+    <li>Avaliação funcional aprofundada</li>
+    <li>Sessões de TO com Método B.A.S.E.</li>
+    <li>Orientação parental (durante e entre sessões)</li>
+  </ul>
+
+  <h3>Comercial e operacional</h3>
+  <ul class="bullets">
+    <li>Atendimento de leads via WhatsApp (Fagner)</li>
+    <li>Gestão de agenda, cobranças e prontuário (Notion)</li>
+    <li>Emissão de notas fiscais</li>
+  </ul>
+
+  <h3>Crescimento</h3>
+  <ul class="bullets">
+    <li>Construção de rede médica para indicações</li>
+    <li>Gestão da presença digital</li>
+    <li>Participação ativa no BNI Lumen</li>
+  </ul>
+</section>
+
+<!-- ============= PÁGINA 7: 08 PARCERIAS + 09 CUSTOS ============= -->
+<section class="page">
+  <div class="label" style="margin-bottom: 6mm;">08 · Parcerias-Chave</div>
+  <h2>Quem caminha com a clínica.</h2>
+
+  <ul class="bullets">
+    <li><strong>Ana</strong>. Locação da sala de atendimento por demanda.</li>
+    <li><strong>Rede médica em construção</strong>. Neuropediatra, Dr. Samuel (ADIB), pediatra de escola, contatos regionais.</li>
+    <li><strong>Rede de amigos</strong>. Indicações e networking inicial.</li>
+    <li><strong>BNI Lumen (Sorocaba)</strong>. Grupo de networking estruturado, fonte ativa de indicações.</li>
+    <li><strong>Colégio Atitude</strong>. Parceria potencial para palestra e divulgação.</li>
+  </ul>
+
+  <hr class="rule" style="margin: 8mm 0;">
+
+  <div class="label" style="margin-bottom: 6mm;">09 · Estrutura de Custos</div>
+  <h3 style="margin-top: 0;">Custos fixos mensais</h3>
+
+  <table class="data">
+    <thead>
+      <tr><th>Item</th><th>Valor / mês</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Plano de Saúde</td><td class="amount">R$ 1.914,29</td></tr>
+      <tr><td>BNI Lumen</td><td class="amount">R$ 750,00</td></tr>
+      <tr><td>Contabilizei</td><td class="amount">R$ 369,00</td></tr>
+      <tr><td>Adaptaorg</td><td class="amount">R$ 199,00</td></tr>
+      <tr><td>Freepik Premium</td><td class="amount">R$ 82,15</td></tr>
+      <tr><td>Canva</td><td class="amount">R$ 48,30</td></tr>
+      <tr><td>O Novo Mercado Escola (até 12/12)</td><td class="amount">R$ 54,33</td></tr>
+      <tr><td>Google One</td><td class="amount">R$ 37,30</td></tr>
+      <tr style="background: rgba(184,115,51,0.1);"><td><strong>Total</strong></td><td class="amount"><strong>R$ 3.454,37</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h3>Custos variáveis</h3>
+  <ul class="bullets">
+    <li>Locação da sala: R$ 40,00 por sessão</li>
+  </ul>
+</section>
+
+<!-- ============= PÁGINA 8: LACUNAS + RESUMO ============= -->
+<section class="page">
+  <div class="label" style="margin-bottom: 6mm;">Lacunas Identificadas</div>
+  <h2>O que a marca promete e ainda não entrega.</h2>
+
+  <p>Dois pontos que a comunicação da Clínica Base já articula como diferencial, mas que ainda não estão estruturados operacionalmente. Endereçar esses gaps é prioridade do próximo ciclo.</p>
+
+  <div class="gap-card" style="margin-top: 6mm;">
+    <div class="gap-num">Lacuna 01</div>
+    <div class="gap-name">Orientação parental entre sessões</div>
+    <p style="font-size: 11pt; line-height: 1.55; margin: 0;">Hoje é informal. A promessa central da marca é que <em>"o tratamento não termina na sessão"</em>. Isso precisa de protocolo: cadência, canal, formato dos materiais, mensuração de aderência.</p>
+  </div>
+
+  <div class="gap-card">
+    <div class="gap-num">Lacuna 02</div>
+    <div class="gap-name">Processo de alta</div>
+    <p style="font-size: 11pt; line-height: 1.55; margin: 0;">Quando uma família encerra o tratamento, não há acompanhamento estruturado. Oportunidade para gerar recomendações ativas e fidelização. Estruturar protocolo de saída e contato pós-alta.</p>
+  </div>
+
+  <hr class="rule" style="margin: 10mm 0;">
+
+  <div class="label" style="margin-bottom: 6mm;">Resumo Executivo</div>
+
+  <div class="summary-grid">
+    <div class="summary-card">
+      <div class="h-label">Quem servimos</div>
+      <div class="body">Mães de crianças com atrasos do neurodesenvolvimento. Atendimento sem limite de faixa etária.</div>
+    </div>
+    <div class="summary-card">
+      <div class="h-label">O que entregamos</div>
+      <div class="body">Terapia Ocupacional infantil pelo Método B.A.S.E., com a mãe como parceira do tratamento.</div>
+    </div>
+    <div class="summary-card">
+      <div class="h-label">Como faturamos</div>
+      <div class="body">100% particular. Sessão avulsa R$ 320 ou pacote R$ 300/sessão.</div>
+    </div>
+    <div class="summary-card">
+      <div class="h-label">Custos fixos</div>
+      <div class="body">R$ 3.454,37/mês. Break-even com ~13 sessões mensais.</div>
+    </div>
+  </div>
+
+  <div class="footer-doc">
+    Clínica Base · Sorocaba, SP · Documento interno · Versão 1.1 · Maio 2026
+  </div>
+</section>
+
+</body>
+</html>
