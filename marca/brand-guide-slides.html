@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Clínica Base · Brand Guide · Apresentação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+  @page { size: 1920px 1080px; margin: 0; }
+  :root {
+    --charcoal: #3D2B1F;
+    --creme: #F5EFE6;
+    --cobre: #B87333;
+    --salvia: #7C9A7C;
+    --preto: #1A1A1A;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #2a2a2a;
+    color: var(--charcoal);
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .slide {
+    width: 1920px;
+    height: 1080px;
+    background: var(--creme);
+    color: var(--charcoal);
+    page-break-after: always;
+    page-break-inside: avoid;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 0 20px 80px rgba(0,0,0,0.3);
+  }
+  .slide:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  .slide.dark { background: var(--charcoal); color: var(--creme); }
+  .slide.cobre { background: var(--cobre); color: var(--creme); }
+
+  /* Common elements */
+  .slide-num {
+    position: absolute;
+    top: 60px;
+    right: 80px;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cobre);
+    opacity: 0.8;
+  }
+  .slide.dark .slide-num, .slide.cobre .slide-num { color: var(--creme); opacity: 0.7; }
+
+  .slide-tag {
+    position: absolute;
+    top: 60px;
+    left: 80px;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--cobre);
+  }
+  .slide.dark .slide-tag, .slide.cobre .slide-tag { color: var(--creme); }
+  .slide.cobre .slide-tag { color: var(--charcoal); }
+
+  .slide-footer {
+    position: absolute;
+    bottom: 50px;
+    left: 80px;
+    right: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    opacity: 0.55;
+  }
+  .slide.dark .slide-footer { color: var(--creme); opacity: 0.6; }
+  .slide.cobre .slide-footer { color: var(--charcoal); opacity: 0.7; }
+
+  /* Logo small in footer */
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* Headlines */
+  h1.cover-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 200px;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    color: var(--charcoal);
+  }
+  h1.cover-title .accent { color: var(--cobre); }
+
+  h2.section {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 140px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--charcoal);
+  }
+  h2.section .accent { color: var(--cobre); }
+
+  h3.slide-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    color: var(--charcoal);
+    max-width: 1400px;
+  }
+  .slide.dark h3.slide-title { color: var(--creme); }
+
+  h4.slide-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.3;
+    color: var(--charcoal);
+    opacity: 0.85;
+    max-width: 1400px;
+    margin-top: 24px;
+  }
+  .slide.dark h4.slide-subtitle { color: var(--creme); opacity: 0.85; }
+
+  .lead {
+    font-family: 'Lato', sans-serif;
+    font-size: 28px;
+    line-height: 1.55;
+    color: var(--charcoal);
+    max-width: 1300px;
+  }
+  .slide.dark .lead { color: var(--creme); }
+
+  .body-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    line-height: 1.6;
+    color: var(--charcoal);
+    max-width: 1300px;
+  }
+  .slide.dark .body-text { color: var(--creme); }
+
+  .quote-mega {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    color: var(--charcoal);
+    max-width: 1500px;
+  }
+  .quote-mega .accent { color: var(--cobre); }
+  .slide.dark .quote-mega { color: var(--creme); }
+  .slide.dark .quote-mega .accent { color: var(--cobre); }
+
+  .quote-attr {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--cobre);
+    margin-top: 32px;
+  }
+
+  /* Slide content layouts */
+  .slide-content {
+    padding: 160px 80px 130px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .slide-content.center {
+    align-items: center;
+    text-align: center;
+  }
+
+  .slide-content.cover {
+    justify-content: space-between;
+    padding: 80px;
+  }
+
+  /* Brand mark grid for variations */
+  .brand-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin-top: 50px;
+  }
+
+  .brand-card {
+    padding: 60px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 380px;
+    border: 1px solid rgba(61,43,31,0.15);
+  }
+  .brand-card.dark { background: var(--charcoal); border-color: var(--charcoal); }
+  .brand-card.mono { background: #ffffff; border-color: rgba(0,0,0,0.1); }
+  .brand-card .card-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cobre);
+    margin-top: 32px;
+  }
+  .brand-card.dark .card-label { color: var(--creme); opacity: 0.7; }
+
+  /* Color palette */
+  .colors-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 28px;
+    margin-top: 60px;
+  }
+  .color-swatch {
+    display: flex;
+    flex-direction: column;
+  }
+  .color-swatch .chip {
+    height: 240px;
+    border-radius: 4px;
+    border: 1px solid rgba(61,43,31,0.1);
+  }
+  .color-swatch .name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--charcoal);
+    margin-top: 18px;
+    margin-bottom: 4px;
+  }
+  .color-swatch .hex {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    color: var(--charcoal);
+    opacity: 0.7;
+  }
+  .color-swatch .use {
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    color: var(--charcoal);
+    opacity: 0.6;
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+
+  /* Typography specimen */
+  .typo-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 50px;
+    align-items: baseline;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(61,43,31,0.12);
+  }
+  .typo-grid:last-child { border-bottom: none; }
+  .typo-grid .level {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cobre);
+    line-height: 1.4;
+  }
+  .typo-grid .level small {
+    display: block;
+    font-weight: 400;
+    color: var(--charcoal);
+    opacity: 0.55;
+    letter-spacing: 0.05em;
+    text-transform: none;
+    font-size: 13px;
+    margin-top: 4px;
+  }
+
+  /* Tone table */
+  .tone-table {
+    width: 100%;
+    margin-top: 50px;
+    border-collapse: collapse;
+    font-size: 22px;
+  }
+  .tone-table td {
+    padding: 18px 24px;
+    vertical-align: top;
+    border-bottom: 1px solid rgba(61,43,31,0.15);
+  }
+  .tone-table td:first-child {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--charcoal);
+    width: 240px;
+  }
+  .tone-table td:nth-child(2) {
+    color: var(--cobre);
+    font-weight: 700;
+    width: 320px;
+  }
+  .tone-table td:last-child {
+    font-style: italic;
+    opacity: 0.8;
+  }
+
+  /* DO / DON'T columns */
+  .do-dont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 50px;
+  }
+  .do-col, .dont-col {
+    padding: 32px 36px;
+  }
+  .do-col {
+    background: rgba(124,154,124,0.12);
+    border-left: 4px solid #5C8A5C;
+  }
+  .dont-col {
+    background: rgba(176,80,80,0.08);
+    border-left: 4px solid #B05050;
+  }
+  .do-col .col-label, .dont-col .col-label {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .do-col .col-label { color: #5C8A5C; }
+  .dont-col .col-label { color: #B05050; }
+  .do-col ul, .dont-col ul {
+    list-style: none;
+    padding: 0;
+  }
+  .do-col li, .dont-col li {
+    font-size: 22px;
+    line-height: 1.4;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(61,43,31,0.1);
+  }
+  .do-col li:last-child, .dont-col li:last-child { border-bottom: none; }
+
+  /* Architecture flow */
+  .arch-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 60px;
+    align-items: center;
+  }
+  .arch-step {
+    width: 800px;
+    padding: 36px 50px;
+    border: 1.5px solid var(--charcoal);
+    text-align: center;
+  }
+  .arch-step.featured {
+    border-color: var(--cobre);
+    border-width: 2.5px;
+    background: rgba(184,115,51,0.06);
+  }
+  .arch-step .arch-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 42px;
+    color: var(--charcoal);
+    opacity: 0.85;
+    line-height: 1;
+  }
+  .arch-step.featured .arch-name { font-weight: 700; opacity: 1; }
+  .arch-step .arch-role {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cobre);
+    margin-top: 10px;
+  }
+  .arch-arrow {
+    font-size: 28px;
+    color: var(--cobre);
+  }
+
+  /* Pillar grid for B.A.S.E. */
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 36px;
+    margin-top: 60px;
+  }
+  .pillar-card {
+    padding: 36px 32px;
+    border-left: 3px solid var(--cobre);
+  }
+  .pillar-card .pl-letter {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 96px;
+    color: var(--cobre);
+    line-height: 0.85;
+    margin-bottom: 16px;
+  }
+  .pillar-card .pl-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--charcoal);
+    margin-bottom: 12px;
+  }
+  .pillar-card .pl-desc {
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--charcoal);
+  }
+
+  /* Bullet list */
+  ul.bullets {
+    list-style: none;
+    padding: 0;
+    margin: 36px 0;
+  }
+  ul.bullets li {
+    font-size: 26px;
+    line-height: 1.5;
+    padding: 14px 0 14px 36px;
+    position: relative;
+    border-bottom: 1px solid rgba(61,43,31,0.12);
+  }
+  ul.bullets li:last-child { border-bottom: none; }
+  ul.bullets li::before {
+    content: "·";
+    position: absolute;
+    left: 4px;
+    top: -10px;
+    color: var(--cobre);
+    font-weight: 700;
+    font-size: 56px;
+  }
+
+  /* Cover specifics */
+  .cover-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .cover-meta .date {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cobre);
+  }
+
+  /* Application thumbs */
+  .apps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-top: 60px;
+  }
+  .app-thumb {
+    aspect-ratio: 9/12;
+    background: var(--creme);
+    border: 1px solid rgba(61,43,31,0.15);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .app-thumb.dark { background: var(--charcoal); }
+  .app-thumb.cobre { background: var(--cobre); }
+  .app-thumb .at-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cobre);
+    font-weight: 700;
+  }
+  .app-thumb.dark .at-label, .app-thumb.cobre .at-label { color: var(--creme); }
+  .app-thumb .at-headline {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.15;
+    color: var(--charcoal);
+  }
+  .app-thumb.dark .at-headline { color: var(--creme); }
+  .app-thumb .at-foot {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--charcoal);
+    opacity: 0.7;
+  }
+  .app-thumb.dark .at-foot { color: var(--creme); opacity: 0.6; }
+
+  /* Manifesto specific */
+  .manifesto-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    line-height: 1.6;
+    color: var(--creme);
+    max-width: 1500px;
+  }
+  .manifesto-text .accent {
+    font-style: italic;
+    color: var(--cobre);
+    font-size: 36px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============= 01. CAPA ============= -->
+<section class="slide">
+  <div class="slide-content cover">
+    <div>
+      <div class="footer-logo">
+        <svg viewBox="0 0 140 90" width="84" height="54" xmlns="http://www.w3.org/2000/svg">
+          <line x1="10" y1="80" x2="130" y2="80" stroke="#3D2B1F" stroke-width="2.5"/>
+          <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#3D2B1F" stroke-width="3.5" fill="none"/>
+          <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#7C9A7C" stroke-width="3.5" fill="none"/>
+          <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#B87333" stroke-width="3.5" fill="none"/>
+        </svg>
+        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 22px; color: var(--charcoal); line-height: 1;">
+          Clínica Base
+          <div style="font-family: 'Lato', sans-serif; font-weight: 400; font-size: 11px; letter-spacing: 0.24em; color: var(--cobre); text-transform: uppercase; margin-top: 6px;">Terapia Ocupacional</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div style="font-family: 'Lato', sans-serif; font-size: 18px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cobre); font-weight: 700; margin-bottom: 32px;">Brand Guide · Apresentação</div>
+      <h1 class="cover-title">Clínica<br><span class="accent">Base</span></h1>
+      <div style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 36px; color: var(--charcoal); opacity: 0.75; margin-top: 32px;">A identidade visual e verbal completa.</div>
+    </div>
+
+    <div class="cover-meta">
+      <div class="date">Sorocaba, SP · Maio 2026 · Versão 1.0</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= 02. SUMÁRIO ============= -->
+<section class="slide">
+  <div class="slide-tag">Sumário</div>
+  <div class="slide-num">02</div>
+  <div class="slide-content">
+    <h3 class="slide-title">O que tem aqui dentro.</h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px 80px; margin-top: 80px; max-width: 1500px;">
+      <div>
+        <div style="font-family: 'Lato', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cobre); margin-bottom: 16px;">A Marca</div>
+        <ul style="list-style: none; padding: 0; font-family: 'Playfair Display', serif; font-size: 26px; line-height: 1.8; color: var(--charcoal);">
+          <li>Big Idea</li>
+          <li>Tagline e Frase Central</li>
+          <li>Arquitetura de Marca</li>
+          <li>Método B.A.S.E.</li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-family: 'Lato', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cobre); margin-bottom: 16px;">O Sistema Visual</div>
+        <ul style="list-style: none; padding: 0; font-family: 'Playfair Display', serif; font-size: 26px; line-height: 1.8; color: var(--charcoal);">
+          <li>Logo (Conceito I)</li>
+          <li>Paleta de Cores</li>
+          <li>Tipografia</li>
+          <li>Tom de Marca</li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-family: 'Lato', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cobre); margin-bottom: 16px;">Aplicações</div>
+        <ul style="list-style: none; padding: 0; font-family: 'Playfair Display', serif; font-size: 26px; line-height: 1.8; color: var(--charcoal);">
+          <li>WhatsApp e Instagram</li>
+          <li>Cartão e Papelaria</li>
+          <li>Carrossel, Stories e E-book</li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-family: 'Lato', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cobre); margin-bottom: 16px;">Encerramento</div>
+        <ul style="list-style: none; padding: 0; font-family: 'Playfair Display', serif; font-size: 26px; line-height: 1.8; color: var(--charcoal);">
+          <li>Uso Incorreto</li>
+          <li>Manifesto</li>
+          <li>Próximos passos</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= 03. SEÇÃO: A MARCA ============= -->
+<section class="slide dark">
+  <div class="slide-num">03</div>
+  <div class="slide-content center">
+    <div style="font-family: 'Lato', sans-serif; font-size: 18px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--cobre); font-weight: 700; margin-bottom: 40px;">Parte 01</div>
+    <h2 class="section" style="color: var(--creme);">A <span class="accent">marca</span>.</h2>
+    <div style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 36px; color: var(--creme); opacity: 0.75; margin-top: 36px; max-width: 1300px;">Os ativos verbais que sustentam toda a comunicação.</div>
+  </div>
+</section>
+
+<!-- ============= 04. BIG IDEA ============= -->
+<section class="slide">
+  <div class="slide-tag">Big Idea</div>
+  <div class="slide-num">04</div>
+  <div class="slide-content center">
+    <div style="font-family: 'Lato', sans-serif; font-size: 16px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--cobre); font-weight: 700; margin-bottom: 60px;">O conceito central · Durabilidade 30 anos</div>
+    <div class="quote-mega">
+      "A mãe é o maior <span class="accent">instrumento terapêutico</span> que existe."
+    </div>
+    <div class="quote-attr">A crença que sustenta tudo</div>
+  </div>
+  <div class="slide-footer">
+    <div>Clínica Base · Brand Guide</div>
+    <div>Big Idea</div>
+  </div>
+</section>
+
+<!-- ============= 05. TAGLINE ============= -->
+<section class="slide cobre">
+  <div class="slide-tag">Tagline</div>
+  <div class="slide-num">05</div>
+  <div class="slide-content center">
+    <div style="font-family: 'Lato', sans-serif; font-size: 16px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--charcoal); font-weight: 700; margin-bottom: 60px; opacity: 0.7;">A frase que acompanha a marca em todo lugar</div>
+    <div class="quote-mega" style="color: var(--creme);">
+      "Você é a base do <span style="color: var(--charcoal);">seu filho</span>."
+    </div>
+    <div class="quote-attr" style="color: var(--charcoal);">Tagline oficial</div>
+  </div>
+  <div class="slide-footer">
+    <div>Clínica Base · Brand Guide</div>
+    <div>Tagline</div>
+  </div>
+</section>
+
+<!-- ============= 06. FRASE CENTRAL ============= -->
+<section class="slide">
+  <div class="slide-tag">Frase Central</div>
+  <div class="slide-num">06</div>
+  <div class="slide-content center">
+    <div style="font-family: 'Lato', sans-serif; font-size: 16px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--cobre); font-weight: 700; margin-bottom: 50px;">Como a Regiane se apresenta</div>
+    <div class="quote-mega" style="font-size: 72px;">
+      "Atendo mães que chegam <span class="accent">sem entender</span> o que está acontecendo com o filho, e saem <span class="accent">sabendo o que fazer</span>."
+    </div>
+    <div class="quote-attr">Regiane Vidal · CREFITO-3 11824-TO</div>
+  </div>
+  <div class="slide-footer">
+    <div>Clínica Base · Brand Guide</div>
+    <div>Frase Central</div>
+  </div>
+</section>
+
+<!-- ============= 07. ARQUITETURA ============= -->
+<section class="slide">
+  <div class="slide-tag">Arquitetura de Marca</div>
+  <div class="slide-num">07</div>
+  <div class="slide-content">
+    <h3 class="slide-title">Três ativos distintos.</h3>
+    <h4 class="slide-subtitle">Regiane criou o método. O método sustenta a clínica. Cada um faz o seu trabalho.</h4>
+
+    <div class="arch-flow">
+      <div class="arch-step">
+        <div class="arch-name">Regiane Vidal</div>
+        <div class="arch-role">A pessoa · terapeuta · autoridade</div>
+      </div>
+      <div class="arch-arrow">↓</div>
+      <div class="arch-step featured">
+        <div class="arch-name">Clínica Base</div>
+        <div class="arch-role">A instituição · onde acontece</div>
+      </div>
+      <div class="arch-arrow">↓</div>
+      <div class="arch-step">
+        <div class="arch-name">Método Base</div>
+        <div class="arch-role">A entrega · o que diferencia</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div>Clínica Base · Brand Guide</div>
+    <div>Arquitetura</div>
+  </div>
+</section>
+
+<!-- ============= 08. MÉTODO B.A.S.E. ============= -->
+<section class="slide">
+  <div class="slide-tag">Método</div>
+  <div class="slide-num">08</div>
+  <div class="slide-content">
+    <h3 class="slide-title">Método B.A.S.E.</h3>
+    <h4 class="slide-subtitle">Quatro pilares que traduzem ciência em ação prática. Fundamentado em Integração Sensorial Ayres e DIR-Floortime.</h4>
+
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pl-letter">B</div>
+        <div class="pl-name">Brincar</div>
+        <div class="pl-desc">Ferramenta intencional de desenvolvimento, não passatempo.</div>
+      </div>
+      <div class="pillar-card">
+        <div class="pl-letter">A</div>
+        <div class="pl-name">Afeto</div>
+        <div class="pl-desc">Interações responsivas que constroem segurança emocional.</div>
+      </div>
+      <div class="pillar-card">
+        <div class="pl-letter">S</div>
+        <div class="pl-name">Sensorial</div>
+        <div class="pl-desc">Compreensão do processamento sensorial no comportamento.</div>
+      </div>
+      <div class="pillar-card">
+        <div class="pl-letter">E</div>
+        <div class="pl-name">Estimulação</div>
+        <div class="pl-desc">Ferramentas concretas para aplicar no cotidiano.</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div>Clínica Base · Brand Guide</div>
+    <div>Método B.A.S.E.</div>
+  </div>
+</section>
+
+<!-- ============= 09. SEÇÃO: SISTEMA VISUAL ============= -->
+<section class="slide dark">
+  <div class="slide-num">09</div>
+  <div class="slide-content center">
+    <div style="font-family: 'Lato', sans-serif; font-size: 18px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--cobre); font-weight: 700; margin-bottom: 40px;">Parte 02</div>
+    <h2 class="section" style="color: var(--creme);">Sistema <span class="accent">visual</span>.</h2>
+    <div style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 36px; color: var(--creme); opacity: 0.75; margin-top: 36px; max-width: 1300px;">Logo, cores, tipografia. O que o público vê antes de ler.</div>
+  </div>
+</section>
+
+<!-- ============= 10. LOGO PRINCIPAL ============= -->
+<section class="slide">
+  <div class="slide-tag">Logo · Conceito I</div>
+  <div class="slide-num">10</div>
+  <div class="slide-content center">
+    <div style="font-family: 'Lato', sans-serif; font-size: 16px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--cobre); font-weight: 700; margin-bottom: 60px;">Marca Concêntrica</div>
+    <svg viewBox="0 0 140 90" width="600" height="380" xmlns="http://www.w3.org/2000/svg">
+      <line x1="10" y1="80" x2="130" y2="80" stroke="#3D2B1F" stroke-width="2.5"/>
+      <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#3D2B1F" stroke-width="3.5" fill="none"/>
+      <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#7C9A7C" stroke-width="3.5" fill="none"/>
+      <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#B87333" stroke-width="3.5" fill="none"/>
+    </svg>
+    <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 80px; color: var(--charcoal); line-height: 1; margin-top: 30px; letter-spacing: -0.02em;">Clínica Base</div>
+    <div style="font-family: 'Lato', sans-serif; font-weight: 400; font-size: 18px; letter-spacing: 0.34em; color: var(--cobre); text-transform: uppercase; margin-top: 18px;">Terapia Ocupacional</div>
+  </div>
+  <div class="slide-footer">
+    <div>Clínica Base · Brand Guide</div>
+    <div>Logo Principal</div>
+  </div>
+</section>
+
+<!-- ============= 11. SIGNIFICADO DO LOGO ============= -->
+<section class="slide">
+  <div class="slide-tag">Logo · Significado</div>
+  <div class="slide-num">11</div>
+  <div class="slide-content">
+    <h3 class="slide-title">Três entidades, uma fundação.</h3>
+    <h4 class="slide-subtitle">Cada arco representa um agente do desenvolvimento. Todos sobre a mesma linha-base.</h4>
+
+    <div style="display: grid; grid-template-columns: 700px 1fr; gap: 80px; align-items: center; margin-top: 60px;">
+      <svg viewBox="0 0 140 90" width="700" height="450" xmlns="http://www.w3.org/2000/svg">
+        <line x1="10" y1="80" x2="130" y2="80" stroke="#3D2B1F" stroke-width="2.5"/>
+        <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#3D2B1F" stroke-width="3.5" fill="none"/>
+        <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#7C9A7C" stroke-width="3.5" fill="none"/>
+        <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#B87333" stroke-width="3.5" fill="none"/>
+      </svg>
+
+      <div>
+        <div style="margin-bottom: 36px;">
+          <div style="display: flex; align-items: center; gap: 16px;">
+            <div style="width: 24px; height: 24px; border-radius: 50%; background: #3D2B1F;"></div>
+            <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 32px;">Arco externo</div>
+          </div>
+          <div style="font-size: 22px; line-height: 1.5; color: var(--charcoal); margin-top: 12px; padding-left: 40px; opacity: 0.85;">A clínica que sustenta o todo.</div>
+        </div>
+        <div style="margin-bottom: 36px;">
+          <div style="display: flex; align-items: center; gap: 16px;">
+            <div style="width: 24px; height: 24px; border-radius: 50%; background: #7C9A7C;"></div>
+            <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 32px;">Arco intermediário</div>
+          </div>
+          <div style="font-size: 22px; line-height: 1.5; color: var(--charcoal); margin-top: 12px; padding-left: 40px; opacity: 0.85;">A mãe, parceira ativa do desenvolvimento.</div>
+        </div>
+        <div>
+          <div style="display: flex; align-items: center; gap: 16px;">
+            <div style="width: 24px; height: 24px; border-radius: 50%; background: #B87333;"></div>
+            <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 32px;">Arco interno</div>
+          </div>
+          <div style="font-size: 22px; line-height: 1.5; color: var(--charcoal); margin-top: 12px; padding-left: 40px; opacity: 0.85;">A criança, no centro do cuidado.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div>Clínica Base · Brand Guide</div>
+    <div>Logo · Significado</div>
+  </div>
+</section>
+
+<!-- ============= 12. VARIAÇÕES DO LOGO ============= -->
+<section class="slide">
+  <div class="slide-tag">Logo · Variações</div>
+  <div class="slide-num">12</div>
+  <div class="slide-content">
+    <h3 class="slide-title">Cinco variações operacionais.</h3>
+
+    <div class="brand-grid-3" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="brand-card">
+        <svg viewBox="0 0 140 90" width="200" height="128" xmlns="http://www.w3.org/2000/svg">
+          <line x1="10" y1="80" x2="130" y2="80" stroke="#3D2B1F" stroke-width="2.5"/>
+          <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#3D2B1F" stroke-width="3.5" fill="none"/>
+          <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#7C9A7C" stroke-width="3.5" fill="none"/>
+          <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#B87333" stroke-width="3.5" fill="none"/>
+        </svg>
+        <div class="card-label">Principal · Sobre creme</div>
+      </div>
+      <div class="brand-card dark">
+        <svg viewBox="0 0 140 90" width="200" height="128" xmlns="http://www.w3.org/2000/svg">
+          <line x1="10" y1="80" x2="130" y2="80" stroke="#F5EFE6" stroke-width="2.5"/>
+          <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#F5EFE6" stroke-width="3.5" fill="none"/>
+          <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#7C9A7C" stroke-width="3.5" fill="none"/>
+          <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#B87333" stroke-width="3.5" fill="none"/>
+        </svg>
+        <div class="card-label">Negativa · Sobre charcoal</div>
+      </div>
+      <div class="brand-card mono">
+        <svg viewBox="0 0 140 90" width="200" height="128" xmlns="http://www.w3.org/2000/svg">
+          <line x1="10" y1="80" x2="130" y2="80" stroke="#1A1A1A" stroke-width="2.5"/>
+          <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#1A1A1A" stroke-width="3.5" fill="none"/>
+          <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#1A1A1A" stroke-width="3.5" fill="none" stroke-opacity="0.7"/>
+          <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#1A1A1A" stroke-width="3.5" fill="none" stroke-opacity="0.45"/>
+        </svg>
+        <div class="card-label" style="color: #1A1A1A;">Monocromática</div>
+      </div>
+      <div class="brand-card">
+        <svg viewBox="0 0 140 90" width="120" height="76" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#3D2B1F" stroke-width="4" fill="none"/>
+          <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#7C9A7C" stroke-width="4" fill="none"/>
+          <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#B87333" stroke-width="4" fill="none"/>
+        </svg>
+        <div class="card-label">Símbolo isolado · Favicon</div>
+      </div>
+      <div class="brand-card" style="grid-column: span 2;">
+        <div style="display: flex; align-items: center; gap: 32px;">
+          <svg viewBox="0 0 140 90" width="160" height="100" xmlns="http://www.w3.org/2000/svg">
+            <line x1="10" y1="80" x2="130" y2="80" stroke="#3D2B1F" stroke-width="2.5"/>
+            <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#3D2B1F" stroke-width="3.5" fill="none"/>
+            <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#7C9A7C" stroke-width="3.5" fill="none"/>
+            <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#B87333" stroke-width="3.5" fill="none"/>
+          </svg>
+          <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 48px; color: var(--charcoal); line-height: 1;">Clínica Base</div>
+        </div>
+        <div class="card-label">Lockup completo · Horizontal</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div>Clínica Base · Brand Guide</div>
+    <div>Logo · Variações</div>
+  </div>
+</section>
+
+<!-- ============= 13. PALETA DE CORES ============= -->
+<section class="slide">
+  <div class="slide-tag">Sistema de Cores</div>
+  <div class="slide-num">13</div>
+  <div class="slide-content">
+    <h3 class="slide-title">Editorial Quente.</h3>
+    <h4 class="slide-subtitle">Cinco cores. Proporção 60/30/10. Calor terroso, não pastel pediátrico.</h4>
+
+    <div class="colors-grid">
+      <div class="color-swatch">
+        <div class="chip" style="background: #3D2B1F;"></div>
+        <div class="name">Charcoal Quente</div>
+        <div class="hex">#3D2B1F · 40%</div>
+        <div class="use">Cor primária, títulos.</div>
+      </div>
+      <div class="color-swatch">
+        <div class="chip" style="background: #F5EFE6; border-color: rgba(61,43,31,0.2);"></div>
+        <div class="name">Creme</div>
+        <div class="hex">#F5EFE6 · 40%</div>
+        <div class="use">Fundo principal, respiro.</div>
+      </div>
+      <div class="color-swatch">
+        <div class="chip" style="background: #B87333;"></div>
+        <div class="name">Cobre</div>
+        <div class="hex">#B87333 · 10%</div>
+        <div class="use">Acento, CTAs, destaques.</div>
+      </div>
+      <div class="color-swatch">
+        <div class="chip" style="background: #7C9A7C;"></div>
+        <div class="name">Verde Sálvia</div>
+        <div class="hex">#7C9A7C · 7%</div>
+        <div class="use">Suporte, ícones.</div>
+      </div>
+      <div class="color-swatch">
+        <div class="chip" style="background: #1A1A1A;"></div>
+        <div class="name">Preto Quente</div>
+        <div class="hex">#1A1A1A · 3%</div>
+        <div class="use">Tipografia, contraste.</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div>Clínica Base · Brand Guide</div>
+    <div>Cores</div>
+  </div>
+</section>
+
+<!-- ============= 14. TIPOGRAFIA ============= -->
+<section class="slide">
+  <div class="slide-tag">Sistema Tipográfico</div>
+  <div class="slide-num">14</div>
+  <div class="slide-content">
+    <h3 class="slide-title">Playfair Display + Lato.</h3>
+    <h4 class="slide-subtitle">Serif editorial para títulos. Sans-serif humanista para corpo. Ambas no Google Fonts, licença gratuita.</h4>
+
+    <div style="margin-top: 60px; max-width: 1700px;">
+      <div class="typo-grid">
+        <div class="level">H1<small>Playfair · 64px · Bold</small></div>
+        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 64px; line-height: 1.1; color: var(--charcoal);">Você é a base do seu filho.</div>
+      </div>
+      <div class="typo-grid">
+        <div class="level">H2<small>Playfair · 40px · Bold</small></div>
+        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 40px; line-height: 1.2; color: var(--charcoal);">Método B.A.S.E. · Brincar, Afeto, Sensorial, Estimulação</div>
+      </div>
+      <div class="typo-grid">
+        <div class="level">H3<small>Playfair · 28px · Regular</small></div>
+        <div style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: 28px; line-height: 1.3; color: var(--charcoal);">Coach parental estruturado: a mãe leva o desenvolvimento para casa.</div>
+      </div>
+      <div class="typo-grid">
+        <div class="level">Citação<small>Playfair · 22px · Italic</small></div>
+        <div style="font-family: 'Playfair Display', serif; font-weight: 400; font-style: italic; font-size: 22px; line-height: 1.5; color: var(--charcoal);">"Antes da Clínica Base, eu não sabia o que fazer entre as sessões."</div>
+      </div>
+      <div class="typo-grid">
+        <div class="level">Body<small>Lato · 18px · Regular</small></div>
+        <div style="font-family: 'Lato', sans-serif; font-weight: 400; font-size: 18px; line-height: 1.6; color: var(--charcoal); max-width: 1100px;">A Clínica Base é uma clínica de Terapia Ocupacional em Sorocaba que trabalha lado a lado com a mãe para sustentar o desenvolvimento da criança no dia a dia.</div>
+      </div>
+      <div class="typo-grid">
+        <div class="level">Caption<small>Lato · 14px · Light</small></div>
+        <div style="font-family: 'Lato', sans-serif; font-weight: 300; font-size: 14px; line-height: 1.5; color: var(--charcoal); letter-spacing: 0.02em;">Regiane Vidal · CREFITO-3 11824-TO · Sorocaba, SP</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div>Clínica Base · Brand Guide</div>
+    <div>Tipografia</div>
+  </div>
+</section>
+
+<!-- ============= 15. TOM DE MARCA ============= -->
+<section class="slide">
+  <div class="slide-tag">Tom de Marca</div>
+  <div class="slide-num">15</div>
+  <div class="slide-content">
+    <h3 class="slide-title">Como a Clínica Base fala.</h3>
+    <h4 class="slide-subtitle">Especialista que entende o filho, e entende a mãe. Cinco dimensões calibradas.</h4>
+
+    <table class="tone-table">
+      <tr>
+        <td>Formalidade</td>
+        <td>Informal com precisão</td>
+        <td>Especialista de confiança, não instituição.</td>
+      </tr>
+      <tr>
+        <td>Emoção</td>
+        <td>Alta</td>
+        <td>A mãe está em momento de vulnerabilidade real.</td>
+      </tr>
+      <tr>
+        <td>Autoridade</td>
+        <td>Acessível</td>
+        <td>Parceira, senta ao lado, não distante.</td>
+      </tr>
+      <tr>
+        <td>Humor</td>
+        <td>Sério</td>
+        <td>O tema não comporta leveza fácil.</td>
+      </tr>
+      <tr>
+        <td>Perspectiva</td>
+        <td>Visionária</td>
+        <td>O desenvolvimento começa na família, não na clínica.</td>
+      </tr>
+    </table>
+  </div>
+  <div class="slide-footer">
+    <div>Clínica Base · Brand Guide</div>
+    <div>Tom</div>
+  </div>
+</section>
+
+<!-- ============= 16. DO/DON'T ============= -->
+<section class="slide">
+  <div class="slide-tag">Vocabulário</div>
+  <div class="slide-num">16</div>
+  <div class="slide-content">
+    <h3 class="slide-title">O que aparece. O que nunca aparece.</h3>
+
+    <div class="do-dont">
+      <div class="do-col">
+        <div class="col-label">✓ Sempre</div>
+        <ul>
+          <li>Linguagem direta, sem rodeios</li>
+          <li>Fatos concretos e específicos</li>
+          <li>Emoção com substância</li>
+          <li>Mãe como protagonista</li>
+          <li>Verbos de ação e transformação</li>
+          <li>Perguntas que a mãe já está fazendo</li>
+        </ul>
+      </div>
+      <div class="dont-col">
+        <div class="col-label">✗ Nunca</div>
+        <ul>
+          <li>Travessão (—)</li>
+          <li>Construção "não é X, é Y"</li>
+          <li>Palavra "cura"</li>
+          <li>Faixa etária específica</li>
+          <li>"Atendimento humanizado"</li>
+          <li>Urgência artificial</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div>Clínica Base · Brand Guide</div>
+    <div>Vocabulário</div>
+  </div>
+</section>
+
+<!-- ============= 17. SEÇÃO: APLICAÇÕES ============= -->
+<section class="slide cobre">
+  <div class="slide-num" style="color: var(--charcoal); opacity: 0.7;">17</div>
+  <div class="slide-content center">
+    <div style="font-family: 'Lato', sans-serif; font-size: 18px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--charcoal); font-weight: 700; margin-bottom: 40px; opacity: 0.7;">Parte 03</div>
+    <h2 class="section" style="color: var(--creme);">Aplicações.</h2>
+    <div style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 36px; color: var(--creme); margin-top: 36px; max-width: 1300px;">Templates oficiais para WhatsApp, Instagram, papelaria e digital.</div>
+  </div>
+</section>
+
+<!-- ============= 18. APLICAÇÕES OVERVIEW ============= -->
+<section class="slide">
+  <div class="slide-tag">Aplicações</div>
+  <div class="slide-num">18</div>
+  <div class="slide-content">
+    <h3 class="slide-title">Oito templates oficiais.</h3>
+
+    <div class="apps-grid">
+      <div class="app-thumb">
+        <div class="at-label">01 · WhatsApp</div>
+        <div class="at-headline">Mensagem de boas-vindas em 5 etapas</div>
+        <div class="at-foot">Tom Fagner · Sem pressão</div>
+      </div>
+      <div class="app-thumb dark">
+        <div class="at-label">02 · Instagram</div>
+        <div class="at-headline" style="color: var(--creme);">Perfil + feed 1080×1080</div>
+        <div class="at-foot">Logo + tagline editorial</div>
+      </div>
+      <div class="app-thumb">
+        <div class="at-label">03 · Cartão</div>
+        <div class="at-headline">Cartão de visita 90×50mm</div>
+        <div class="at-foot">Frente e verso</div>
+      </div>
+      <div class="app-thumb dark">
+        <div class="at-label">04 · E-mail</div>
+        <div class="at-headline" style="color: var(--creme);">Assinatura corporativa</div>
+        <div class="at-foot">CREFITO + contatos</div>
+      </div>
+      <div class="app-thumb">
+        <div class="at-label">05 · Papel timbrado</div>
+        <div class="at-headline">Laudo e relatório A4</div>
+        <div class="at-foot">Cabeçalho + rodapé</div>
+      </div>
+      <div class="app-thumb cobre">
+        <div class="at-label">06 · Carrossel IG</div>
+        <div class="at-headline" style="color: var(--creme);">Padrão 8 slides educativo</div>
+        <div class="at-foot" style="color: var(--creme);">Capa, conteúdo, fechamento</div>
+      </div>
+      <div class="app-thumb">
+        <div class="at-label">07 · Stories</div>
+        <div class="at-headline">Pergunta, resposta, depoimento</div>
+        <div class="at-foot">9:16 com zona segura</div>
+      </div>
+      <div class="app-thumb dark">
+        <div class="at-label">08 · E-book</div>
+        <div class="at-headline" style="color: var(--creme);">Material de captação A4</div>
+        <div class="at-foot">Capa + página interna</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div>Clínica Base · Brand Guide</div>
+    <div>Aplicações</div>
+  </div>
+</section>
+
+<!-- ============= 19. POST INSTAGRAM EXEMPLO ============= -->
+<section class="slide">
+  <div class="slide-tag">Aplicação · Instagram</div>
+  <div class="slide-num">19</div>
+  <div class="slide-content">
+    <h3 class="slide-title">Post de feed em ação.</h3>
+
+    <div style="display: grid; grid-template-columns: 540px 1fr; gap: 80px; align-items: center; margin-top: 60px;">
+      <div style="width: 540px; height: 540px; background: var(--creme); padding: 48px; display: flex; flex-direction: column; box-shadow: 0 20px 60px rgba(0,0,0,0.15);">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <svg viewBox="0 0 140 90" width="68" height="44" xmlns="http://www.w3.org/2000/svg">
+            <line x1="10" y1="80" x2="130" y2="80" stroke="#3D2B1F" stroke-width="2.5"/>
+            <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#3D2B1F" stroke-width="3.5" fill="none"/>
+            <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#7C9A7C" stroke-width="3.5" fill="none"/>
+            <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#B87333" stroke-width="3.5" fill="none"/>
+          </svg>
+          <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 22px; color: var(--charcoal);">
+            Clínica Base
+            <div style="font-family: 'Lato', sans-serif; font-weight: 400; font-size: 9px; letter-spacing: 0.22em; color: var(--cobre); text-transform: uppercase; margin-top: 4px;">Terapia Ocupacional</div>
+          </div>
+        </div>
+        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+          <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 32px; line-height: 1.18; color: var(--charcoal); margin-bottom: 16px;">A mãe entende a criança antes do laudo entender.</div>
+          <div style="font-family: 'Lato', sans-serif; font-weight: 400; font-size: 14px; line-height: 1.55; color: var(--charcoal); max-width: 420px;">Na Clínica Base, a Terapia Ocupacional coloca essa intuição no centro do desenvolvimento da criança, pelo Método B.A.S.E.</div>
+        </div>
+        <div>
+          <div style="width: 56px; height: 2px; background: var(--cobre); margin-bottom: 12px;"></div>
+          <div style="font-family: 'Lato', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--cobre);">Saiba mais na bio</div>
+        </div>
+      </div>
+
+      <div>
+        <h4 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 36px; line-height: 1.2; margin-bottom: 24px;">Anatomia do post.</h4>
+        <ul class="bullets" style="margin: 0;">
+          <li>Logo no canto superior, área de proteção respeitada</li>
+          <li>Headline em Playfair Bold 32-56px</li>
+          <li>Subtítulo em Lato Regular, ancorado ao Método</li>
+          <li>CTA em Cobre, all-caps, tracking 0.05em</li>
+          <li>Linha separadora 2px em Cobre acima do CTA</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div>Clínica Base · Brand Guide</div>
+    <div>Aplicação · Post Instagram</div>
+  </div>
+</section>
+
+<!-- ============= 20. CARROSSEL ============= -->
+<section class="slide">
+  <div class="slide-tag">Aplicação · Carrossel</div>
+  <div class="slide-num">20</div>
+  <div class="slide-content">
+    <h3 class="slide-title">Carrossel educativo · 8 slides.</h3>
+    <h4 class="slide-subtitle">Capa + conteúdo + fechamento. Alternância creme / charcoal cria ritmo. Slides em cobre quebram a sequência.</h4>
+
+    <div style="display: grid; grid-template-columns: repeat(8, 1fr); gap: 14px; margin-top: 60px;">
+      <div style="aspect-ratio: 1; background: var(--creme); padding: 14px; border: 1px solid rgba(61,43,31,0.15); display: flex; flex-direction: column; justify-content: space-between;">
+        <div style="font-family: 'Lato', sans-serif; font-size: 7px; letter-spacing: 0.16em; color: var(--cobre); font-weight: 700; text-transform: uppercase;">01 · Capa</div>
+        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 11px; line-height: 1.15; color: var(--charcoal);">Quando seu filho está em crise, ele está te pedindo ajuda.</div>
+        <div style="font-family: 'Lato', sans-serif; font-size: 6px; color: var(--charcoal);">arrasta →</div>
+      </div>
+      <div style="aspect-ratio: 1; background: var(--charcoal); padding: 14px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+        <div style="font-family: 'Lato', sans-serif; font-size: 7px; letter-spacing: 0.16em; color: var(--cobre); font-weight: 700; margin-bottom: 8px;">02</div>
+        <div style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 10px; color: var(--creme); line-height: 1.3;">"Por que ele não consegue parar?"</div>
+      </div>
+      <div style="aspect-ratio: 1; background: var(--creme); padding: 14px; border: 1px solid rgba(61,43,31,0.15); display: flex; flex-direction: column;">
+        <div style="font-family: 'Lato', sans-serif; font-size: 7px; letter-spacing: 0.16em; color: var(--cobre); font-weight: 700;">03</div>
+        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 9px; color: var(--charcoal); margin-top: 6px;">O sistema sensorial dele.</div>
+      </div>
+      <div style="aspect-ratio: 1; background: var(--creme); padding: 14px; border: 1px solid rgba(61,43,31,0.15); display: flex; flex-direction: column;">
+        <div style="font-family: 'Lato', sans-serif; font-size: 7px; letter-spacing: 0.16em; color: var(--cobre); font-weight: 700;">04</div>
+        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 9px; color: var(--charcoal); margin-top: 6px;">Não é mau comportamento.</div>
+      </div>
+      <div style="aspect-ratio: 1; background: var(--creme); padding: 14px; border: 1px solid rgba(61,43,31,0.15); display: flex; flex-direction: column;">
+        <div style="font-family: 'Lato', sans-serif; font-size: 7px; letter-spacing: 0.16em; color: var(--cobre); font-weight: 700;">05</div>
+        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 8px; color: var(--charcoal); margin-top: 4px;">Sinais que você pode observar:</div>
+      </div>
+      <div style="aspect-ratio: 1; background: var(--cobre); padding: 14px; display: flex; flex-direction: column; justify-content: center;">
+        <div style="font-family: 'Lato', sans-serif; font-size: 7px; letter-spacing: 0.16em; color: var(--creme); font-weight: 700; margin-bottom: 8px;">06 · Insight</div>
+        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 10px; line-height: 1.2; color: var(--creme);">A mãe é a primeira a notar.</div>
+      </div>
+      <div style="aspect-ratio: 1; background: var(--creme); padding: 14px; border: 1px solid rgba(61,43,31,0.15); display: flex; flex-direction: column;">
+        <div style="font-family: 'Lato', sans-serif; font-size: 7px; letter-spacing: 0.16em; color: var(--cobre); font-weight: 700;">07 · Método B.A.S.E.</div>
+        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 8px; color: var(--charcoal); margin-top: 4px;">Na Clínica Base:</div>
+      </div>
+      <div style="aspect-ratio: 1; background: var(--charcoal); padding: 14px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center;">
+        <svg viewBox="0 0 140 90" width="32" height="20" xmlns="http://www.w3.org/2000/svg">
+          <line x1="10" y1="80" x2="130" y2="80" stroke="#F5EFE6" stroke-width="3"/>
+          <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#F5EFE6" stroke-width="4" fill="none"/>
+          <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#7C9A7C" stroke-width="4" fill="none"/>
+          <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#B87333" stroke-width="4" fill="none"/>
+        </svg>
+        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 10px; line-height: 1.2; color: var(--creme);">Você é a base do seu filho.</div>
+        <div style="font-family: 'Lato', sans-serif; font-size: 5px; letter-spacing: 0.14em; color: var(--cobre); text-transform: uppercase;">Salve · Compartilhe</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div>Clínica Base · Brand Guide</div>
+    <div>Aplicação · Carrossel</div>
+  </div>
+</section>
+
+<!-- ============= 21. USO INCORRETO ============= -->
+<section class="slide">
+  <div class="slide-tag">Uso Incorreto</div>
+  <div class="slide-num">21</div>
+  <div class="slide-content">
+    <h3 class="slide-title">O que não fazer.</h3>
+    <h4 class="slide-subtitle">Oito erros que destroem a consistência da marca. Reconheça e refaça antes de publicar.</h4>
+
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; margin-top: 60px;">
+      <div style="border: 1px solid rgba(61,43,31,0.15); padding: 24px;">
+        <div style="font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 700; color: #B05050; margin-bottom: 12px;">✗ 01</div>
+        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 19px; color: var(--charcoal); margin-bottom: 8px;">Esticar o logo</div>
+        <div style="font-size: 14px; line-height: 1.45; color: var(--charcoal); opacity: 0.75;">Mantém sempre as proporções 140×90.</div>
+      </div>
+      <div style="border: 1px solid rgba(61,43,31,0.15); padding: 24px;">
+        <div style="font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 700; color: #B05050; margin-bottom: 12px;">✗ 02</div>
+        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 19px; color: var(--charcoal); margin-bottom: 8px;">Fundo sem proteção</div>
+        <div style="font-size: 14px; line-height: 1.45; color: var(--charcoal); opacity: 0.75;">Sempre sobre cor sólida da paleta.</div>
+      </div>
+      <div style="border: 1px solid rgba(61,43,31,0.15); padding: 24px;">
+        <div style="font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 700; color: #B05050; margin-bottom: 12px;">✗ 03</div>
+        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 19px; color: var(--charcoal); margin-bottom: 8px;">Trocar cores dos arcos</div>
+        <div style="font-size: 14px; line-height: 1.45; color: var(--charcoal); opacity: 0.75;">Charcoal/sálvia/cobre, nesta ordem.</div>
+      </div>
+      <div style="border: 1px solid rgba(61,43,31,0.15); padding: 24px;">
+        <div style="font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 700; color: #B05050; margin-bottom: 12px;">✗ 04</div>
+        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 19px; color: var(--charcoal); margin-bottom: 8px;">Inverter tipografia</div>
+        <div style="font-size: 14px; line-height: 1.45; color: var(--charcoal); opacity: 0.75;">Playfair em títulos, Lato em corpo.</div>
+      </div>
+      <div style="border: 1px solid rgba(61,43,31,0.15); padding: 24px;">
+        <div style="font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 700; color: #B05050; margin-bottom: 12px;">✗ 05</div>
+        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 19px; color: var(--charcoal); margin-bottom: 8px;">Branco puro #FFFFFF</div>
+        <div style="font-size: 14px; line-height: 1.45; color: var(--charcoal); opacity: 0.75;">Use Creme #F5EFE6.</div>
+      </div>
+      <div style="border: 1px solid rgba(61,43,31,0.15); padding: 24px;">
+        <div style="font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 700; color: #B05050; margin-bottom: 12px;">✗ 06</div>
+        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 19px; color: var(--charcoal); margin-bottom: 8px;">Cobre sobre Sálvia</div>
+        <div style="font-size: 14px; line-height: 1.45; color: var(--charcoal); opacity: 0.75;">Conflito de cores quentes.</div>
+      </div>
+      <div style="border: 1px solid rgba(61,43,31,0.15); padding: 24px;">
+        <div style="font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 700; color: #B05050; margin-bottom: 12px;">✗ 07</div>
+        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 19px; color: var(--charcoal); margin-bottom: 8px;">Emojis em copy formal</div>
+        <div style="font-size: 14px; line-height: 1.45; color: var(--charcoal); opacity: 0.75;">Apenas em redes sociais, com parcimônia.</div>
+      </div>
+      <div style="border: 1px solid rgba(61,43,31,0.15); padding: 24px;">
+        <div style="font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 700; color: #B05050; margin-bottom: 12px;">✗ 08</div>
+        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 19px; color: var(--charcoal); margin-bottom: 8px;">Travessão (—)</div>
+        <div style="font-size: 14px; line-height: 1.45; color: var(--charcoal); opacity: 0.75;">Use vírgula, ponto, dois-pontos.</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div>Clínica Base · Brand Guide</div>
+    <div>Uso Incorreto</div>
+  </div>
+</section>
+
+<!-- ============= 22. MANIFESTO ============= -->
+<section class="slide dark">
+  <div class="slide-tag" style="color: var(--cobre);">Manifesto</div>
+  <div class="slide-num">22</div>
+  <div class="slide-content">
+    <h3 class="slide-title" style="color: var(--creme);">A crença que nos move.</h3>
+    <div class="manifesto-text" style="margin-top: 40px;">
+      <p style="margin-bottom: 24px;">Acreditamos que <span class="accent">a mãe informada e apoiada é o maior instrumento terapêutico que existe</span>.</p>
+      <p style="margin-bottom: 24px;">Que o desenvolvimento real, o que transforma, o que fica para a vida, acontece nas <span class="accent">167 horas que não são a sessão de terapia</span>. No banho. No almoço. No brincar antes de dormir.</p>
+      <p style="font-style: italic; color: var(--cobre); font-size: 56px; margin-top: 50px;">Em casa.</p>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div style="color: var(--creme); opacity: 0.6;">Clínica Base · Brand Guide</div>
+    <div style="color: var(--creme); opacity: 0.6;">Manifesto</div>
+  </div>
+</section>
+
+<!-- ============= 23. ENCERRAMENTO ============= -->
+<section class="slide cobre">
+  <div class="slide-num" style="color: var(--charcoal); opacity: 0.7;">23</div>
+  <div class="slide-content center">
+    <svg viewBox="0 0 140 90" width="160" height="100" xmlns="http://www.w3.org/2000/svg">
+      <line x1="10" y1="80" x2="130" y2="80" stroke="#F5EFE6" stroke-width="2.5"/>
+      <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#F5EFE6" stroke-width="3.5" fill="none"/>
+      <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#3D2B1F" stroke-width="3.5" fill="none"/>
+      <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#3D2B1F" stroke-width="3.5" fill="none" stroke-opacity="0.5"/>
+    </svg>
+    <div class="quote-mega" style="color: var(--creme); margin-top: 80px;">
+      "Você é a base<br>do seu <span style="color: var(--charcoal);">filho</span>."
+    </div>
+    <div class="quote-attr" style="color: var(--charcoal); margin-top: 48px;">Clínica Base · Brand Guide v1.0 · Maio 2026</div>
+  </div>
+</section>
+
+<!-- ============= 24. CRÉDITOS ============= -->
+<section class="slide">
+  <div class="slide-tag">Próximos passos</div>
+  <div class="slide-num">24</div>
+  <div class="slide-content">
+    <h3 class="slide-title">Como aplicar.</h3>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-top: 60px;">
+      <div>
+        <div style="font-family: 'Lato', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cobre); margin-bottom: 24px;">Documentação completa</div>
+        <ul class="bullets" style="margin: 0;">
+          <li><strong>brand-guide.html</strong> · 15 seções, abre no navegador</li>
+          <li><strong>brand-guide.pdf</strong> · versão para impressão</li>
+          <li><strong>fundacao-de-marca.pdf</strong> · ativos verbais</li>
+          <li><strong>identidade-estrategica.pdf</strong> · estratégia operacional</li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-family: 'Lato', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cobre); margin-bottom: 24px;">Próximas frentes</div>
+        <ul class="bullets" style="margin: 0;">
+          <li>Atualizar perfil do Instagram com a paleta</li>
+          <li>Substituir Canva templates pela paleta editorial</li>
+          <li>Aplicar logo no e-mail e papel timbrado</li>
+          <li>Hospedar brand guide no Notion (link interno)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top: 80px; padding-top: 30px; border-top: 1px solid rgba(61,43,31,0.2); display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 24px; color: var(--charcoal); margin-bottom: 4px;">Regiane Vidal</div>
+        <div style="font-family: 'Lato', sans-serif; font-size: 14px; letter-spacing: 0.06em; color: var(--charcoal); opacity: 0.7;">Terapeuta Ocupacional · CREFITO-3 11824-TO · Sorocaba, SP</div>
+      </div>
+      <div class="footer-logo">
+        <svg viewBox="0 0 140 90" width="50" height="32" xmlns="http://www.w3.org/2000/svg">
+          <line x1="10" y1="80" x2="130" y2="80" stroke="#3D2B1F" stroke-width="2.5"/>
+          <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#3D2B1F" stroke-width="3.5" fill="none"/>
+          <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#7C9A7C" stroke-width="3.5" fill="none"/>
+          <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#B87333" stroke-width="3.5" fill="none"/>
+        </svg>
+        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 18px; color: var(--charcoal);">Clínica Base</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
