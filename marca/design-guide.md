@@ -114,7 +114,7 @@ A identidade deve parecer "consultório de psicanálise editorial", não "pediat
 - Verbos de ação e transformação
 - A mãe como protagonista (sujeito da frase)
 - Perguntas que a mãe já está fazendo
-- "Método B.A.S.E." (com pontos e maiúsculas)
+- "Método BASE" (sem pontos, caixa alta)
 
 ### Nunca usar
 - Travessão (—) — substituir por vírgula, ponto, dois-pontos
@@ -126,6 +126,58 @@ A identidade deve parecer "consultório de psicanálise editorial", não "pediat
 - Urgência artificial ("vagas limitadas")
 - Adjetivos vazios ("excelente", "qualidade superior", "atendimento humanizado")
 - Clichês de saúde ("cuidamos com amor", "sua família em primeiro lugar")
+
+---
+
+## Arquitetura de Marca
+
+Três ativos distintos, cada um com função própria:
+
+| Ativo | Papel |
+|-------|-------|
+| **Regiane Vidal** | A pessoa, terapeuta, autoridade |
+| **Clínica Base** | A instituição, onde acontece |
+| **Método BASE** | A entrega, o que diferencia |
+
+Regiane criou o método. O método sustenta a clínica. Cada um faz o seu trabalho.
+
+---
+
+## Método BASE
+
+Quatro pilares que traduzem ciência em ação prática. Fundamentado em Integração Sensorial Ayres e DIR-Floortime.
+
+| Letra | Pilar | Descrição |
+|-------|-------|-----------|
+| **B** | Brincar | Ferramenta intencional de desenvolvimento, não passatempo |
+| **A** | Afeto | Interações responsivas que constroem segurança emocional |
+| **S** | Sensorial | Compreensão do processamento sensorial no comportamento |
+| **E** | Estimulação | Ferramentas concretas para aplicar no cotidiano |
+
+---
+
+## Manifesto
+
+Acreditamos que a mãe informada e apoiada é o maior instrumento terapêutico que existe.
+
+Que o desenvolvimento real, o que transforma, o que fica para a vida, acontece nas 167 horas que não são a sessão de terapia. No banho. No almoço. No brincar antes de dormir.
+
+*Em casa.*
+
+---
+
+## Uso Incorreto — 8 erros a evitar
+
+| Erro | Regra |
+|------|-------|
+| Esticar o logo | Manter sempre as proporções 140×90 |
+| Logo sobre fundo sem proteção | Sempre sobre cor sólida da paleta |
+| Trocar cores dos arcos | Charcoal / Sálvia / Cobre, nesta ordem |
+| Inverter tipografia | Playfair em títulos, Lato em corpo |
+| Usar branco puro `#FFFFFF` | Usar Creme `#F5EFE6` |
+| Cobre sobre Sálvia | Conflito de cores quentes |
+| Emojis em copy formal | Apenas em redes sociais, com parcimônia |
+| Travessão (—) | Substituir por vírgula, ponto ou dois-pontos |
 
 ---
 
