@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1050px;
+      height: 600px;
+      overflow: hidden;
+      background: #3D2B1F;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 64px 72px;
+      font-family: 'Lato', sans-serif;
+    }
+
+    /* Topo: logo + especialidade */
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .specialty {
+      font-size: 20px;
+      font-weight: 300;
+      color: #7C9A7C;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-align: right;
+    }
+
+    /* Centro: nome */
+    .center {
+      text-align: center;
+    }
+
+    .line-top {
+      width: 48px;
+      height: 1px;
+      background: #B87333;
+      margin: 0 auto 28px;
+    }
+
+    .name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 80px;
+      color: #F5EFE6;
+      letter-spacing: 0.12em;
+      line-height: 1;
+    }
+
+    .line-bottom {
+      width: 48px;
+      height: 1px;
+      background: #B87333;
+      margin: 28px auto 0;
+    }
+
+    /* Base: contatos */
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .contact-item {
+      font-size: 21px;
+      font-weight: 300;
+      color: #F5EFE6;
+      line-height: 1.55;
+      opacity: 0.85;
+    }
+
+    .contact-item strong {
+      display: block;
+      font-size: 20px;
+      font-weight: 700;
+      color: #B87333;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top">
+    <svg viewBox="0 0 140 90" width="80" height="52" xmlns="http://www.w3.org/2000/svg">
+      <line x1="10" y1="80" x2="130" y2="80" stroke="#F5EFE6" stroke-width="2.5"/>
+      <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#F5EFE6" stroke-width="3" fill="none"/>
+      <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#7C9A7C" stroke-width="3" fill="none"/>
+      <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#B87333" stroke-width="3" fill="none"/>
+    </svg>
+    <div class="specialty">Terapia Ocupacional</div>
+  </div>
+
+  <div class="center">
+    <div class="line-top"></div>
+    <div class="name">CLÍNICA BASE</div>
+    <div class="line-bottom"></div>
+  </div>
+
+  <div class="bottom">
+    <div class="contact-item">
+      <strong>Telefone</strong>
+      (11) 97724-9842
+    </div>
+    <div class="contact-item" style="text-align:right;">
+      <strong>Endereço</strong>
+      Av. Rudolf Dafferner, 400 — Sala 314b<br>
+      Bloco Madrid, Boa Vista, Sorocaba / SP
+    </div>
+  </div>
+
+</body>
+</html>

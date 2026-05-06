@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1050px;
+      height: 600px;
+      overflow: hidden;
+      background: #F5EFE6;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      font-family: 'Lato', sans-serif;
+    }
+
+    /* Lado esquerdo — nome grande */
+    .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 56px 56px 56px;
+      border-right: 1px solid #e0d8cd;
+    }
+
+    .pre-name {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+      color: #B87333;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 96px;
+      color: #3D2B1F;
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+    }
+
+    .specialty {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+      color: #7C9A7C;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 20px;
+    }
+
+    /* Lado direito — contatos */
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 56px 56px 56px;
+    }
+
+    .logo {
+      margin-bottom: auto;
+      padding-top: 52px;
+    }
+
+    .contact-block {
+      margin-bottom: 20px;
+    }
+
+    .contact-label {
+      font-size: 20px;
+      font-weight: 700;
+      color: #B87333;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 5px;
+    }
+
+    .contact-value {
+      font-size: 22px;
+      font-weight: 400;
+      color: #3D2B1F;
+      line-height: 1.55;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="left">
+    <div class="pre-name">Clínica</div>
+    <div class="name">BASE</div>
+    <div class="specialty">Terapia Ocupacional</div>
+  </div>
+
+  <div class="right">
+    <div class="logo">
+      <svg viewBox="0 0 140 90" width="130" height="84" xmlns="http://www.w3.org/2000/svg">
+        <line x1="10" y1="80" x2="130" y2="80" stroke="#3D2B1F" stroke-width="2.5"/>
+        <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#3D2B1F" stroke-width="3" fill="none"/>
+        <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#7C9A7C" stroke-width="3" fill="none"/>
+        <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#B87333" stroke-width="3" fill="none"/>
+      </svg>
+    </div>
+
+    <div class="contact-block">
+      <div class="contact-label">Telefone</div>
+      <div class="contact-value">(11) 97724-9842</div>
+    </div>
+
+    <div class="contact-block">
+      <div class="contact-label">Endereço</div>
+      <div class="contact-value">
+        Av. Rudolf Dafferner, 400<br>
+        Sala 314b, Bloco Madrid<br>
+        Boa Vista, Sorocaba / SP<br>
+        CEP 18085-005
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

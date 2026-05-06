@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1050px;
+      height: 600px;
+      overflow: hidden;
+      background: #F5EFE6;
+      font-family: 'Lato', sans-serif;
+      position: relative;
+    }
+
+    /* Faixa vertical cobre na borda esquerda */
+    .accent-strip {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 6px;
+      background: #B87333;
+    }
+
+    /* Layout principal */
+    .card {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      padding: 52px 64px 52px 80px;
+    }
+
+    /* Topo: nome e logo */
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .name-block .pre {
+      font-size: 20px;
+      font-weight: 300;
+      color: #7C9A7C;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .name-block .name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 80px;
+      color: #3D2B1F;
+      line-height: 0.9;
+      letter-spacing: -0.01em;
+    }
+
+    .name-block .tagline {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 22px;
+      color: #B87333;
+      margin-top: 16px;
+    }
+
+    /* Base: contatos em linha */
+    .bottom {
+      display: flex;
+      gap: 64px;
+      align-items: flex-end;
+      border-top: 1px solid #d8d0c5;
+      padding-top: 28px;
+    }
+
+    .contact-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .c-label {
+      font-size: 20px;
+      font-weight: 700;
+      color: #B87333;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .c-value {
+      font-size: 21px;
+      font-weight: 400;
+      color: #3D2B1F;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="accent-strip"></div>
+
+  <div class="card">
+    <div class="top">
+      <div class="name-block">
+        <div class="pre">Clínica</div>
+        <div class="name">BASE</div>
+        <div class="tagline">Você é a base do seu filho.</div>
+      </div>
+
+      <svg viewBox="0 0 140 90" width="88" height="56" xmlns="http://www.w3.org/2000/svg">
+        <line x1="10" y1="80" x2="130" y2="80" stroke="#3D2B1F" stroke-width="2.5"/>
+        <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#3D2B1F" stroke-width="3" fill="none"/>
+        <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#7C9A7C" stroke-width="3" fill="none"/>
+        <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#B87333" stroke-width="3" fill="none"/>
+      </svg>
+    </div>
+
+    <div class="bottom">
+      <div class="contact-group">
+        <div class="c-label">Telefone</div>
+        <div class="c-value">(11) 97724-9842</div>
+      </div>
+      <div class="contact-group">
+        <div class="c-label">Endereço</div>
+        <div class="c-value">
+          Av. Rudolf Dafferner, 400, Sala 314b<br>
+          Boa Vista, Sorocaba / SP
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
