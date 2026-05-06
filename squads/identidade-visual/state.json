@@ -1,1 +1,19 @@
-{"squad":"identidade-visual","status":"running","step":{"current":1,"total":7,"label":"step-01-estrategia-de-marca"},"agents":[{"id":"beatriz-branding","name":"Beatriz Branding","icon":"🧭","status":"working","desk":{"col":1,"row":1}},{"id":"vitor-visual","name":"Vitor Visual","icon":"🎨","status":"idle","desk":{"col":2,"row":1}},{"id":"carla-compilacao","name":"Carla Compilação","icon":"📋","status":"idle","desk":{"col":3,"row":1}},{"id":"paulo-padrao","name":"Paulo Padrão","icon":"✅","status":"idle","desk":{"col":1,"row":2}}],"handoff":null,"startedAt":"2026-05-05T16:11:54Z","updatedAt":"2026-05-05T16:11:54Z"}
+{
+  "squad": "identidade-visual",
+  "status": "running",
+  "step": { "current": 2, "total": 7, "label": "step-02-aprovar-estrategia" },
+  "agents": [
+    { "id": "beatriz-branding", "name": "Beatriz Branding", "icon": "🧭", "status": "done", "desk": { "col": 1, "row": 1 } },
+    { "id": "vitor-visual", "name": "Vitor Visual", "icon": "🎨", "status": "idle", "desk": { "col": 2, "row": 1 } },
+    { "id": "carla-compilacao", "name": "Carla Compilação", "icon": "📋", "status": "idle", "desk": { "col": 3, "row": 1 } },
+    { "id": "paulo-padrao", "name": "Paulo Padrão", "icon": "✅", "status": "idle", "desk": { "col": 1, "row": 2 } }
+  ],
+  "handoff": {
+    "from": "beatriz-branding",
+    "to": "vitor-visual",
+    "message": "Estratégia de marca completa: arquétipo Cuidador + Sábio, tagline aprovada 'Você é a base do seu filho', logo Marca Concêntrica e diretrizes visuais para Vitor.",
+    "completedAt": "2026-05-06T16:42:00Z"
+  },
+  "startedAt": "2026-05-06T16:39:23Z",
+  "updatedAt": "2026-05-06T16:42:00Z"
+}
