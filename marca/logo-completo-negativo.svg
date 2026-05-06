@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 125" width="560" height="500">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Fundo charcoal -->
+  <rect width="140" height="125" fill="#3D2B1F"/>
+
+  <!-- Linha de base — creme -->
+  <line x1="10" y1="80" x2="130" y2="80" stroke="#F5EFE6" stroke-width="2"/>
+  <!-- Arco externo — creme (clínica) -->
+  <path d="M 30 80 A 40 40 0 0 1 110 80" stroke="#F5EFE6" stroke-width="3" fill="none"/>
+  <!-- Arco intermediário — sálvia (mãe) -->
+  <path d="M 45 80 A 25 25 0 0 1 95 80" stroke="#7C9A7C" stroke-width="3" fill="none"/>
+  <!-- Arco interno — cobre (criança) -->
+  <path d="M 58 80 A 12 12 0 0 1 82 80" stroke="#B87333" stroke-width="3" fill="none"/>
+
+  <!-- Separador em cobre -->
+  <line x1="60" y1="93" x2="80" y2="93" stroke="#B87333" stroke-width="1.5"/>
+
+  <!-- Nome da clínica — creme -->
+  <text
+    x="70" y="116"
+    font-family="'Playfair Display', Georgia, serif"
+    font-weight="700"
+    font-size="18"
+    fill="#F5EFE6"
+    text-anchor="middle"
+    letter-spacing="-0.2"
+  >Clínica Base</text>
+</svg>
